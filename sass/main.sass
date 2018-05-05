@@ -1,0 +1,1397 @@
+//@import "norms"
+
+@import "vars"
+@import "norm"
+@import "base"
+@import "typography"
+@import "breadcrumb"
+@import "sliders"
+@import "map"
+@import "modal"
+
+
+//@import "tables"
+
+//@import "libs"
+
+//header
+header
+  background: #f1eee5
+  height: 214px
+  +flex(column)
+  justify-content: flex-end
+.header-top
+  align-items: center
+  padding: 0
+  &_contacts
+    margin-bottom: 0
+    margin-left: 0!important
+  &_phones
+    margin: 12px 0 0
+    padding: 8px 0 0
+    display: block
+    a
+      color: #282828
+      font-family: $f-Vollkorn
+      font-size: 16px
+      font-weight: 400
+      line-height: 24px
+      text-transform: uppercase
+      margin-right: 10px
+  &_email
+    color: #a8806b
+    font-family: $f-Vollkorn
+    font-size: 14px
+    font-weight: 400
+    line-height: 14px
+  &_logo
+    width: 195px
+    height: 130px
+    text-align: center
+  &_address
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: flex-end
+    text-align: right
+    margin: -32px 0 0
+    margin-right: 0!important
+    padding: 5px 0 0
+    .lang-wrap
+      margin-bottom: 36px
+      display: block
+      a
+        display: inline-block
+        margin-right: 10px
+        &:last-child
+          margin-right: 0
+    .address
+      p, a
+        display: block
+      p
+        margin-bottom: 5px
+
+.header-bootom
+  width: 100%
+  display: block
+  position: relative
+  clear: both
+  height: 30px
+  margin-top: 28px
+  margin-bottom: 2px
+  nav
+    display: flex
+    justify-content: space-between
+    align-items: center
+    li
+      position: relative
+      &.active
+        &:before
+          +after()
+          width: 100%
+          height: 4px
+          top: auto
+          bottom: -15px
+          background-color: #a8806b
+      &:before
+        display: none
+      &:after
+        +after()
+        background: url(../img/icon-nav-dot.png)
+        background-size: contain
+        width: 4px
+        height: 4px
+        top: 8px
+        left: -13px
+      &:first-child:after
+        display: none
+    a
+      color: $link-nav-color
+      font-family: $f-Vollkorn
+      font-size: 15px
+      font-weight: 600
+      line-height: 14px
+      position: relative
+      text:
+        transform: uppercase
+        decoration: $link-hover-decoration
+      letter-spacing: 0.6px
+      +transitColor()
+      &:hover
+        color: $p-color_light
+        text-decoration: $link-hover-decoration
+        +transitColor()
+
+
+
+.mobile-menu
+  display: none
+  .hamburger
+    position: absolute
+    right: 0
+    top: -50px
+.mobile-menu_side-nav
+  display: block
+
+
+
+
+
+.page-def
+  padding-top: 70px
+  padding-bottom: 40px
+  &_no-paddings
+    @extend .page-def
+    padding-top: 0
+
+.page-404
+  padding-bottom: 60px
+  .container
+    +flex(column)
+    align-items: center
+    & > *
+      margin-bottom: 32px
+      text-align: center
+
+
+
+.ads-firm-link
+  color: #d79400
+  font-size: 12px
+  text-decoration: underline
+  margin-bottom: 15px
+  display: inline-block
+
+
+
+
+.table-bordered
+  border: $table-border
+  margin-bottom: 50px
+  td
+    font-weight: 300
+    border: $table__td-border
+  .table_bg
+    background: orange
+
+
+
+.media
+  align-items: center
+  +flex(column)
+  &_row
+    +flex(row)
+    justify-content: flex-start
+    align-items: flex-start
+    p span
+      margin-right: 20px
+  &_column
+    +flex(column)
+    justify-content: flex-start
+    text-align: center
+    .media__circle_icon
+      margin: 0 0 20px 0
+      + .media__text
+        h4
+          margin: 0 0 10px 0
+          color: $p-color
+
+  &__text
+    +flex(column)
+    justify-content: space-around
+    text-transform: none
+    margin-bottom: 0
+    color: #4b4b4b
+    font-family: $f-Roboto
+    font-size: 16px
+    font-weight: 300
+    line-height: 26px
+    letter-spacing: 0.16px
+    p
+      margin-bottom: 0
+    h4
+      margin-bottom: 4px
+    h6
+      text-transform: none
+      font-size: 20px
+  &__text-wrapper
+    +flex(column)
+    justify-content: flex-start
+    text-transform: none
+    padding: 0 0 0 80px
+  &.sort-text-img
+    .media__text-wrapper
+      padding: 0 80px 0 0
+  &.sort-img-text, &.sort-text-img
+    .media__img
+      align-self: flex-start
+  &-contacts
+    .media__text
+      > *
+        font-family: $f-Vollkorn
+
+.no-title
+  ul
+    padding-top: 40px
+
+
+
+.cards
+  background: #f1eee5
+  padding: 30px 0
+  .items
+    flex-wrap: wrap
+  .card
+    box-shadow: 0 0 15px rgba(68, 60, 34, 0.15)
+    background: #fff
+    border: 10px solid #fff
+    width: 31.3%
+    min-height: 729px
+    margin: 0 0.5% 40px
+    position: relative
+    &__info
+      height: 347px
+      padding: 20px 20px 10px
+      margin-bottom: 20px
+      position: relative
+      //flex-grow: 1
+      //display: flex
+      //flex-direction: column
+      //justify-content: space-between
+      overflow: hidden
+      .media-list
+        ul
+          margin-bottom: 0
+        li
+          margin-bottom: 7px
+        p
+          font-family: $f-Roboto
+          font-size: 14px
+          font-weight: 300
+          letter-spacing: 0px
+        .icon
+          margin-right: 3px
+    &__title
+      color: #a8806b
+      font-weight: 400
+      margin-bottom: 10px
+      letter-spacing: -0.4px
+    figure
+      cursor: pointer
+      max-height: 240px
+      overflow: hidden
+      margin-bottom: 15px
+      +flex(row)
+      align-items: center
+      justify-content: center
+    .btn-def
+      width: 90%
+      left: 5%
+      height: 48px
+      transition: all .3s
+      bottom: 0
+      margin: 0 0 20px
+      &:hover
+        background-color: #5c4d45
+        border-color: #5c4d45
+        color: #f1eee5
+        transition: all .3s
+      &:focus
+        outline: none
+
+
+.circle
+  margin-right: 20px
+  min-width: 47px
+  height: 47px
+  border: 2px solid #a8806b
+  border-radius: 50%
+  background-color: #eeebe2
+  +flex(row)
+  justify-content: center
+  text-align: center
+  align-items: center
+  color: #a8806b
+  font-family: $f-Roboto
+  font-size: 16px
+  font-weight: 500
+  line-height: 26px
+  text-transform: uppercase
+  letter-spacing: 0.16px
+  &_icon
+    width: 80px
+    height: 80px
+    margin: 0 20px 0 0
+    img
+      max-width: 100%
+
+
+.hotel__media-list
+  margin-bottom: 30px
+
+.media-list
+  &__title
+    color: #4b4b4b
+    font-family: $f-Roboto
+    text-transform: none
+    font-size: 16px
+    font-weight: 700
+    line-height: 1.4
+    letter-spacing: 0.16px
+    &_lg
+      text-transform: uppercase
+    &_sm
+      font-weight: 400
+  li
+    margin: 0 0 11px 0
+    p
+      color: #4b4b4b
+      font-family: $f-Roboto
+      font-size: 16px
+      font-weight: 300
+      letter-spacing: 0.16px
+  &_row
+    display: flex
+    align-items: center
+    margin-bottom: 30px
+    ul
+      display: inline-flex
+      margin: 0
+      flex-wrap: wrap
+    .media-list__title
+      margin: 0 20px 0 0
+      text-transform: none
+    li
+      display: inline-flex
+      margin-right: 20px
+      margin-bottom: 0
+  &_column
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: flex-start
+    ul
+      display: flex
+      li
+        margin-right: 25px
+
+
+.icon
+  padding: 0px 0 0 35px
+  margin: 0
+  p
+    line-height: 17px
+
+  &_sm
+    width: 23px
+    min-width: 23px
+    height: 24px
+    padding: 0
+    margin-right: 10px
+    &+p
+      margin: 0
+  img
+    max-width: 100%
+  &_air
+    background: url("../img/icon-hotel-sprite2.png") no-repeat 0 4px
+  &_mbar
+    background: url("../img/icon-hotel-sprite2.png") no-repeat 0 -30px
+  &_tv
+    background: url("../img/icon-hotel-sprite2.png") no-repeat 0 -68px
+  &_hair
+    background: url("../img/icon-hotel-sprite2.png") no-repeat 0 -102px
+  &_wifi
+    background: url("../img/icon-hotel-sprite2.png") no-repeat 0 -141px
+  &_phone
+    background: url("../img/icon-hotel-sprite2.png") no-repeat 0 -175px
+  &_breakfast
+    background: url("../img/icon-hotel-sprite1.png") no-repeat 0 4px
+  &_parking
+    background: url("../img/icon-hotel-sprite1.png") no-repeat 0 -32px
+  &_sport
+    background: url("../img/icon-hotel-sprite1.png") no-repeat 0 -104px
+  &_pool
+    background: url("../img/icon-hotel-sprite1.png") no-repeat 0 -140px
+  &_doors
+    background: url("../img/icon-hotel-sprite3.png") no-repeat 0 2px
+  &_levels
+    background: url("../img/icon-hotel-sprite3.png") no-repeat 0 -35px
+  &_servises
+    background: url("../img/icon-hotel-sprite3.png") no-repeat 0 -143px
+  &_check
+    background: url("../img/icon-hotel-sprite3.png") no-repeat 0 -178px
+  &_restrant
+    background: url("../img/icon-hotel-sprite4.png") no-repeat 0 3px
+  &_launge
+    background: url("../img/icon-hotel-sprite4.png") no-repeat 0 -33px
+  &_billiard
+    background: url("../img/icon-hotel-sprite4.png") no-repeat 0 -104px
+  &_hot
+    background: url("../img/icon-hotel-sprite4.png") no-repeat 0 -176px
+  &_press
+    background: url("../img/icon-hotel-sprite5.png") no-repeat 0 2px
+  &_conf
+    background: url("../img/icon-hotel-sprite5.png") no-repeat 0 -34px
+  &_room
+    background: url("../img/icon-hotel-sprite5.png") no-repeat 0 -70px
+  &_style
+    background: url("../img/icon-hotel-beauty.png") no-repeat 0 2px
+  &_copy
+    background: url("../img/icon-conf-sprite1.png") no-repeat 0 6px
+  &_print
+    background: url("../img/icon-conf-sprite1.png") no-repeat 0 -29px
+  &_mail
+    background: url("../img/icon-conf-sprite1.png") no-repeat 0 -66px
+  &_mic
+    background: url("../img/icon-conf-sprite2.png") no-repeat 0 3px
+  &_proj
+    background: url("../img/icon-conf-sprite2.png") no-repeat -145px 3px
+  &_screen
+    background: url("../img/icon-conf-sprite2.png") no-repeat -289px 3px
+  &_man
+    background: url("../img/icon-sauna-sprite1.png") no-repeat 0 3px
+  &_fin
+    background: url("../img/icon-sauna-sprite1.png") no-repeat 0 -33px
+  &_pool
+    background: url("../img/icon-sauna-sprite1.png") no-repeat 0 -70px
+  &_bighall
+    background: url("../img/icon-sauna-sprite1.png") no-repeat 0 -106px
+  &_restroom
+    background: url("../img/icon-sauna-sprite1.png") no-repeat 0 -142px
+  &_chear
+    background: url("../img/icon-sauna-sprite1.png") no-repeat 0 -179px
+  &_piramida
+    background: url("../img/icon-sauna-sprite1.png") no-repeat 0 -215px
+  &_tv
+    background: url("../img/icon-sauna-sprite1.png") no-repeat 0 -251px
+  &_table
+    background: url("../img/icon-sauna-sprite2.png") no-repeat 0 -69px
+  &_shower
+    background: url("../img/icon-sauna-sprite2.png") no-repeat 0 -178px
+  &_iron
+    background: url("../img/icon-sport-sprite1.png") no-repeat 0 3px
+  &_cardio
+    background: url("../img/icon-sport-sprite1.png") no-repeat 0 -31px
+  &_cc
+    background: url("../img/icon-sport-sprite1.png") no-repeat 0 -69px
+  &_bar
+    background: url("../img/icon-sport-sprite1.png") no-repeat 0 -106px
+  &_admin
+    background: url("../img/icon-sport-sprite1.png") no-repeat 0 -174px
+  &_bil-american
+    background: url("../img/icon-billird-sprite1.png") no-repeat 0 4px
+  &_bil-rus
+    background: url("../img/icon-billird-sprite1.png") no-repeat 0 -34px
+  &_grey
+    -webkit-filter: grayscale(100%)
+    filter: grayscale(100%)
+  &_door-grey
+    background: url("../img/icon-nomer-sprite1.png") no-repeat 0 3px
+  &_m2-grey
+    background: url("../img/icon-nomer-sprite1.png") no-repeat 0 -28px
+  &_man-grey
+    background: url("../img/icon-nomer-sprite1.png") no-repeat 0 -57px
+  &_bed-grey
+    background: url("../img/icon-nomer-sprite1.png") no-repeat 0 -87px
+  &_breakfast-grey
+    background: url("../img/icon-nomer-sprite1.png") no-repeat 0 -119px
+  &_shower-grey
+    background: url("../img/icon-nomer-sprite1.png") no-repeat 0 -146px
+  &_asterix
+    color: red
+    margin-right: 7px
+    height: 8px
+    top: 3px
+    position: relative
+  &_nosmoke
+    background: url("../img/icon-nonsmoke.png") no-repeat 0 0
+  &_label
+    background: url("../img/icon-label.png") no-repeat 0 0
+  &_bad
+    background: url("../img/icon-nomer-sprite2.png") no-repeat 0 5px
+  &_fridge
+    background: url("../img/icon-nomer-sprite2.png") no-repeat 0 -103px
+  &_check
+    background: url("../img/icon-check.png") no-repeat 0 5px
+
+
+#my-menu
+  opacity: 0
+
+
+.restaurant-media
+  .media_row
+    align-items: center
+
+.mobile-menu_side-nav
+  ul
+    padding: 30px 25px
+  li a
+    text-align: center
+    text-overflow: ellipsis
+    white-space: nowrap
+    overflow: hidden
+    color: inherit
+    display: block
+    padding: 10px 0px 10px 0px
+    margin: 0
+    position: relative
+    text-transform: uppercase
+  .mm-panels>.mm-panel:not(.mm-hidden)
+    padding-top: 0
+  .dop-menu
+    .header-top_email
+      text-align: center
+    .address
+      p
+        color: #fff
+        font-family: $f-Vollkorn
+        font-size: 14px
+        font-weight: 400
+        text-align: center
+        line-height: 14px
+
+.mm-listview > li:not(.mm-divider):after
+  background: #fff
+  width: 90%
+  text-align: center
+
+.mm-listview li a:after
+  display: none
+
+.nomers__more-info
+  strong
+    margin-bottom: 10px
+  ul
+    padding: 0 0 0 20px
+    li
+      position: relative
+      color: $p-color_light
+      &:before
+        +after()
+        background: url("../img/icon-list-dot.png")no-repeat 0 0
+        width: 4px
+        height: 4px
+        left: -13px
+        top: 7px
+
+
+.block-download.items
+  align-items: center
+  flex-wrap: nowrap
+  .items
+    width: 400px
+    padding: 0
+  .block
+    margin-bottom: 5px
+  .btn-def
+    justify-content: center
+    max-width: 170px
+  .icon-label
+    margin-right: 20px
+
+.block
+  margin-bottom: 45px
+  display: block
+  strong
+    margin-bottom: 10px
+    display: block
+    letter-spacing: -.5px
+
+
+h2.title
+  margin-bottom: $title-margin-bottom_sm
+
+.title
+  color: #282828
+  font-family: $f-Vollkorn
+  font-size: 30px
+  font-weight: 400
+  line-height: 1.5
+  text-transform: uppercase
+  position: relative
+  display: flex
+  align-items: center
+  margin-bottom: $title-margin-bottom
+  &_dashed
+    position: relative
+    &:after
+      +after()
+      flex-grow: 1
+      position: relative
+      top:  -2px
+      height: 1px
+      margin-left: 40px
+      background: url(../img/bg-title_dashed.png) repeat-x 0 0
+    &-bottom
+      flex-direction: column
+      align-items: flex-start
+      padding: 0 0 25px
+      &:after
+        +after()
+        width: 100%
+        top: auto
+        bottom: 0
+        margin: 0
+  &_sm
+    text-transform: lowercase
+    font-size: 16px
+  &_md
+    text-transform: none
+    color: #4b4b4b
+    font-family: $f-Roboto
+    font-size: 16px
+    font-weight: 700
+    line-height: 1.4
+    letter-spacing: 0.16px
+    margin: 0
+
+
+
+//.show-more
+
+
+.show-more-block
+  min-height: 50px
+  position: relative
+  overflow: hidden
+  p
+    margin: 0
+.show-more__link
+  position: relative
+  color: #a8806b
+  display: block
+  margin: 40px 0 35px
+  font-family: $f-Vollkorn
+  font-size: 14px
+  font-weight: 400
+  letter-spacing: .5px
+  cursor: pointer
+
+
+
+.wrapper-border
+  box-shadow: 0 0 15px rgba(68, 60, 34, 0.15)
+  background: #f1eee5
+  border: 10px solid #fff
+  width: 100%
+  height: 200px
+  margin: 0 0 10px
+  position: relative
+  display: flex
+  flex-direction: column
+  justify-content: center
+  padding: 0 40px
+  h4
+    color: #393939
+.form
+  input
+    width: 100%
+    letter-spacing: -.9px
+    padding-left: 10px
+
+  &-row
+    flex-direction: row
+    display: flex
+    justify-content: space-between
+    align-items: stretch
+    flex-wrap: wrap
+    > *
+      width: 16%
+      margin: 0 .5% !important
+    .calendar
+      position: relative
+      &:after
+        +after()
+        background: url("../img/icon-datapick.png") no-repeat 0 0
+        top: 14px
+        left: auto
+        right: 10px
+        width: 20px
+        height: 20px
+    .clockpicker
+      position: relative
+      &:after
+        +after()
+        background: url("../img/icon-clockpicker.png") no-repeat 0 0
+        top: 14px
+        left: auto
+        right: 10px
+        width: 20px
+        height: 20px
+    .rooms
+      position: relative
+      &:after
+        content: ''
+        position: absolute
+        display: block
+        background: #fff url(../img/icon-dors.png) no-repeat 0 0
+        top: 14px
+        left: auto
+        right: 2px
+        width: 29px
+        z-index: 2222
+        height: 30px
+    .people
+      max-width: 230px
+      position: relative
+      &:after
+        +after()
+        background:  url("../img/icon-forma-man.png") no-repeat 0 0
+        top: 43px
+        left: auto
+        right: 2px
+        width: 29px
+        height: 20px
+    input
+      width: 100%
+      letter-spacing: -.9px
+      padding-left: 10px
+
+    .btn-def
+      height: unset
+      max-width: 226px
+      width: 226px
+    &__fw-block
+      width: 100%
+      display: flex
+      flex-direction: row
+      justify-content: flex-start
+      align-items: center
+      input
+        min-width: 20px
+        width: 20px
+        margin-right: 10px
+        outline: none
+        &:focus
+          outline: none
+      p
+        margin: 0
+      .checkbox-label
+        &:before
+          border-radius: 3px
+        input[type=checkbox]
+          display: none
+      .checkbox__text
+        line-height: 17px
+  &-column
+
+
+
+
+
+.additional-info
+  margin-bottom: 0
+
+
+
+
+
+
+
+
+
+
+div.textDiv
+  //margin: 50px auto 0 auto
+  //padding-top: 40px
+  .show
+    //height: 470px
+    //display: block
+    //padding: 0 0 20px
+    //overflow: hidden
+    //margin-bottom: 54px
+    //position: relative
+    //transition: height .4s
+
+div.textDiv + .hider
+  //position: relative
+  ///*display: none;*/
+  //text-align: right
+  //background: #fafafa
+  //padding: 5px 0
+  //margin: 10px auto 0 auto
+  //width: 1000px
+  //transition: height .4s
+
+div.textDiv + .hider span
+  //display: inline-block
+
+div.textDiv + .hider span:after
+  //content: ''
+  //font-size: 13px
+  //color: red
+  //position: absolute
+  //display: inline-block
+  //background: #fafafa
+  //bottom: 0
+  //right: 0
+  //padding: 5px 0
+  //text-align: right
+  //cursor: pointer
+  //opacity: 0.8
+  //text-decoration: underline
+
+div.textDiv.more + .hider span:after
+  //content: 'Читать больше'
+
+div.textDiv + .hider.open span:after
+  //content: 'Свернуть'
+
+
+
+
+
+
+.bg-block
+  margin-bottom: 40px
+  position: relative
+  width: 100%
+  display: block
+  clear: both
+  &:after
+    content: ''
+    clear: both
+    display: block
+  .bg-block__bg
+    max-width: 100%
+    position: absolute
+    max-width: 768px
+    left: -375px
+    height: 100%
+    flex-grow: 1
+    z-index: 0
+  .container
+    z-index: 1
+  &-1-3
+    background-color: #eeebe2
+    width: 100%
+    min-height: 610px
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-bottom: 80px
+  &-1-3-3
+    .container
+      flex-wrap: wrap
+    .wrapper-border
+      width: 100% !important
+      margin-bottom: 30px
+    .bg-block__slider
+      height: 400px
+      width: 447px
+      z-index: 1
+      overflow: hidden
+
+  &-2-3
+    background-color: #eeebe2
+    width: 100%
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    margin-bottom: 80px
+    .bg-block__bg
+      left: auto !important
+      right: 0
+      max-width: none
+
+    .container
+      display: flex
+      justify-content: flex-start
+    .wrap
+      width: 550px
+      display: flex
+      flex-direction: column
+      justify-content: flex-start
+
+.bg
+  &_main
+    &-conf
+      background: #eeebe2  url("../img/img-conf-bg.jpg") no-repeat 0 0
+    //&-restor
+    //  background: #eeebe2  url("../img/bg-main-2-3-1.jpg") no-repeat top right
+    &-hotel
+      background: #eeebe2  url("../img/bg-main-checkin.jpg") no-repeat top left
+    //&-sport
+    //  background: #eeebe2  url("../img/bg-main-sport2.jpg") no-repeat top right
+
+
+.bg_main
+  &-conf
+    .container
+      align-items: center
+  &-restor
+    .container
+      padding: 0
+      display: flex
+      justify-content: flex-start
+      align-items: center
+      overflow: visible
+    .wrap
+      padding: 30px 0
+    .bg-block__bg
+      position: absolute
+      z-index: -1
+
+  &-sport
+    overflow: hidden
+    background: #eeebe2
+    .container
+      display: flex
+      justify-content: flex-start
+      align-items: center
+      overflow: visible
+    .wrap
+      width: 350px
+      display: block
+      margin-right: 40px
+    .bg-block__content
+      width: 350px
+    .bg-block__bg
+      position: relative
+      left: auto!important
+      right: auto
+      max-width: 100%
+      width: 100%
+      height: auto
+
+
+.shape
+  box-shadow: 0 0 26px rgba(0, 0, 0, 0.1)
+  background-color: #ffffff
+  padding: 20px
+  display: flex
+  justify-content: space-between
+  width:  100%
+  img
+    width: 144px
+    height: 144px
+    display: block
+    margin-right: 25px
+  &__title
+    margin: 8px 0
+  &__text
+    max-height: 73px
+    overflow: hidden
+
+
+
+.more-link-alone
+  position: relative
+  color: #4b4b4b
+  font-family: $f-Vollkorn
+  font-size: 14px
+  font-weight: 600
+  text-transform: uppercase
+  display: flex
+  justify-content: space-between
+  width: 100%
+
+  &:before
+    +after()
+    flex-grow: 1
+    position: relative
+    top: 5px
+    height: 2px
+    margin-right: 14px
+    background: #dbd4c0
+
+
+
+
+
+  .bg-block__slider
+    width: 550px!important
+    height: auto
+    justify-content: center
+    align-items: center
+    background: #fff
+    border: 15px solid #fff
+    overflow: hidden
+    z-index: 2
+    max-height: 490px
+    align-self: center
+  .bg-block__content
+    padding-left: 50px
+    display: flex
+    flex-direction: column
+    justify-content: center
+  .bg-block__title
+    color: $link-nav-color
+    font-family: $f-Vollkorn
+    font-size: $h1-font-size
+    font-weight: 400
+    text-transform: uppercase
+    margin-bottom: 35px
+  .bg-block__subtitle
+    color: $link-nav-color
+    font-family: $f-Vollkorn
+    font-size: $h4-font-size
+    font-weight: 400
+    text-transform: uppercase
+    margin-bottom: 25px
+  p
+    font-size: $p-font-size
+    color: #4b4b4b
+
+
+
+//    Video
+.video-bg
+  //min-height: 600px
+  height: auto
+  width: 100%
+  margin-bottom: 60px
+  overflow: hidden
+  video
+    width:  100%
+    height: 100%
+
+
+
+
+.bg-item
+  width: 47%!important
+  background-color: #eeebe2
+  padding: 35px 40px
+  +flex(column)
+  justify-content: center
+  p
+    color: #282828
+    font-family: $f-Vollkorn
+    font-size: 18px
+    font-weight: 400
+    line-height: 30px
+    text-transform: uppercase
+    margin-bottom: 0
+
+
+
+
+
+
+
+.table
+  color: #4b4b4b
+  font-family: $f-Roboto
+  font-size: 16px
+  font-weight: 500
+  line-height: 26px
+  text-transform: uppercase
+  letter-spacing: 0.16px
+  td, th
+    padding: 15px 10px 16px 20px !important
+    font-family: $f-Roboto
+  td
+    font-weight: 300
+    min-width: 40px
+  .table_bg
+    font-weight: 500
+    background-color: #fbf8f6
+  .nowrap
+    white-space: nowrap
+  &-conf
+    td
+      text-transform: none
+      &:first-child
+        text-align: center
+        padding: 15px 24px 0!important
+    .table_bg
+      font-weight: 500
+      width: 200px
+  &-sport
+    tr
+      td:first-child
+        width: 110px
+  &-beauty
+    td
+      letter-spacing: -0.5px
+      padding-right: 5px!important
+      vertical-align: middle!important
+      width: 25%
+      line-height: 1.6!important
+  &-bassein
+    margin-bottom: 0
+  &-billiard
+    tr
+      td
+        &:last-child
+          text-transform: lowercase
+
+
+.page-bassein
+  &__media
+    justify-content: flex-start
+    align-items: center
+  .media_row
+    align-items: center
+
+.bas-sales
+  position: relative
+  .media_row
+    margin-bottom: 10px
+  &__p
+    position: absolute
+    bottom: 0
+    text-transform: uppercase
+    color: #4b4b4b
+    font-family: $f-Roboto
+    font-size: 16px
+    font-weight: 300
+    line-height: 26px
+    letter-spacing: 0.16px
+
+.form-wrap
+  width: 100%
+  padding: 55px 50px 16px
+  min-width: 460px
+  &-contact
+    border: 20px solid #ffffff
+    background-color: #f1eee5
+    box-shadow: 0 0 26px rgba(0, 0, 0, 0.1)
+    margin-top: 13px
+
+form
+  text-align: left
+  +flex(column)
+  justify-content: flex-start
+  align-items: flex-start
+  width: 100%
+  label
+    width: 100%
+    flex-grow: 1
+    +flex(column)
+    margin-bottom: 20px
+    p
+      margin-bottom: 5px
+      color: #4b4b4b
+      font-family: $f-Roboto
+      font-size: 13px
+
+  input, textarea
+    border-radius: 6px
+    border: none
+    background-color: #ffffff
+    height: 48px
+    padding: 0 10px 0 20px
+    outline: none
+    box-shadow: none
+    color: #adadad
+    font-family: $f-Roboto
+    font-size: 16px
+    &::placeholder
+      color: #adadad
+      font-family: $f-Roboto
+      font-size: 16px
+    &:focus
+      border: none !important
+      outline: none
+      box-shadow: none !important
+
+.clockpicker-button
+  display: none
+
+textarea
+  resize: none
+  height: 140px
+  padding-top: 10px
+  margin-bottom: 20px
+  .btn-def
+    margin: 0 0 20px
+    &:hover
+      background-color: #f1eee5
+      transition: background-color .3s
+.clockpicker input
+  border-radius: 6px
+  border: none
+  background-color: #ffffff
+  height: 48px
+  padding: 0 10px 0 20px
+  outline: none
+  box-shadow: none
+  color: #adadad
+  font-family: $f-Roboto
+  font-size: 16px
+
+.contact-info
+  flex-wrap: nowrap
+  +flex(row)
+  align-items: flex-start
+  flex-grow: 2
+  padding: 0 0 80px
+  .contact-info__column
+    width: 60%
+    padding-top: 0
+    > div
+      +flex(row)
+      justify-content: flex-start
+      align-items: flex-start
+      span
+        width: 46%
+        text-align: left
+        +flex(column)
+        justify-content: flex-start
+        align-items: flex-start
+        margin-bottom: 12px
+
+        &:first-child
+          width: 54%
+          padding-right: 15px
+  .title_dashed-bottom
+    width: 85%
+    display: block
+    padding: 0 0 14px 0
+
+  h5
+    //margin: 0
+    text-transform: uppercase
+    letter-spacing: -0.2px
+  span
+    display: block
+  a
+    text-decoration: underline
+    color: #a8806b
+    font-family: $f-Vollkorn
+    font-size: 14px
+    font-weight: 400
+    line-height: 14px
+    letter-spacing: 0.56px
+    margin: 0 0 20px
+    &:hover
+      color: $link-nav-color
+
+
+
+
+
+
+
+
+
+
+footer
+  background: #5c4d45
+  padding: 22px 0
+  p, h6, h5
+    color: #f0f3ec
+    margin-bottom: 0
+    line-height: 1.5
+  h5, h6
+    font-family: $f-Vollkorn
+    font-weight: 400
+    font-size: 16px
+    text-transform: uppercase
+  h5
+    letter-spacing: .5px
+  h6
+    font-size: 13px
+.footer__nav
+  list-style: none
+  +flex(column)
+  justify-content: space-around
+  text-align: left
+  margin-bottom: 0
+  padding: 0 0 0 15px
+  li
+    margin-bottom: 10px
+  a
+    color: #ddd0b0
+    font-size: 13px
+    font-weight: 400
+    line-height: 14px
+    text-transform: uppercase
+    letter-spacing: 0.52px
+    position: relative
+    &:hover
+      color: $link-nav-color
+    &:before
+      +after()
+      content: ''
+      position: absolute
+      display: block
+      background: url(../img/icon-footer__list.png) no-repeat 0 0
+      width: 3px
+      height: 3px
+      left: -12px
+      top: 6px
+
+
+
+
+
+.footer__wrap
+  .footer__contact-info
+    width: 40%
+.footer__contact-info
+  padding: 0
+  div
+    +flex(column)
+    justify-content: space-between
+    span
+      display: block
+  a
+    color: #ddd0b0
+    display: inline
+    margin: 0
+    text-decoration: underline
+    &:hover
+      color: $link-nav-color
+
+.m0
+  margin: 0
+
+
+.footer__logo
+  text-align: center
+  +flex(column)
+  align-items: center
+  p
+    font-size: 12px
+  &>img
+    width: 196px
+    margin-bottom: 40px
+  .footer__copyright
+    line-height: 1.6
+    margin-bottom: 15px
+
+.main-block
+  h6
+    font-size: 14px
+    margin-bottom: 0
+  .btn-def
+    position: relative
+    left: 0
+    margin:  0
+
+
+.stars
+  //width: 90px
+  margin-bottom: 15px
+  +flex(row)
+  justify-content: flex-start
+  span
+    background:
+      image: url("../img/icon-star-yellow.png")
+      repeat: no-repeat
+      position: 0 0
+      size: contain
+    width: 20px
+    height: 20px
+    margin-right: 10px
+  &__grey
+    span
+      background-image: url("../img/icon-star.png")
+      width: 10px
+      height: 10px
+
+
+
+
+
+
+
+
+
+
+
+@import "media" // Всегда в конце

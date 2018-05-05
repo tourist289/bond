@@ -1,0 +1,136 @@
+//
+// Basic Bootstrap table
+//
+@import "vars"
+
+$mbot: 20px
+$table-bg: #fff
+$table-hover-bg: #ddd
+$table-border-color: #eee
+$table-cell-padding: 22px
+$table-cell-padding-sm: 12px
+$table-border-width: 2px
+
+$table-head-color: red
+$table-head-bg: green
+
+$table-dark-color: #fff
+$table-dark-bg: #000
+$table-dark-border-color: orange
+$table-dark-hover-bg: #222
+
+
+
+.table
+  width: 100%
+  max-width: 100%
+  margin-bottom: $mbot
+  background-color: $table-bg // Reset for nesting within parents with `background-color`.
+
+  th,
+  td
+    padding: $table-cell-padding
+    vertical-align: top
+    border-top: $table-border-width solid $table-border-color
+
+
+  thead th
+    vertical-align: bottom
+    border-bottom: (2 * $table-border-width) solid $table-border-color
+
+
+  tbody + tbody
+    border-top: (2 * $table-border-width) solid $table-border-color
+
+
+  .table
+    background-color: $body-bg
+
+
+
+
+//
+// Condensed table w/ half padding
+//
+
+.table-sm
+  th,
+  td
+    padding: $table-cell-padding-sm
+
+
+
+
+// Bordered version
+//
+// Add borders all around the table and between all the columns.
+
+.table-bordered
+  border: $table-border-width solid $table-border-color
+
+  th,
+  td
+    border: $table-border-width solid $table-border-color
+
+
+  thead
+    th,
+    td
+      border-bottom-width: (2 * $table-border-width)
+
+
+
+
+
+
+// Hover effect
+//
+// Placed here since it has to come after the potential zebra striping
+
+.table-hover
+  tbody tr
+      background-color: $table-hover-bg
+
+
+
+
+// Dark styles
+//
+// Same table markup, but inverted color scheme: dark background and light text.
+
+// stylelint-disable-next-line no-duplicate-selectors
+.table
+  .thead-dark
+    th
+      color: $table-dark-color
+      background-color: $table-dark-bg
+      border-color: $table-dark-border-color
+
+
+
+  .thead-light
+    th
+      color: $table-head-color
+      background-color: $table-head-bg
+      border-color: $table-border-color
+
+
+
+
+.table-dark
+  color: $table-dark-color
+  background-color: $table-dark-bg
+
+  th,
+  td,
+  thead th
+    border-color: $table-dark-border-color
+
+
+  &.table-bordered
+    border: 0
+
+  &.table-hover
+    tbody tr
+        background-color: $table-dark-hover-bg
+

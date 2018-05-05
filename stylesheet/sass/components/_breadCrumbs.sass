@@ -1,0 +1,19 @@
+@import "../vars"
+.breadCrumbs
+	position: relative
+	padding: 40px 0 5px
+	line-height: 16px
+	font-weight: 400
+	a
+		color: $red
+		&:after
+			content: '|'
+			width: 7px
+			display: inline-block
+			margin: 3px 15px
+		&:hover
+			color: $red
+			&:after
+				color: $red
+	span
+		color: $red

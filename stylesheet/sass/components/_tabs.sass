@@ -1,0 +1,42 @@
+@import "../vars"
+
+.tabs
+	&_item
+		display: none
+		&.active
+			display: block
+	&_menu
+		display: flex
+		justify-content: space-between
+		position: relative
+		margin-bottom: 50px
+		padding-left: 0
+		li
+			background: $butt
+			color: $ff
+			cursor: pointer
+			text-align: center
+			padding: 10px 0
+			width: 83px
+			border-radius: 4px
+			&.active
+				background: #293b5a
+
+//============  TABS
+//	$('.js_tabs-menu').on('click', 'li:not(.active)', function() {
+//		$(this)
+//			.addClass('active').siblings().removeClass('active')
+//			.closest('.js_tabs').find('.js_tabs-item').removeClass('active').eq($(this).index()).addClass('active');
+//	});
+//========================  END TABS
+
+//<div class="js_tabs">
+//	<ul class="js_tabs-menu tabs_menu">
+//		<li class="active">Ship</li>
+//		<li>Cargo</li>
+//		<li>Sale</li>
+//	</ul>
+//	<div class="js_tabs-item tabs_item active">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, odio!</div>
+//	<div class="js_tabs-item tabs_item"><img src="http://placehold.it/320x340"></div>
+//	<div class="js_tabs-item tabs_item"></div>
+//</div>

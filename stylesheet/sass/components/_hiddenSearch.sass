@@ -1,0 +1,132 @@
+@import "../vars"
+
+.hidden
+	&_search
+		width: 0
+		opacity: 0
+		visibility: hidden
+		height: 35px
+		position: absolute
+		z-index: 1
+		top: 0
+		right: 100%
+		transition: all .3s ease-in-out
+	&_answer
+		width: 555px
+		max-height: 640px
+		padding: 19px 17px 13px
+		height: 0
+		opacity: 0
+		visibility: hidden
+		overflow: hidden
+		position: absolute
+		z-index: 3
+		top: 40px
+		right: 100%
+		background-color: $ff
+		border: 1px solid #dee6ef
+		border-radius: 4px
+		box-shadow: 1.5px 2.6px 9px rgba(0, 0, 0, 0.1)
+		transition: height .3s ease-in-out, opacity .25s ease-in-out
+
+
+.answer_item
+	width: 100%
+.item_section
+	position: relative
+	overflow: hidden
+	img
+		max-width: 70px
+		margin-right: 20px
+	h5
+		margin-bottom: 16px
+		white-space: nowrap
+		overflow: hidden
+		text-overflow: ellipsis
+	p
+		font-size: 12px
+		max-height: 38px
+		overflow: hidden
+	&-smw
+		section
+			max-width: 320px
+.item_title
+	position: relative
+	width: 100%
+	height: 12px
+	overflow: hidden
+	margin-bottom: 15px
+	font-size: 12px
+	font-weight: 600
+	text-transform: uppercase
+	&:after
+		content: ''
+		position: absolute
+		top: 5px
+		left: 0
+		height: 1px
+		width: 100%
+		background-color: #e7eff8
+	span
+		position: relative
+		display: inline-block
+		background: $ff
+		padding-right: 12px
+		z-index: 1
+	&-red
+		span
+			color: $red
+	&-yel
+		span
+			color: $yel
+.link_show-all
+	border-top: 1px	 solid #e7eff8
+	padding-top: 16px
+	color: $butt
+	font-size: 13px
+	&:hover
+.width_fx
+	width: 555px
+	opacity: 1
+	visibility: visible
+.height_fx
+	height: auto
+	opacity: 1
+	visibility: visible
+
+//<div class="form_search-wrap flex-row end center">
+//<form action="" class="form_search hidden_search">
+//<input type="search">
+//
+//<button type="button">ok</button>
+//</form>
+//<div class="js_open-form btn_search"></div>
+//<div class="js_open-answer flex-col hidden_answer">
+//<a href="" class="answer_item flex-col">
+//<div class="item_title item_title-red"><span>Company</span></div>
+//<div class="item_section flex-row between start">
+//<img src="img/posts/img_post-sm-1.jpg" alt="">
+//<section>
+//<h5>PLS OFFER FIRM FOR FOLL FIRM RQRMNTS:</h5>
+//<p>a/c dir lcl 25/35000 dwt prefer Box try SID/MPP with 2-3m undercoaming dely wc.india 25/30th dec redel PG (excl I/I) 12/25</p>
+//</section>
+//</div>
+//</a>
+//
+//<a href="" class="link_show-all">Show all</a>
+//</div>
+//</div>
+//============ Show form search
+		$('.js_open-form').on('click', function () {
+			$(this).prev().toggleClass('width_fx');
+			$(this).toggleClass('btn_search-open');
+
+			if($('.hidden_search').hasClass('width_fx')){
+				setTimeout( () => {
+					$(this).parent().find('.js_open-answer').addClass('height_fx')
+				}, 1000)
+			}else{
+				$(this).parent().find('.js_open-answer').removeClass('height_fx')
+			}
+		});
+		//======================== END Show form search

@@ -1,0 +1,187 @@
+@import "../vars"
+
+.slider_thumbnails-wrap
+	&:hover
+		.slick
+			&-next, &-prev
+				opacity: 1
+				visibility: visible
+.slick
+	&-prev
+		left: 5px
+		z-index: 1
+		opacity: 0
+		visibility: hidden
+		transition: opacity 0.3s $ease-in-out-circ
+		&:before
+			font-family: $f-faw
+			font-weight: 900
+			font-size: 26px
+			color: $ff
+			content: "\f104"
+			position: absolute
+			left: 9px
+			top: 5px
+	&-next
+		right: 5px
+		opacity: 0
+		visibility: hidden
+		transition: opacity 0.3s $ease-in-out-circ
+		&:before
+			font-family: $f-faw
+			font-weight: 900
+			font-size: 26px
+			color: $ff
+			content: "\f105"
+			position: absolute
+			right: 9px
+			top: 5px
+	&-next, &-prev
+		width: 34px
+		height: 34px
+		border-radius: 50%
+		background: $butt
+		&:hover, &:focus
+			background: $buttHov
+
+.slider
+	&_thumbnails
+		&-wrap
+			position: relative
+			width: 262px
+		&-nav
+			.slider_item
+				width: 48px
+				height: 48px
+				margin: 3px
+			.slick
+				&-prev,
+				&-next
+					top: -120px
+					width: 26px
+					height: 26px
+					background: rgba($ff, .7)
+
+					&:before
+						font-size: 16px
+						color: $bb
+				&-next
+					&:before
+						right: 8px
+				&-prev
+					&:before
+						left: 8px
+
+
+
+//<div class="slider_thumbnails-wrap ">
+//	<div class="js_slider-for">
+//		<div class="slider_item">
+//			<img src="img/img_3.jpg" alt="">
+//		</div>
+//		<div class="slider_item">
+//			<img src="img/img_2.jpg" alt="">
+//		</div>
+//		<div class="slider_item">
+//			<img src="img/img_1.jpg" alt="">
+//		</div>
+//		<div class="slider_item">
+//			<img src="img/img_3.jpg" alt="">
+//		</div>
+//	</div>
+//	<div class="js_slider-nav">
+//		<div class="slider_item">
+//			<img src="img/img_3.jpg" alt="">
+//		</div>
+//		<div class="slider_item">
+//			<img src="img/img_2.jpg" alt="">
+//		</div>
+//		<div class="slider_item">
+//			<img src="img/img_1.jpg" alt="">
+//		</div>
+//		<div class="slider_item">
+//			<img src="img/img_3.jpg" alt="">
+//		</div>
+//	</div>
+//</div>
+
+//$('.js_slider-for').slick({
+//	slidesToShow: 1,
+//	slidesToScroll: 1,
+//	arrows: false,
+//	fade: true,
+//	asNavFor: '.js_slider-nav'
+//});
+//
+//$('.js_slider-nav').slick({
+//	slidesToShow: 3,
+//	slidesToScroll: 1,
+//	asNavFor: '.js_slider-for',
+//	dots: true,
+//	centerMode: true,
+//	focusOnSelect: true
+//});
+
+
+// Вертикальный слайдер
+
+//<div class="js_slider-vertical hidden">
+//	<article class="item_post flex-row between">
+//		<a href="offer_ship.html" class="item_post_img">
+//			<img src="img/posts/img_post-1.jpg" class="img_r" alt="">
+//		</a>
+//		<section class="post_section flex-col start">
+//			<h3><a href="offer_ship.html">PLS OFFER FIRM FOR FOLL FIRM RQRMNTS:</a></h3>
+//			<p>a/c dir lcl 25/35000 dwt prefer Box try SID/MPP with 2-3m undercoaming dely wc.india 25/30th dec redel PG (excl I/I) 12/25 days wog intention steel pipes/coils and other gen cargo 2.5pc adc </p>
+//			<span class="price_wrap flex-row between center"><a href="offer_ship.html" class="btn" data-type="swipe">Company name</a></span>
+//		</section>
+//	</article>
+//	<article class="item_post flex-row between">
+//		<a href="offer_ship.html" class="item_post_img">
+//			<img src="img/posts/img_post-1.jpg" class="img_r" alt="">
+//		</a>
+//		<section class="post_section flex-col start">
+//			<h3><a href="offer_ship.html">PLS OFFER FIRM FOR FOLL FIRM RQRMNTS:</a></h3>
+//			<p>a/c dir lcl 25/35000 dwt prefer Box try SID/MPP with 2-3m undercoaming dely wc.india 25/30th dec redel PG (excl I/I) 12/25 days wog intention steel pipes/coils and other gen cargo 2.5pc adc </p>
+//			<span class="price_wrap flex-row between center"><a href="offer_ship.html" class="btn" data-type="swipe">Company name</a></span>
+//		</section>
+//	</article>
+//</div>
+//$(window).on('load resize', function(){
+//let autoplaySpeed = 3000,
+//	autoplayOn    = true,
+//$slickRoot = $('.js_slider-vertical');
+//$slickRoot.removeClass('stop_slider');
+//if ($(window).width() > 992) {
+//$slickRoot.on('init', () => {
+//	let $slickList = $slickRoot.find('.slick-list');
+//
+//$slickList.mouseenter(() => autoplayOn = false);
+//$slickList.mouseleave(() => autoplayOn = true);
+//
+//	window.setInterval(() => {
+//		if (!autoplayOn) return;
+//	$slickRoot.slick('slickPrev');
+//}, autoplaySpeed);
+//});
+//
+//$slickRoot.slick({
+//	infinite: true,
+//	autoplay: false,
+//	vertical: true,
+//	verticalSwiping: true,
+//	slidesToShow: 7,
+//	slidesToScroll: 1,
+//	speed: 750,
+//	cssEase: 'cubic-bezier(0.455, 0.03, 0.515, 0.955)',
+//	adaptiveHeight: true,
+//	arrows: false
+//});
+//$('.aside_ban').appendTo('.aside_wrap');
+//}
+//else {
+//$('.aside_ban').appendTo('.pagination_wrap');
+//$slickRoot.addClass('stop_slider');
+//$slickRoot.slick('unslick');
+//}
+//});

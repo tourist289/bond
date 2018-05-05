@@ -1,0 +1,32 @@
+//<button type="button" class="js_switchToMob">switcher</button>
+
+//========================  SWITCH To Mob
+		let metaView = $('meta[name=viewport]');
+
+		const fullVersionFunc = () => metaView.attr('content', 'width=device-width, initial-scale=1, maximum-scale=1');
+		const xsVersionFunc = () => metaView.attr('content', 'width=1200');
+
+			//======================== check localStorage
+			let viewport = localStorage.getItem('viewport');
+
+				if(viewport == 'desktop') xsVersionFunc();
+
+				if(viewport == 'mobile') fullVersionFunc();
+
+		$('.js_switchToMob').on('click', function () {
+			let fullVersion = metaView.is('[content="width=device-width, initial-scale=1, maximum-scale=1"]'),
+				  xsVersion = metaView.is('[content="width=1200"]');
+
+			if( fullVersion ) {
+				xsVersionFunc();
+				// add to localStorage
+				localStorage.setItem('viewport', 'desktop');
+			}
+
+			if( xsVersion ) {
+				fullVersionFunc();
+				// add to localStorage
+				localStorage.setItem('viewport', 'mobile');
+			}
+		});
+		//========================  END SWITCH To Mob

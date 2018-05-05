@@ -1,0 +1,33 @@
+@import "../vars"
+.nav
+	a
+		margin-right: 25px
+		&:last-child
+			margin-right: 0
+	&_menu
+		> li
+			margin-right: 30px
+		a
+			font-weight: 500
+.nav_link
+	position: relative
+	display: inline-block
+	z-index: 1
+	padding-bottom: 8px
+	color: $text
+	&:after
+		content: ''
+		position: absolute
+		left: 0
+		bottom: 0
+		display: block
+		width: 0
+		height: 2px
+		border-radius: 20px
+		background: $butt
+		transition: all 0.25s ease-in-out
+	&:hover
+		&:after
+			width: 100%
+			z-index: -1
+			transition-duration: 0.5s

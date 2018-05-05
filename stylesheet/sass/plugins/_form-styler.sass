@@ -1,0 +1,48 @@
+@import "../vars"
+
+.jq-selectbox
+	width: 100%
+	border: none
+	&__select
+		background: transparent
+		box-shadow: none
+		height: 36px
+		border: 1px solid $border
+		&:hover
+			background: transparent
+		&-text
+			width: 100% !important
+	&__dropdown
+		top: 100%
+		border: 1px solid $selectize
+		border-radius: 4px
+		box-shadow: 0 3px 9px rgba(0, 0, 0, 0.1)
+		ul
+			flex-direction: column
+			overflow: inherit
+			overflow-x: inherit
+	&__trigger
+		border-left: 0
+		&-arrow
+			width: 9px
+			height: 5px
+			border: none
+			background: url("../../img/icon_drop-down.png") no-repeat 0 0
+			&:hover
+				border: none
+	&.focused
+		.jq-selectbox__select
+			border-color: $border
+	li
+		text-transform: uppercase
+		&:hover,&.selected
+			background-color: $selectize
+			color: $text
+			text-indent: 5px
+.jq-selectbox
+	&.border_non
+		.jq-selectbox__select
+			border: none
+			text-transform: uppercase
+			color: $text
+			font-weight: 500

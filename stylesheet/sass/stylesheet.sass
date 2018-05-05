@@ -1,0 +1,100 @@
+//@import "libs"
+
+//@import "bourbon"
+@import "vars"
+//@import "fonts"
+@import "components/grid"
+@import "plugins/mMenu"
+//@import "plugins/form-styler"
+//@import "components/modal"
+@import "components/form"
+@import "components/buttons"
+//@import "components/pagination"
+//@import "components/rating"
+@import "components/breadCrumbs"
+@import "404"
+@import "header/header"
+@import "components/item"
+//@import "components/tabs"
+@import "footer/footer"
+
+
+*
+  box-sizing: border-box
+  padding: 0
+  margin: 0
+
+body
+  font-size: 14px
+  min-width: 320px
+  background: #fff
+  position: relative
+  line-height: 1.2
+  font-family: $f-mon
+  overflow-x: hidden
+  opacity: 1
+
+ul, ol, menu
+  list-style: none
+
+a
+  text-decoration: none
+  &:hover
+    text-decoration: none
+
+h1, h2, h3, h4, h5, h6
+  font-weight: 600
+  text-transform: uppercase
+  color: $f-color
+  line-height: 1.4
+  margin-bottom: 25px
+h1
+  font-size: 30px
+h2
+  font-size: 48px
+h3
+  font-size: 30px
+h4
+  font-size: 24px
+h5
+  font-size: 16px
+h6
+  font-size: 16px
+  text-transform: lowercase
+
+p, figcaption
+  font-weight: 300
+  font-size: 14px
+  line-height: 1.6
+  color: $text
+  margin-bottom: 25px
+
+
+main
+  flex-grow: 1
+
+.num-list
+  display: flex
+  flex-direction: column
+  counter-reset: item
+  li
+    position: relative
+    padding: 6px 0 6px 29px
+    &:before
+      content: counter(item)'.'
+      counter-increment: item
+      position: absolute
+      left: 0
+      top: 50%
+      transform: translateY(-50%)
+      font: 700 14px/16px
+      color: $bb
+
+.hidden
+  display: none
+
+
+
+
+// must be the last
+@import "media"

@@ -1,0 +1,39 @@
+@import "vars"
+
+*::-webkit-input-placeholder
+	color: $border
+	opacity: 1
+*:-moz-placeholder
+	color: $border
+	opacity: 1
+*::-moz-placeholder
+	color: $border
+	opacity: 1
+*:-ms-input-placeholder
+	color: $border
+	opacity: 1
+
+input:focus:required:invalid,
+textarea:focus:required:invalid
+	color: $red
+
+input[type=text]:required:valid,
+input[type=email]:required:valid,
+input[type=tel]:required:valid
+textarea:required:valid
+	color: $b
+
+input
+	color: #000
+	border: none
+	outline: none
+	font-size: 14px
+	font-weight: 400
+	line-height: 16px
+	padding: 10px
+
+.form
+	&-
+
+
+

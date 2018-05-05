@@ -1,0 +1,65 @@
+@import "../vars"
+
+i.check
+	display: block
+	margin-right: 13px
+	width: 34px
+	height: 34px
+	position: relative
+	border-radius: 50%
+	background-color: #c8eafb
+	transition: all 0.25s ease-in-out
+	&:after
+		content: ''
+		position: absolute
+		top: 12px
+		left: 12px
+		width: 12px
+		height: 9px
+		transition: all 0.25s ease-in-out
+		background: url("../../img/icon_sign.png") no-repeat 0 -10px
+
+i.join
+	display: block
+	margin-right: 13px
+	width: 34px
+	height: 34px
+	position: relative
+	border-radius: 50%
+	background-color: #c8eafb
+	transition: all 0.25s ease-in-out
+	&:after
+		content: ''
+		position: absolute
+		top: 10px
+		left: 11px
+		width: 12px
+		height: 12px
+		transition: all 0.25s ease-in-out
+		background: url("../../img/icon_join.png") no-repeat 0 -12px
+
+.icon_sprite
+	margin-right: 13px
+	position: relative
+	display: block
+	width: 15px
+	height: 15px
+	&:after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 15px
+		height: 15px
+		transition: all 0.25s ease-in-out
+		background: url("../../img/icon_foot.png") no-repeat 0 0
+	&-mail
+		height: 12px
+		&:after
+			height: 12px
+			background-position: 0 -15px
+	&-map
+		height: 16px
+		&:after
+			height: 16px
+			background-position: 0 -28px

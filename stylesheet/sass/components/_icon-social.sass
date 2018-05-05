@@ -1,0 +1,97 @@
+@import "../vars"
+
+.social
+	&-item
+		position: relative
+		display: inline-flex
+		i
+			width: 130px
+			height: 130px
+			//color: $ff
+			border-radius: 50%
+			//font: 400 normal 40px/1.2 $f-fab
+			&:before
+				position: absolute
+				display: flex
+				justify-content: center
+				align-items: center
+				top: 50%
+				left: 50%
+				transform: translate(-50%,-50%)
+				width: 117px
+				height: 117px
+				border-radius: 50%
+			&.fb
+				background-color: rgba(41, 92, 157, 0.3)
+				&:before
+					content: "\f39e"
+					background-color: #295c9d
+			&.inst
+				background-color: rgba(161, 50, 164, 0.3)
+				font-size: 50px
+				&:before
+					content: "\f16d"
+					background: linear-gradient(to bottom, #b32492 30% , #df525a  ,#f38b54 )
+			&.youtube
+				background-color: rgba(230, 0, 2, .3)
+				font-size: 50px
+				&:before
+					content: "\f167"
+					background-color: #e60002
+			&.vk
+				background-color: rgba(81, 129, 184, .3)
+				&:before
+					content: "\f189"
+					background-color: #5181b8
+
+.social
+	background-color: #1a4486
+	width: 34px
+	height: 34px
+	position: relative
+	border-radius: 50%
+	display: flex
+	align-items: center
+	justify-content: center
+	color: $ff
+	font-family: $f-fab
+	transition: all 0.25s $ease-in-quad
+	&:after
+		font-size: 14px
+		position: absolute
+	&:hover,&:focus
+		opacity: .9
+		transform: rotate(360deg)
+	&.fb
+		&:after
+			content: "\f39e"
+	&.vk
+		&:after
+			content: "\f189"
+	&.inst
+		&:after
+			content: "\f16d"
+	&.youtube
+		&:after
+			content: "\f167"
+	&_list
+		display: flex
+		li
+			margin-left: 10px
+			&:first-child
+				margin-left: 0
+
+//<ul class="social_list">
+//	<li>
+//		<a href="" class="social fb"></a>
+//	</li>
+//	<li>
+//		<a href="" class="social vk"></a>
+//	</li>
+//	<li>
+//		<a href="" class="social inst"></a>
+//	</li>
+//	<li>
+//		<a href="" class="social youtube"></a>
+//	</li>
+//</ul>

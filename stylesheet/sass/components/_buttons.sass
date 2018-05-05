@@ -1,0 +1,30 @@
+@import "../vars"
+
+.btn-def
+	position: relative
+	width: auto
+	font-family: $f-mon
+	color: $f-fff
+	font-size: 16px
+	text-transform: uppercase
+	background: $red
+	z-index: 1
+	border: none
+	outline: none
+	height: 40px
+	border-radius: 0
+	padding: 0 25px
+	cursor: pointer
+	font-weight: bold
+	line-height: 2
+
+	display: flex
+	justify-content: center
+	align-items: center
+	&:hover
+		transition: background $t1
+		background: $bb
+	&_dark
+		background: $butt
+		color: #ffffff
+

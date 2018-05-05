@@ -1,0 +1,78 @@
+@import "../vars"
+
+*::-webkit-input-placeholder,
+*:-ms-input-placeholder,
+*::-moz-placeholder,
+*:-moz-placeholder
+	color: $hr
+	opacity: 1
+
+
+input:focus:required:invalid,
+textarea:focus:required:invalid
+	color: $buttHov
+
+input[type=text]:required:valid,
+input[type=email]:required:valid,
+input[type=tel]:required:valid,
+textarea:required:valid
+	color: $bb
+
+label, button,
+input, select
+	cursor: pointer
+
+
+input
+	color: #bbb
+	outline: none
+	font-size: 14px
+	font-weight: 400
+	padding: 10px
+	border: 1px solid $hr
+	border-radius: 4px
+textarea
+	resize: none
+
+.form_search
+	width: 0
+	opacity: 0
+	visibility: hidden
+	height: 35px
+	position: absolute
+	z-index: 1
+	top: 0
+	right: 100%
+	transition: all .3s ease-in-out
+	input
+		border: 1px solid #dee6ef
+		width: 100%
+		background: $ff
+		border-radius: 4px
+	button
+			position: absolute
+			z-index: 1
+			display: block
+			right: 5px
+			top: 1px
+			width: 34px
+			height: 34px
+			border: none
+			font-size: 16px
+			font-weight: 600
+			outline: 0
+			color: $butt
+			cursor: pointer
+			background: $ff
+			&:hover
+				color: $buttHov
+	&-wrap
+		position: relative
+		width: 125px
+		height: 35px
+		padding-right: 50px
+.height_auto
+	width: 555px
+	opacity: 1
+	visibility: visible
+

@@ -1,0 +1,47 @@
+@import "vars"
+.page-404
+  padding: 50px 0
+  .container
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
+    & > *
+      margin-bottom: 30px
+      position: relative
+
+  h6
+    width: 260px
+    text-align: center
+  figure
+    width: 360px
+    display: block
+    img
+      width: 100%
+      height: auto
+      position: relative
+  &__link-wraper
+    position: relative
+    a
+      left: -40px
+      position: relative
+    &:after
+      content: ''
+      position: absolute
+      right: 0
+      top: 0
+      width: 200px
+      height: 200px
+      display: block
+      background: url("img/404-.jpg") 0 0 no-repeat
+    &:before
+      content: ''
+      right: 50%
+      top: 0
+      width: 10px
+      height: 300px
+      border: none
+      border-left: 1px dashed red
+      border-right: 1px dashed red
+
+

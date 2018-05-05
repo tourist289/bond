@@ -1,0 +1,31 @@
+@import "../vars"
+.pagination
+	display: flex
+	li
+		&.active
+			a
+				color: $h
+	a
+		padding: 9px
+		display: inline-block
+		color: $butt
+		font-size: 12px
+		line-height: 1.4
+		font-weight: 500
+		&:hover,&:focus
+			border-color: transparent
+			color: $h
+		&.empty
+			border-color: transparent
+			width: auto
+			&:hover,&:focus
+				background-color: transparent
+				border-color: transparent
+				color: $h
+		i
+			font-size: 12px
+			line-height: 14px
+			margin-top: -2px
+	&_wrap
+		margin-top: 35px
+		margin-left: 24.9%

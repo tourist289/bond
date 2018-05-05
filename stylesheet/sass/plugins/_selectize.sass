@@ -1,0 +1,110 @@
+@import "../vars"
+
+.selectize
+	&-input
+		&:before
+			content: ''
+			position: absolute
+			top: 14px
+			right: 12px
+			width: 9px
+			height: 5px
+			background: url("../../img/icon_drop-down.png") no-repeat 0 0
+			cursor: pointer
+		&.dropdown-active
+			outline-color: $red
+			&:before
+				left: auto
+				right: 12px
+		&.input-active
+			&:before
+				transform: rotate(180deg)
+				content: ''
+				position: absolute
+				top: 14px
+				right: 12px
+				width: 9px
+				height: 5px
+				background: url("../../img/icon_drop-down.png") no-repeat 0 0
+				cursor: pointer
+	&-control
+		&.multi
+			&.has-items
+				flex-direction: row
+				flex-wrap: wrap
+	&-dropdown
+		margin: 3px 0 -1px
+		border: 1px solid $selectize
+		border-radius: 4px
+		box-shadow: 0 3px 9px rgba(0, 0, 0, 0.1)
+		&-content
+			//overflow: inherit
+			//max-height: none
+			padding: 0
+			.option
+				border-bottom: 1px solid $selectize
+				padding-top: 10px
+				padding-bottom: 10px
+				margin: 0 19px
+				color: #5c6275
+				font-size: 14px
+				&:last-child
+					border-bottom: none
+				&:hover
+					background: $selectize
+					margin: 0
+					padding-left: 29px
+					padding-right: 29px
+.selectize-control.multi
+	.selectize-input>div
+		border-radius: 3px
+		background: $selectize
+		font-size: 14px
+		color: #5c6275
+		&.active
+			background: $selectize
+.selectize-control.plugin-remove_button [data-value] .remove
+	border-left: 0 !important
+	text-indent: -9999px !important
+	&:after
+		content: ''
+		position: absolute
+		display: block
+		width: 9px
+		height: 9px
+		right: 5px
+		top: 7px
+		background: url("../../img/icon_x-xs.png") no-repeat 0 0
+	&:hover
+		background-color: transparent !important
+		&:after
+			transform: scale(.95)
+
+// <select class="js-selectize input-tags" name="tags_input[]" multiple="multiple"></select>
+//========================  SELECTIZE
+
+		let tag_options = [
+			{id: 1, title: 'Shipper/Cargo Buyer'},
+			{id: 2, title: 'Shipowner'},
+			{id: 3, title: 'Ship Operator/Manager'},
+			{id: 4, title: 'Charterer'},
+			{id: 5, title: 'Broker'},
+			{id: 6, title: 'Shipping Agent'},
+			{id: 7, title: 'Cargo Forwarder'},
+			{id: 8, title: 'Surveyor'},
+			{id: 9, title: 'Crew'},
+			{id: 10, title: 'Other'},
+		];
+
+
+		$('.js-selectize').selectize({
+			plugins: ['remove_button'],
+			maxItems: null,
+			valueField: 'id',
+			labelField: 'title',
+			searchField: 'title',
+			options: tag_options,
+			create: false
+		});
+
+		//========================  END SELECTIZE

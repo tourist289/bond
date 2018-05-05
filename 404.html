@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>404</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!--<meta property="og:image" content="path/to/image.jpg">-->
+	<link rel="shortcut icon" href="img/favicon/favicon.png" type="image/x-icon">
+	<!--<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">-->
+	<!--<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">-->
+	<!--<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">-->
+
+
+
+
+	<!-- Chrome, Firefox OS and Opera -->
+	<!--<meta name="theme-color" content="#000">-->
+	<!-- Windows Phone -->
+	<!--<meta name="msapplication-navbutton-color" content="#000">-->
+	<!-- iOS Safari -->
+	<!--<meta name="apple-mobile-web-app-status-bar-style" content="#000">-->
+	<!--<style>body { opacity: 0; overflow-x: hidden; } html { background-color: #fff; }</style>-->
+
+    <link href="https://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700" rel="stylesheet">
+    <!--<link href="https://fonts.googleapis.com/css?family=Vollkorn:400,400i,700,700i" rel="stylesheet">-->
+
+    <!--<link rel="stylesheet" href="css/libsMin.css">-->
+    <link rel="stylesheet" href="libs/css/bootstrap.min.css">
+    <link rel="stylesheet" href="libs/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="libs/css/hamburger.css">
+    <link rel="stylesheet" href="libs/css/jquery.mmenu.all.css">
+    <link rel="stylesheet" href="libs/css/jquery.mmenu.css">
+    <link rel="stylesheet" href="libs/slick/slick-theme.css">
+    <link rel="stylesheet" href="libs/slick/slick.css">
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="libs/css/clockpicker.css">
+
+    <link rel="stylesheet" href="stylesheet/css/stylesheet.css">
+
+</head>
+
+<body>
+	<div id="root-wrapper">
+
+        <header>
+
+
+            <div class="header__top">
+                <div class="container">
+
+
+                    <div class="n">
+
+                    </div>
+
+
+                    <div class=" contactUs">
+                        <div class="folowUs">
+                            <div class="soc-wrap">
+                                <div>
+                                <span class="socIcon fb">
+                                    <a rel="nofollow" href="https://fb.com"></a>
+                                </span>
+                                    <span class="socIcon insta">
+                                    <a rel="nofollow" href="https://www.instagram.com/"></a>
+                                </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <span class="nal-wrapper">
+                        <?php echo $currency; ?>
+                    </span>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+
+            <div class="container">
+
+
+                <div class="row  header__info-wraper  ">
+
+
+                    <div class="col-sm-4 col-md-3 logo__wrapper ">
+                        <div id="logo">
+                            <?php if ($logo) { ?>
+                            <?php if ($home == $og_url) { ?>
+                            <img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>"
+                                 class="img-responsive"/>
+                            <?php } else { ?>
+                            <a href="<?php echo $home; ?>"><img src="<?php echo $logo; ?>"
+                                                                title="<?php echo $name; ?>"
+                                                                alt="<?php echo $name; ?>" class="img-responsive"/></a>
+                            <?php } ?>
+                            <?php } else { ?>
+                            <h1><a href="<?php echo $home; ?>"><?php echo $name; ?></a></h1>
+                            <?php } ?>
+                        </div>
+                    </div>
+
+
+                    <div class="col-sm-5  col-md-6 contact-info">
+                        <span class="phone-wrap">
+                              <a href="tel:<?php echo $clear_telephone; ?>" class="phone">
+                                  <span><?php echo $telephone; ?></span>
+                              </a>
+                        </span>
+
+
+
+                        <div>
+
+
+                        </div>
+
+                    </div>
+                    <div class="col-sm-3 cart-wrapper"><?php echo $cart; ?></div>
+
+
+                </div>
+            </div>
+
+
+
+            <?php if ($categories) { ?>
+            <div class="header__bottom">
+                <div class="container">
+
+
+                    <div class="mobile-menu">
+                        <a href="#my-menu" class="hamburger hamburger--elastic">
+                      <span class="hamburger-box">
+                          <span class="hamburger-inner"></span>
+                      </span>
+
+                        </a>
+                        <div class="hidden sideMenu" id="my-menu">
+                            <ul>
+
+                                <?php if ($categories) { ?>
+                                <li class="mmcatalog">
+                                    <span class="mmcatalog-link">Каталог</span>
+                                    <ul>
+                                        <?php foreach ($categories as $catalogC) : ?>
+                                        <li>
+                                            <?php if (!empty($catalogC['children'])) : ?>
+                                            <span class="mmcatalog-link">
+                                                        <?php echo $catalogC['name']; ?>
+                                                    </span>
+                                            <ul>
+                                                <?php foreach ($catalogC['children'] as $catalogCFirst) : ?>
+                                                <?php if (!empty($catalogCFirst['children'])) : ?>
+                                                <li>
+                                                                    <span class="mmcatalog-link">
+                                                                        <?php echo $catalogCFirst['name']; ?>
+                                                                    </span>
+                                                    <ul>
+                                                        <?php foreach ($catalogCFirst['children'] as $catalogCSecond) : ?>
+                                                        <li>
+                                                            <a href="<?php echo $catalogCSecond['href']; ?>">
+                                                                <?php echo $catalogCSecond['name']; ?>
+                                                            </a>
+                                                        </li>
+                                                        <?php endforeach; ?>
+                                                    </ul>
+                                                </li>
+                                                <?php else : ?>
+                                                <li>
+                                                    <a href="<?php echo $catalogCFirst['href']; ?>">
+                                                        <?php echo $catalogCFirst['name']; ?>
+                                                    </a>
+                                                </li>
+                                                <?php endif; ?>
+                                                <?php endforeach; ?>
+                                            </ul>
+                                            <?php else : ?>
+                                            <a href="<?php echo $catalogC['href'];?>">
+                                                <?php echo $catalogC['name']; ?>
+                                            </a>
+                                            <?php endif; ?>
+                                        </li>
+                                        <?php endforeach; ?>
+                                    </ul>
+
+                                </li>
+                                <?php } ?>
+
+
+                                <?php if (!empty($catalogCategory)) : ?>
+                                <li class="mmcatalog ">
+                                    <span class="mmcatalog-link">Производители</span>
+                                    <ul>
+                                        <?php foreach ($catalogCategory as $catalogC) : ?>
+                                        <li>
+                                            <?php if (!empty($catalogC['children'])) : ?>
+                                            <span class="mmcatalog-link">
+                                            <?php echo $catalogC['name']; ?>
+                                        </span>
+                                            <ul>
+                                                <?php foreach ($catalogC['children'] as $catalogCFirst) : ?>
+                                                <?php if (!empty($catalogCFirst['children'])) : ?>
+                                                <li>
+                                                <span class="mmcatalog-link">
+                                                    <?php echo $catalogCFirst['name']; ?>
+                                                </span>
+                                                    <ul>
+                                                        <?php foreach ($catalogCFirst['children'] as $catalogCSecond) : ?>
+                                                        <li>
+                                                            <a href="<?php echo $catalogCSecond['href']; ?>">
+                                                                <?php echo $catalogCSecond['name']; ?>
+                                                            </a>
+                                                        </li>
+                                                        <?php endforeach; ?>
+                                                    </ul>
+                                                </li>
+                                                <?php else : ?>
+                                                <li>
+                                                    <a href="<?php echo $catalogCFirst['href']; ?>">
+                                                        <?php echo $catalogCFirst['name']; ?>
+                                                    </a>
+                                                </li>
+                                                <?php endif; ?>
+                                                <?php endforeach; ?>
+                                            </ul>
+                                            <?php else : ?>
+                                            <a href="<?php echo $catalogC['href'];?>">
+                                                <?php echo $catalogC['name']; ?>
+                                            </a>
+                                            <?php endif; ?>
+                                        </li>
+                                        <?php endforeach; ?>
+                                    </ul>
+                                </li>
+                                <?php endif; ?>
+
+                                <li><a href="<?php echo $about_us; ?>">о компании</a></li>
+
+                                <li><a href="<?php echo $contact; ?>">контакты </a></li>
+                                <li class="contact-info">
+                                    <a href="tel:<?php echo $telephone; ?>" class="phone">
+                                        <span><?php echo $telephone; ?></span>
+
+                                    </a>
+                                    <a href="mailto:<?php echo $email; ?>">
+                                        <span class="mail-info"><?php echo $email; ?></span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                <span class="nal-wrapper">
+                                    <?php echo $currency; ?>
+                                </span>
+                                </li>
+
+
+
+                                <li><button class="back-call btn-def btn-fff js-call">Заказать обратный звонок</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="<?php echo $home; ?>" class="mobile-title">Elta-ltd</a>
+
+
+
+
+
+
+
+
+                    <nav id="menu" class="navbar">
+
+                        <!-- <div class="navbar-header"><span id="category" class="visible-xs"><?php echo $text_category; ?></span>
+            <button type="button" class="btn btn-navbar navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"><i class="fa fa-bars"></i></button>
+          </div>-->
+
+                        <div class="collapse navbar-collapse navbar-ex1-collapse">
+                            <ul class="nav navbar-nav">
+                                <?php if ($categories) { ?>
+                                <div class="dropdown">
+                                    <a href="<?php echo $catalog; ?>" class="dropdown-toggle"
+                                       data-toggle="dropdown">Каталог</a>
+
+                                    <div class="dropdown-menu">
+                                        <div class="dropdown-inner">
+                                            <ul class="list-unstyled">
+
+                                                <?php foreach ($categories as $catalogC) : ?>
+                                                <li class="sub-list">
+                                                    <?php if (!empty($catalogC['children'])) : ?>
+                                                    <span class="sub-list__trigger">
+                                                                <a href="<?php echo $catalogC['href']; ?>">
+                                                                <?php echo $catalogC['name']; ?>
+                                                                </a>
+                                                            </span>
+                                                    <ul class="sub-list__ul">
+                                                        <?php foreach ($catalogC['children'] as $catalogCFirst) : ?>
+                                                        <?php if (!empty($catalogCFirst['children'])) : ?>
+                                                        <li>
+                                                            <a href="<?php echo $catalogCFirst['href']; ?>">
+                                                                            <span class="sub-list__trigger">
+                                                                                <?php echo $catalogCFirst['name']; ?>
+                                                                            </span>
+                                                            </a>
+                                                            <ul class="sub-list__ul">
+                                                                <?php foreach ($catalogCFirst['children'] as $catalogCSecond) : ?>
+                                                                <li>
+                                                                    <a href="<?php echo $catalogCSecond['href']; ?>">
+                                                                        <?php echo $catalogCSecond['name']; ?>
+                                                                    </a>
+                                                                </li>
+                                                                <?php endforeach; ?>
+                                                            </ul>
+                                                        </li>
+                                                        <?php else : ?>
+                                                        <li>
+                                                            <a href="<?php echo $catalogCFirst['href']; ?>">
+                                                                <?php echo $catalogCFirst['name']; ?>
+                                                            </a>
+                                                        </li>
+                                                        <?php endif; ?>
+                                                        <?php endforeach; ?>
+                                                    </ul>
+                                                    <?php else : ?>
+                                                    <a href="<?php echo $catalogC['href'];?>">
+                                                        <?php echo $catalogC['name']; ?>
+                                                    </a>
+                                                    <?php endif; ?>
+                                                </li>
+                                                <?php endforeach; ?>
+                                            </ul>
+                                        </div>
+
+                                        <a href="<?php echo $catalog; ?>" class="see-all">
+                                            <?php echo $text_all; ?>
+                                        </a>
+
+                                    </div>
+
+                                </div>
+                                <?php } ?>
+                            </ul>
+
+                        </div>
+
+                    </nav>
+
+                     <span class="link-wrapper"> 
+                 <a href="<?php echo $about_us; ?>">о компании</a> 
+                 <a href="<?php echo $contact; ?>">контакты </a> 
+                 </span> 
+                    <span class="search-wrapper">
+                 <?php echo $search; ?>
+
+                         <div class="col-sm-5"> <?php echo $search; ?> 
+                </span>
+
+                </div>
+            </div>
+
+
+
+        </header><!-- HEADER END -->
+
+
+
+
+        <main class="page-def page-404">
+            <div class="container ">
+                <h6>произошла ошибка </h6>
+                <figure>
+                    <img src="img/404.png" alt>
+                </figure>
+                <h6>страница не найдена или не существует </h6>
+
+                <div class="page-404__link-wraper">
+                    <a href="/" class="btn-def js-btn__link">перейти на главную страницу</a>
+                </div>
+
+            </div>
+        </main><!-- MAIN END -->
+
+
+
+
+    <div class="container">
+
+        <div class="breadcrumbs">
+            <a href="">text1</a>
+            <a href="">text2</a>
+        </div>
+
+
+
+        <div class="items-wrapper clearfix row">
+
+            <div class="item col-3">
+                <div class="card">
+                    <a href="/">
+                        <figure class="item-img">
+                            <img src="http://pesto.test-01.in.ua/image/cache/catalog/tovary/varenikisvishnej-200x200.jpg" alt="Вареники с вишней" class="img-responsive">
+                            <figcaption>Вареники с вишней</figcaption>
+                        </figure>
+                    </a>
+                    <div class="item__info">
+                        <span class="item__price">55 грн</span>
+                        <button class="btn-def item__btn" type="button" onclick="cart.add( );">купить</button>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+        <footer><!-- FOOTER -->
+            <div class="container">
+                <div class="footer__wrap items items_col3">
+
+                    <ul class="footer__nav">
+                        <li><a class="active"  href="nomera.html">Номера</a></li>
+                        <li><a href="restoran.html">Ресторан</a></li>
+                        <li><a href="conferense.html">Конференц сервис</a></li>
+                        <li><a href="sport-club.html">Спорт Клуб</a></li>
+                        <li><a href="billiard.html">Бильярдный клуб</a></li>
+                        <li><a href="sauna.html">Сауна</a></li>
+                        <li><a href="basein.html">Бассейн</a></li>
+                        <li><a href="beauty-saloon.html">Салон красоты</a></li>
+                        <li><a href="">Карта сайта</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+
+                    <div class="footer__info footer__contact-info items items_col2">
+                        <div>
+                            <span>
+                                <h6>РЕСЕПШН:</h6>
+                                <h5>+38(0512) 489-583; +38(094) 510-10-12 </h5>
+                                <a href="mailto:reception@alex-hotel.com.ua">reception@alex-hotel.com.ua</a>
+                            </span>
+                            <span>
+                                <h6>Ресторан:</h6>
+                                <h5>+38(0512) 489-579; +38(0512) 489-562</h5>
+                                <a href="mailto:restoran@alex-hotel.com.ua">restoran@alex-hotel.com.ua</a>
+                            </span>
+                            <span>
+                                <h6>КОНФЕРЕНЦ-СЕРВИС:</h6>
+                                <h5>+38(0512) 489-583</h5>
+                                <a href="mailto:admin@alex-hotel.com.ua ">admin@alex-hotel.com.ua </a>
+                            </span>
+                        </div>
+                        <div>
+                            <span>
+                                <h6>СПОРТ-КЛУБ:</h6>
+                                <h5>+38(0512) 489-584  </h5>
+                            </span>
+                            <span>
+                                <h6>БИЛЬЯРДНЫЙ КУЛУБ:</h6>
+                                <h5>+38(0512) 489-560</h5>
+                            </span>
+                            <span>
+                                <h6>Сауна:</h6>
+                                <h5>+38(0512) 489-594</h5>
+                            </span>
+                            <span>
+                                <h6>САЛОН КРАСОТЫ:</h6>
+                                <h5>+38(0512) 489-593</h5>
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <div class="footer__logo">
+                        <img src="img/img-logo_footer.png">
+                        <p class="footer__copyright">© 2017  <br>Гостинично-ресторанный кломплекс <br> «Александровский» </p>
+                        <div class="footer__stars">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <span>
+                            <p>Разработка и поддержка </p>
+                            <a class="ads-firm-link" href="https://adsgroup.com.ua">ADS group</a>
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+        </footer><!-- FOOTER END -->
+
+
+
+        <!--MODAL WINDOW " MAP " -->
+
+        <div class="modal__overlay">
+            <div id="map-block" class="modalDiv modalDiv__map">
+                <span class="closeModalIcon"></span>
+
+                <section id="map" class="map-block">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2722.2578666112804!2d31.982897451587956!3d46.97626953919693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c5c973ea11f4f7%3A0xe44184f1ab8a5c06!2z0LLRg9C70LjRhtGPINCd0ZbQutC-0LvRjNGB0YzQutCwLCAyNSwg0JzQuNC60L7Qu9Cw0ZfQsiwg0JzQuNC60L7Qu9Cw0ZfQstGB0YzQutCwINC-0LHQu9Cw0YHRgtGMLCA1NDAwMA!5e0!3m2!1suk!2sua!4v1516108267833"  frameborder="0" style="border:0" allowfullscreen></iframe>
+                </section>
+
+            </div>
+        </div>
+
+
+	</div>
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="libs/js/jquery.min.js"></script>
+    <!--<script src="js/scripts.min.js"></script>-->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script src="js/common.js"></script>
+
+    <script src="libs/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="libs/slick/slick.js"></script>
+    <script type="text/javascript" src="libs/js/jquery.mmenu.all.js"></script>
+    <script type="text/javascript" src="libs/js/jquery.formstyler.min.js"></script>
+    <script src="libs/js/clockpicker.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+@import "../vars"
+
+.check_pass
+	display: flex
+	position: absolute
+	right: -45px
+	bottom: 15px
+	margin-bottom: 0 !important
+	span
+		width: 7px
+		height: 7px
+		margin-right: 5px
+		background: $hr
+		border-radius: 50%
+		margin-bottom: 0 !important
+	&.red
+		span
+			&:nth-child(1)
+				background: $red
+	&.yellow
+		span
+			&:nth-child(1),
+			&:nth-child(2)
+				background: #f7ea56
+	&.green
+		span
+			&:nth-child(1),
+			&:nth-child(2),
+			&:nth-child(3)
+				background: $green
+
+
+//<span class="js_check_pass check_pass">
+//<span></span>
+//<span></span>
+//<span></span>
+//</span>
+
+//========================  END SHOW PASS
+			$(".js_pass-check").keyup(function() {
+
+				let pass = $(".js_pass-check").val();
+				check( pass );
+
+			});
+
+			const check = pass => {
+				let protect = 0,
+						small = "([a-z]+)",
+						big = "([A-Z]+)",
+						numb = "([0-9]+)",
+						boxBg = $(".js_check_pass");
+						//vv = /\W/;
+
+				//a,s,d,f
+				if(pass.match(small)) protect++;
+
+				//A,B,C,D
+				if(pass.match(big)) protect++;
+
+				//1,2,3,4,5 ... 0
+				if(pass.match(numb)) protect++;
+
+				//!@#$
+				//if(pass.match(vv)) protect++;
+
+
+
+				if( pass.length < 8 ) {
+					boxBg.removeClass('red yellow green');
+					$('.js_check_pass').addClass('red');
+				}
+
+				if(protect == 2) {
+					boxBg.removeClass('red');
+					boxBg.addClass('yellow');
+				}
+
+				if(protect == 3) {
+					boxBg.removeClass('yellow');
+					boxBg.addClass('green');
+				}
+
+				if(pass.length === 0) boxBg.removeClass('red yellow green');
+
+
+				// if(protect == 4) {
+				// 	$("#bg_res").removeClass();
+				// 	$("#bg_res").addClass('green_v');
+				// 	return "Высокий";
+				// }
+			};
+		//========================  END SHOW PASS
