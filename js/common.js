@@ -27,7 +27,7 @@ $(document).ready(function(){
         modalTrigger = $('.js-modal');
     var slickIndex ;
 
-        modalTrigger.on('click', function(e){
+    modalTrigger.on('click', function(e){
         e.preventDefault();
         modal = $(this).data('href');
         overlay = $(modal).parent();
@@ -122,15 +122,15 @@ $(document).ready(function(){
 
 
     $(window).on('click', function(e){
-       if(e.target.className == 'modal__overlay' ||
-           e.target.className == 'closeModalIcon'){
+        if(e.target.className == 'modal__overlay' ||
+            e.target.className == 'closeModalIcon'){
 
-           // $(modal)
-           $('.modalDiv')
-               .animate({opacity: 0, top: '45%'}, 200,
-                   funcCloseModal()
-               );
-       }
+            // $(modal)
+            $('.modalDiv')
+                .animate({opacity: 0, top: '45%'}, 200,
+                    funcCloseModal()
+                );
+        }
     });
 
     //============  ESCAPE key pressed
@@ -261,29 +261,29 @@ $(document).ready(function(){
 
 
 
-    $('.js-pop-slider').slick(getSliderPopSettings());
-    $('.js-slider_cart').slick(getSliderUnoSettings());
-    $('.js-slider_nomer').slick(getSliderUnoSettings11());
-    $('.js-slider_fw').slick(getSliderFWSettings());
+    $('.js-slider_four').slick(getSliderFourSettings());
+    // $('.js-slider_cart').slick(getSliderUnoSettings());
+    // $('.js-slider_nomer').slick(getSliderUnoSettings11());
+    // $('.js-slider_fw').slick(getSliderFWSettings());
 
-    function getSliderPopSettings(){
-        return {
-            slidesToShow:1,
-            slidesToScroll:1,
-            arrows: false,
-            dots: false,
-            focusOnSelect:true,
-            autoplay: false,
-            responsive:[
-                {
-                    breakpoint: 770,
-                    settings:{
-                        swipe: false
-                    }
-                }
-            ]
-        }
-    }
+    // function getSliderPopSettings(){
+    //     return {
+    //         slidesToShow:1,
+    //         slidesToScroll:1,
+    //         arrows: false,
+    //         dots: false,
+    //         focusOnSelect:true,
+    //         autoplay: false,
+    //         responsive:[
+    //             {
+    //                 breakpoint: 770,
+    //                 settings:{
+    //                     swipe: false
+    //                 }
+    //             }
+    //         ]
+    //     }
+    // }
     function getSliderUnoSettings(){
         return {
             slidesToShow:1,
@@ -313,29 +313,15 @@ $(document).ready(function(){
             ]
         }
     }
-    function getSliderFWSettings(){
+    function getSliderFourSettings(){
         return {
-            slidesToShow:5,
-            slidesToScroll:3,
+            slidesToShow:4,
+            slidesToScroll:1,
             arrows: true,
             dots: false,
             focusOnSelect:true,
             autoplay: false,
             responsive:[
-                {
-                    breakpoint: 1400,
-                    settings:{
-                        slidesToShow: 5,
-                        slidesToScroll:2
-                    }
-                },
-                {
-                    breakpoint: 1200,
-                    settings:{
-                        slidesToShow: 4,
-                        slidesToScroll:2
-                    }
-                },
                 {
                     breakpoint: 991,
                     settings:{

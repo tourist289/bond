@@ -11,10 +11,12 @@
 @import "components/buttons"
 //@import "components/pagination"
 //@import "components/rating"
-@import "components/breadCrumbs"
+@import "components/breadcrumbs"
 @import "404"
 @import "header/header"
 @import "components/item"
+@import "components/sliders"
+@import "components/map"
 //@import "components/tabs"
 @import "footer/footer"
 
@@ -27,7 +29,7 @@
 body
   font-size: 14px
   min-width: 320px
-  background: #fff
+  background: $bg
   position: relative
   line-height: 1.2
   font-family: $f-mon
@@ -38,9 +40,13 @@ ul, ol, menu
   list-style: none
 
 a
+  color:
   text-decoration: none
   &:hover
     text-decoration: none
+    outline: none
+  &:focus
+    outline: none
 
 h1, h2, h3, h4, h5, h6
   font-weight: 600
@@ -60,7 +66,8 @@ h5
   font-size: 16px
 h6
   font-size: 16px
-  text-transform: lowercase
+  text-transform: unset
+  font-weight: 400
 
 p, figcaption
   font-weight: 300
@@ -92,6 +99,48 @@ main
 
 .hidden
   display: none
+
+//  contacts page start
+.contacts
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+  &>*
+    width: 50%
+    flex-grow: 1
+  &__info
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: flex-start
+  &__form
+    label
+      color: #818181
+      font-size: 12px
+      display: block
+      p
+        margin-bottom: 0
+
+.contacts__item
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 10px 10px 0 0
+  border-bottom: 2px solid red
+  &>*
+    flex-grow: 1
+  img
+    padding: 20px
+  span
+    color: $bb
+    display: block
+  &-title
+    color: $a-color
+
+
+
+
+//  contacts page end
 
 
 

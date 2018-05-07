@@ -1,19 +1,30 @@
 @import "../vars"
 
-.item
+.items-wrapper
+  margin-bottom: $mbL
+.card
+  background: $ff
+  padding: 20px
+  margin-bottom: $mbL
   figure
-    width: 80%
-    margin: 0 auto
+    margin: 0 auto $mb
+    img
+      width: 80%
+      margin: 0 auto
   figcaption
     color: $f-color_footer-dark
     font-size: 14px
+    width: 80%
   &__info
     display: flex
     justify-content: space-between
     align-items: center
   &__price
+    padding-left: 10px
     font-size: 17px
     color: #000000
+    .amount
+      font-size: 17px
 
 
 

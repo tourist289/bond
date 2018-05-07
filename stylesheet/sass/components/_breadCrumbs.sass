@@ -1,19 +1,28 @@
 @import "../vars"
-.breadCrumbs
-	position: relative
-	padding: 40px 0 5px
-	line-height: 16px
-	font-weight: 400
-	a
-		color: $red
-		&:after
-			content: '|'
-			width: 7px
-			display: inline-block
-			margin: 3px 15px
-		&:hover
-			color: $red
-			&:after
-				color: $red
-	span
-		color: $red
+
+
+.breadcrumbs
+  position: relative
+  padding: 40px 0 5px
+  line-height: 16px
+  font-weight: 400
+  margin-bottom: $mb
+  a
+    color: $a-color
+    position: relative
+    display: inline-block
+    &:after
+      content: '|'
+      height: 32px
+      top: -1px
+      position: relative
+      display: inline-block
+      margin: 0 15px
+    &:hover
+      color: $red
+    &:last-child
+      color: $bg_grey-dark
+      &:after
+        display: none
+  span
+    color: $red
