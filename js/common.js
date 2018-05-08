@@ -259,41 +259,55 @@ $(document).ready(function(){
 //
 // 5.slick slider
 
+// **** next - prev buttons for sliders
+
+    $('.js-prev').on('click', function(e){
+        let slider = $(this).closest('section[data-rel=slider]').attr('class');
+        $(`.js-${slider}`).slick('slickPrev');
+    });
+    $('.js-next').on('click', function(e){
+        let slider = $(this).closest('section[data-rel=slider]').attr('class');
+        $(`.js-${slider}`).slick('slickNext');
+    });
+
 
 
     $('.js-slider_four').slick(getSliderFourSettings());
+    $('.js-slider_best').slick(getSliderBestSettings());
     // $('.js-slider_cart').slick(getSliderUnoSettings());
     // $('.js-slider_nomer').slick(getSliderUnoSettings11());
-    // $('.js-slider_fw').slick(getSliderFWSettings());
+    $('.js-slider_fw').slick(getSliderFWSettings());
+    $('.js-slider_brands').slick(getSliderBrandsSettings());
 
-    // function getSliderPopSettings(){
-    //     return {
-    //         slidesToShow:1,
-    //         slidesToScroll:1,
-    //         arrows: false,
-    //         dots: false,
-    //         focusOnSelect:true,
-    //         autoplay: false,
-    //         responsive:[
-    //             {
-    //                 breakpoint: 770,
-    //                 settings:{
-    //                     swipe: false
-    //                 }
-    //             }
-    //         ]
-    //     }
-    // }
-    function getSliderUnoSettings(){
+    function getSliderBrandsSettings(){
+        return {
+            slidesToShow:6,
+            slidesToScroll:3,
+            arrows: false,
+            dots: false,
+            focusOnSelect:true,
+            autoplay: false,
+            responsive:[
+                {
+                    breakpoint: 770,
+                    settings:{
+                        swipe: false
+                    }
+                }
+            ]
+        }
+    }
+    function getSliderFWSettings(){
         return {
             slidesToShow:1,
             slidesToScroll:1,
-            arrows: true,
+            arrows: false,
             dots: false,
             focusOnSelect:true,
             autoplay: false
         }
     }
+
     function getSliderUnoSettings11(){
         return {
             slidesToShow:1,
@@ -313,6 +327,7 @@ $(document).ready(function(){
             ]
         }
     }
+
     function getSliderFourSettings(){
         return {
             slidesToShow:4,
@@ -329,6 +344,33 @@ $(document).ready(function(){
                         slidesToScroll:1
                     }
                 },
+                {
+                    breakpoint: 760,
+                    settings:{
+                        slidesToShow: 2,
+                        slidesToScroll:1
+                    }
+                },
+                {
+                    breakpoint: 550,
+                    settings:{
+                        slidesToShow: 1,
+                        slidesToScroll:1
+                    }
+                }
+
+            ]
+        }
+    }
+    function getSliderBestSettings(){
+        return {
+            slidesToShow:3,
+            slidesToScroll:1,
+            arrows: false,
+            dots: false,
+            focusOnSelect:true,
+            autoplay: false,
+            responsive:[
                 {
                     breakpoint: 760,
                     settings:{

@@ -1,9 +1,127 @@
 @import "../vars"
+.slider__btns
+  z-index: 333
+  position: absolute
+  bottom: 0
+  left: 0
+  width: 100px
+  display: flex
+  justify-content: space-between
 
-.slider_four
+  .prev, .next
+    width: 44px
+    height: 44px
+    background: #616870
+    cursor: pointer
+    transition: background .3s
+    &:hover
+      background: #8d97a2
+      transition: background .3s
+    &:before
+      content: ""
+      background: url(../../../img/icon-slider-prev-arrow.png) no-repeat 0 0
+      width: 6px
+      position: relative
+      height: 10px
+      display: inline-block
+      left: 19px
+      top: 14px
+      margin: 0
+  .next
+    &:before
+      transform: rotate(180deg)
+
+
+// common slider
+.slider
   .slide
     margin: 0 10px
     &:focus
       outline: none
+
+
+.slider_fw
+  position: relative
+  .container
+    position: relative
+    bottom: 50px
+  .slider__btns
+    left: auto
+    right: 0
+    bottom: 0
+
+
+
+.slider_four
+  .slide
   .card
     //margin: 0 20px 0
+
+
+.best-offer
+  position: relative
+  margin-bottom: $mbL + 50px
+  img
+    //position: absolute
+    left: 0
+    top: 0
+    height: 100%
+  &__show-all
+    position: absolute
+    right: 0
+    top: 0
+    color: $red
+.slider_best
+  display: flex
+  justify-content: flex-end
+  align-items: center
+  padding: 40px 0
+
+  position: absolute
+  right: -50px
+  width: 850px
+  top: 70px
+  .slider
+    width: 100%
+    height: auto
+  .slider__btns
+    left: -262px
+    bottom: 125px
+
+.best-offer.right
+  img
+    float: right
+  .best-offer__show-all
+    position: absolute
+    right: auto
+    left: 0
+    top: 0
+    color: $red
+  .slider_best
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    padding: 40px 0
+
+    position: absolute
+    right: auto
+    left: 0
+    width: 850px
+    top: 70px
+    .slider
+      width: 100%
+      height: auto
+    .slider__btns
+      right: -212px
+      left: auto
+      bottom: 125px
+
+.slider_brands
+  margin-bottom: $mbL +20px
+  .slide
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
+    img
+      margin-bottom: $mb
