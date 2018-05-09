@@ -17,6 +17,8 @@
 @import "components/item"
 @import "components/sliders"
 @import "components/map"
+@import "thank"
+@import "sertificate"
 //@import "components/tabs"
 @import "footer/footer"
 
@@ -40,8 +42,8 @@ ul, ol, menu
   list-style: none
 
 a
-  color:
-  text-decoration: none
+  color: $red
+  text-decoration: underline
   &:hover
     text-decoration: none
     outline: none
@@ -60,13 +62,19 @@ h2
   font-size: 48px
 h3
   font-size: 30px
+  text-transform: none
+  color: $bb
 h4
   font-size: 24px
+  color: $bb
+
 h5
   font-size: 16px
+  text-transform: none
+  color: #818181
 h6
   font-size: 16px
-  text-transform: unset
+  text-transform: none
   font-weight: 400
 
 p, figcaption
@@ -75,7 +83,13 @@ p, figcaption
   line-height: 1.6
   color: $text
   margin-bottom: 25px
-
+label
+  p
+    margin: 0 0 5px
+  input
+    border-radius: 0
+    color: #818181
+    padding: 0 12px
 
 main
   flex-grow: 1

@@ -61,6 +61,8 @@
 .best-offer
   position: relative
   margin-bottom: $mbL + 50px
+  display: flex
+  justify-content: flex-start
   img
     //position: absolute
     left: 0
@@ -79,6 +81,7 @@
 
   position: absolute
   right: -50px
+  right: 0
   width: 850px
   top: 70px
   .slider
@@ -86,11 +89,14 @@
     height: auto
   .slider__btns
     left: -262px
-    bottom: 125px
+    bottom: 85px
+  .card
+    margin-bottom: 0
 
 .best-offer.right
+  justify-content: flex-end
   img
-    float: right
+    //float: right
   .best-offer__show-all
     position: absolute
     right: auto
@@ -114,7 +120,7 @@
     .slider__btns
       right: -212px
       left: auto
-      bottom: 125px
+      bottom: 85px
 
 .slider_brands
   margin-bottom: $mbL +20px
@@ -123,5 +129,58 @@
     flex-direction: column
     justify-content: flex-start
     align-items: center
+    width: 160px
+    height: 160px
+    background: $ff
+    figure
+      height: 161px
+      width: 100%
+      padding: 10px
+      display: flex
+      justify-content: center
+      align-items: center
     img
-      margin-bottom: $mb
+      margin-bottom: $mb - 15px
+
+
+
+  .container
+    position: relative
+    bottom: 0
+    display: flex
+    justify-content: center
+    align-items: center
+  .slider__btns
+    z-index: 333
+    position: relative
+    bottom: 0
+    left: 0
+    width: 100px
+    display: flex
+    justify-content: space-between
+
+  .prev, .next
+    width: 17px
+    height: 17px
+    border: none
+    border-top: 6px solid $red
+    border-left: 6px solid $red
+    background: $ff
+    opacity: 1
+    transition: opacity .3s
+    transform: rotate(-45deg)
+    &:hover
+      opacity: .7
+      transition: opacity .3s
+      background: $ff
+  .next
+    transform: rotate(135deg)
+    margin: 0
+    padding: 0
+  .slider__btns-divider
+    background: url(../../../img/hr_03.jpg) no-repeat 0 0
+    width: 3px
+    height: 50px
+    position: absolute
+    left: 50px
+    top: -15px

@@ -1,0 +1,37 @@
+@import "vars"
+
+.sertif
+  h4
+    display: block
+    border-bottom: 2px solid $divider2
+    text-transform: none
+    padding: 0 0 20px
+    margin-bottom: $mbL
+
+  form
+    label
+      display: block
+
+  .sertif__theme
+    .jq-radio
+      display: inline-block
+    p
+      display: inline-block
+      position: relative
+      top: -2px
+      &:first-child
+        display: block
+        margin-bottom: 10px
+
+.sertif__summ
+  input
+    display: none
+  .jq-radio
+    width: 80px
+    height: 80px
+    background: #616870
+    display: inline-block
+    &+p
+      position: absolute
+    &.checked
+      background: #eb494c

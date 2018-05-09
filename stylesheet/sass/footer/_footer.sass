@@ -1,3 +1,122 @@
 @import "../vars"
 
-f
+footer
+  background: linear-gradient(to right, $bg_grey-light 66%, $bg_grey-dark 66%)
+.footer__suscribe
+  background: $bg_grey-dark
+  border-bottom: 1px dashed #3f4143
+  .container
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 0
+    height: 85px
+    & > *
+      flex-grow: 1
+
+  p
+    color: $ff
+    font-size: 16px
+    margin-bottom: 0
+  img
+    margin-right:  25px
+  form
+    display: flex
+    justify-content: space-between
+    align-items: center
+    height: 100%
+    width: 45%
+
+    input
+      width: 60%
+      border-radius: 0
+    button
+      width: 35%
+
+.footer__common
+  .container
+    display: flex
+    justify-content: space-between
+    padding: 0
+    & > *
+      flex-grow: 1
+
+.footer__about
+  background: $bg_grey-light
+  width: 60%
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  align-items: flex-start
+  & > *
+    flex-grow: 1
+  ul
+    padding: 0 40px 0 0
+    width: 100%
+    li
+      list-style: none
+      padding: 12px 10px 12px 0
+      border-bottom: 1px dashed #818181
+    a
+      color: $f-color_footer
+
+
+
+.footer__info
+  background: $bg_grey-dark
+  width: 40%
+  display: flex
+  flex-direction: column
+  padding: 0 0 0 40px
+
+  width: 60%
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  align-items: flex-start
+
+
+  .logo
+    max-width: 160px
+    padding: 20px 0 0
+  &.contacts>*
+    width: 100%
+  .contacts__info
+    padding: 20px 0
+  .contacts__item
+    border: none
+    padding: 0
+    span
+      color: $ff
+    .contacts__item-title
+      color: $f-color_footer-dark
+      padding-bottom: 5px
+
+.soc-wrap
+  display: block
+  padding: 20px 0 0
+  margin-bottom: 0
+  max-height: 20px
+  .socIcon
+    display: inline-block
+    position: relative
+    width: 20px
+    height: 20px
+    margin-right: 20px
+
+.footer__lists
+  display: flex
+  justify-content: space-between
+  align-items: center
+  width: 100%
+  & > *
+    flex-grow: 1
+  ul
+    width: 45%
+
+.adsgroup,
+.copyright
+  color: #f6f6f7
+  max-height: 30px
+  a
+    color: #f6f6f7
