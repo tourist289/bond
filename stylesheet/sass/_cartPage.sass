@@ -1,0 +1,168 @@
+@import "vars"
+
+
+.cart__items
+  padding: 0 20px 0 0
+
+
+.cart__table
+  header
+    display: flex
+    justify-content: space-around
+    align-items: center
+    height: 50px
+    border-top: 2px solid #f3f3f4
+    padding: 0px
+    p
+      color: #818181
+      font-size: 14px
+      font-weight: 600
+      line-height: 1.4
+      margin-bottom: 0
+      display: inline-block
+
+
+
+.cart__item
+  height: 200px
+  border: none
+  background-color: #ffffff
+  padding: 20px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  position: relative
+  margin-bottom: 20px
+  &>*
+    flex-grow: 1
+    width: 25%
+    display: flex
+    justify-content: center
+  .remove-item
+    width: 15px
+    height: 15px
+    position: absolute
+    cursor: pointer
+    right: 15px
+    bottom: 15px
+    background: url(../../img/icon-remove.jpg) no-repeat 0 0
+    background-size: contain
+    display: block
+  .img-wrapper
+    img
+      width: 80%
+  .name
+    width: 40%
+  .item
+    width: 45%
+    display: flex
+    justify-content: space-between
+    align-items: center
+  .info
+    a
+      color: #818181
+      text-decoration: none
+
+      span
+        margin-top: 5px
+        display: block
+        color: $bb
+        font-weight: bold
+  .item__price
+    width: 50%
+    display: flex
+    justify-content: space-between
+    align-items: center
+    .count
+      font-size: 13px
+      font-weight: bold
+
+
+
+
+.cart__table-bottom
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+  height: 40px
+  border-bottom: 1px solid #dddddd
+  .main_return
+    color: #f12729
+    font-family: "Source Sans Pro"
+    font-size: 15px
+    font-weight: 300
+    line-height: 20px
+    margin-bottom: 20px
+    letter-spacing: -0.15px
+    text-decoration: underline
+  .total-wrap
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    color: #1d1d1d
+    font-size: 16px
+    font-weight: 600
+    text-transform: uppercase
+    letter-spacing: 0.8px
+  .total_price
+    font-size: 26px
+    letter-spacing: 1.3px
+    margin-left: 25px
+
+
+.cart__sidebar
+  padding-bottom: 50px
+  h3.title-hr
+    color: #1d1d1d
+    font-size: 16px
+    font-weight: 600
+    text-transform: uppercase
+    letter-spacing: 0.8px
+    margin-top: 26px
+    margin-bottom: 34px
+
+.steps 
+  margin-bottom: 53px 
+  .step
+    padding: 0
+  .accordion
+    font-size: 16px
+    font-weight: 600
+    width: 100%
+    height: 44px
+    margin-bottom: 30px
+    justify-content: flex-start
+    padding-left: 20px
+
+fieldset 
+  min-width: 0 
+  padding: 0 
+  margin: 0 
+  border: 0 
+
+form label 
+  color: #1d1d1d
+  font-size: 15px 
+  font-weight: 300 
+  line-height: 17px 
+  letter-spacing: -0.15px 
+  margin-bottom: 3px 
+  display: block 
+
+.steps .step-1 input[type=email],
+.steps .step-1 input[type=text]
+  margin-bottom: 5px 
+  width: 100% 
+
+.steps form textarea,
+.steps form input
+  width: 80% 
+  height: 38px 
+  border-radius: 5px 
+  border: 1px solid #dddddd 
+  background-color: #ffffff 
+  margin-bottom: 12px 
+  padding-left: 10px 
+  padding-right: 5px 
+  color: #1d1d1d 
+  font-size: 15px 

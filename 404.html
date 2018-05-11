@@ -1003,6 +1003,12 @@ theme">
 
 
 
+
+
+
+
+
+
 <!--THANK YOU PAGE START **********-->
 
         <div class="container thank">
@@ -1013,7 +1019,172 @@ theme">
             </div>
         </div>
 
-<!--THANK YOU  PAGE END **********-->
+<!--THANK YOU  PAGE END ***************-->
+
+
+
+
+
+
+
+<!--CART PAGE START -->
+
+        <div class="container cart-container">
+            <div class="breadcrumbs">
+                <a href="">breadcrumbs text1</a>
+                <a href="">breadcrumbs text2</a>
+            </div>
+
+
+
+    <div class="row">
+        <div  id="" class="col-sm-12">
+                <h3>Ваша корзина </h3>
+
+                <div class="col-sm-8 cart__items">
+                    <form action="" id="cartForm" method="post" enctype="multipart/form-data">
+                        <section class="cart__table">
+                            <header>
+                                <p>Фото</p>
+                                <p class="name">Товар</p>
+                                <p>Кол-во</p>
+                                <p>Цена</p>
+                                <p>Сумма</p>
+                            </header>
+
+
+                            <section class="cart__item">
+                                <span class="remove-item js-remove" onclick="cart.remove('92');"></span>
+                                <span class="img-wrapper">
+                                    <a href="">
+                                        <img src="img/item02.jpg" alt="">
+                                    </a>
+                                </span>
+                                <span class="info">
+                                    <a href="">Кожаная папка для
+    документов Petek 811    <span>759-283-01</span>
+                                    </a>
+                                </span>
+                                <span class="amount-counter">
+                                      <div class="jq-number js-styler product_select_count"> - 1 +
+                                      </div>
+                                </span>
+                                <span class="price">
+                                    <span class="count">6 858</span> грн.
+                                </span>
+                                <span class="total price"><span class="count">6 858</span> грн.</span>
+
+                            </section>
+
+                        </section>
+                    </form>
+
+                    <div class="cart__table-bottom">
+                        <a class="main_return" href="http://elta.test-02.in.ua/">Продолжить покупки</a>
+                        <div class="total-wrap">
+                            <span class="">Итого:</span>
+                            <span class="total_price">98UAH</span>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-sm-4 cart__sidebar">
+
+
+                    <h3> Оформление заказа</h3>
+
+                    <form class="ordering_form_item" method="post" action="" id="ordering_form_item">
+                        <div class="steps">
+                            <div class="step step-1" id="collapse-user-data">
+                                <h5>1. Личные данные</h5>
+                                <fieldset required="">
+                                    <label class="" for="input-name">Имя:</label>
+                                    <code class="error-message hidden"></code>
+                                    <input type="text" name="name" value="" id="input-name" class="">
+                                    <label class="" for="input-name">Фамилия:</label>
+                                    <code class="error-message hidden"></code>
+                                    <input type="text" name="lastName" value="" id="input-lastName" class="">
+
+                                    <label class="" for="input-email">E-mail:</label>
+                                    <code class="error-message hidden"></code>
+                                    <input type="email" name="email" value="" id="input-email" class="js-mail">
+
+                                    <label class="" for="input-phone">Контактный телефон:</label>
+                                    <code class="error-message hidden"></code>
+                                    <input type="text" name="phone" value="" id="input-phone" class="js-phone">
+
+                                    <label class="" for="input-address">Город</label>
+                                    <code class="error-message hidden"></code>
+                                    <input type="text" name="address" id="input-address" class="gutter_normal">
+                                </fieldset>
+                            </div>
+
+
+                            <div class="step step-2" id="collapse-shipping-method">
+                                <h5>2. Способ доставки</h5>
+
+                                <div class="jq-radio js-styler"><input class="js-styler" type="radio" name="shipping_method" value="novaposhta.novaposhta"><div class="jq-radio__div"></div></div>
+                                <span class="bold">Доставка Новой почтой</span>
+                                <p class="gutter_normal">Заказы суммой более 2000 грн, доставляются бесплатно.</p>
+
+
+                                <div class="jq-radio js-styler checked">
+                                    <input checked="" class="js-styler" type="radio" name="shipping_method" value="pickup.pickup"><div class="jq-radio__div"></div>
+                                </div>
+                                <span class="bold">Самовывоз</span>
+                                <p class="gutter_sm">По адресу: г.Харьков, ул. Чкалова, 33</p><br>
+                            </div>
+
+                            <div class="step step-3 hr" id="collapse-payment-method">
+                                <h5>3. Способ оплаты</h5>
+                                <div class="jq-radio js-styler checked"><input checked="" class="js-styler" type="radio" name="payment_method" value="bank_transfer"><div class="jq-radio__div"></div></div>
+                                <span class="bold gutter_sm">Оплата на карту Приват Банка</span><br>
+                                <div class="jq-radio js-styler"><input class="js-styler" type="radio" name="payment_method" value="cod"><div class="jq-radio__div"></div></div>
+                                <span class="bold gutter_sm">Платежная система Liqpay</span><br>
+
+                                <div class="jq-radio js-styler"><input class="js-styler" type="radio" name="payment_method" value="cod"><div class="jq-radio__div"></div></div>
+                                <span class="bold gutter_sm">Наложенный платеж <span> (При получении заказа в курьерской службе или самовывозе)</span></span><br>
+                            </div>
+                        </div>
+
+                        <div id="collapse-payment-address">
+                            <input type="hidden" name="payment_address" value="existing">
+                            <input type="hidden" name="address_id" value="209">
+                        </div>
+                        <div id="collapse-shipping-address">
+                            <input type="hidden" name="shipping_address" value="existing">
+                            <input type="hidden" name="address_id" value="209">
+                        </div>
+                        <button type="button" onclick="orderguest.save();" class="btn-def btn-main"> Оформить заказ
+                        </button>
+                        <div class="loader hidden">
+                            <img src="/catalog/view/theme/adsgroup/image/preLoaders.svg" alt="">
+                        </div>
+                    </form>
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--CART PAGE END **********-->
 
 
 
