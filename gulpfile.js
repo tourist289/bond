@@ -7,8 +7,8 @@ let gulp           = require('gulp'),
 		bourbon        = require('node-bourbon'),
 		ftp            = require('vinyl-ftp');
 
-const folderName = 'adsgroup', // name folder where theme
-			hostName = 'b3'; // name folder where project
+let folderName = 'bond', // name folder where theme
+			hostName = 'bond'; // name folder where project
 
 gulp.task('browser-sync', function() {
 	browserSync({
@@ -49,4 +49,4 @@ gulp.task('deploy', function() {
 		.pipe(conn.dest('/path/to/folder/on/server'));
 });
 
-gulp.task('default', ['watch']);
+gulp.task('default', ['watch', 'browser-sync']);
