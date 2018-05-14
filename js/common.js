@@ -274,7 +274,7 @@ $(document).ready(function(){
 
     $('.js-slider_four').slick(getSliderFourSettings());
     $('.js-slider_best').slick(getSliderBestSettings());
-    // $('.js-slider_cart').slick(getSliderUnoSettings());
+    $('.js-slider_item').slick(getSliderUnoSettings());
     // $('.js-slider_nomer').slick(getSliderUnoSettings11());
     $('.js-slider_fw').slick(getSliderFWSettings());
     $('.js-slider_brands').slick(getSliderBrandsSettings());
@@ -308,22 +308,22 @@ $(document).ready(function(){
         }
     }
 
-    function getSliderUnoSettings11(){
+    function getSliderUnoSettings(){
         return {
             slidesToShow:1,
             slidesToScroll:1,
             arrows: true,
             dots: false,
             focusOnSelect:true,
-            autoplay: true,
+            autoplay: false,
             swipe: false,
             responsive:[
-                {
-                    breakpoint: 770,
-                    settings:{
-                        swipe: true
-                    }
-                }
+                // {
+                //     breakpoint: 770,
+                //     settings:{
+                //         swipe: true
+                //     }
+                // }
             ]
         }
     }

@@ -105,3 +105,100 @@
 //		&:after
 //			transform-origin: 1px 0
 //			background-color: rgba(0, 0, 0, .7)
+
+
+.modal
+  &__container
+    width: 80%
+    margin: 0 auto 30px
+    display: block
+  &__title
+    display: block
+  &__item
+    display: flex
+    flex-direction: column
+    justify-content: center
+    figure
+      display: inline-flex
+      align-items: center
+      justify-content: flex-start
+      min-width: 150px
+      margin-right: 30px
+      height: 250px
+      img
+        width: 100%
+        height: auto
+    .item__name
+      padding: 20px 0
+      margin: 0 0 40px
+      position: relative
+      &:after
+        content: ''
+        display: block
+        position: absolute
+        bottom: -20px
+        left: 0
+        width: 100%
+        height: 1px
+        background: $hr
+    .info
+      height: 100%
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      justify-content: space-between
+      &>*
+        margin: 0
+      h4
+        font-weight: bold
+      span.price
+        font-size: 22px
+  &__btns
+    border-top: 4px solid $hr
+    width: 100%
+    margin: 0 0 30px
+    .modal__container
+      justify-content: space-between
+      align-items: center
+      &>*
+        flex-grow: 1
+        width: 50%
+
+        
+#modal_fastBuy
+  .modal__item
+    figure
+      display: inline-flex
+      align-items: center
+      justify-content: flex-start
+      min-width: 150px
+      margin-right: 30px
+      height: 350px
+      img
+        width: 100%
+        height: auto
+
+
+
+#modal_ItemWindow
+  .slider_item
+  .slider
+    margin-right: 30px
+  .img-wrapper
+    margin-right: 30px
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    width: 100px
+    figure
+      display: inline-flex
+      align-items: center
+      justify-content: flex-start
+      min-width: 150px
+      margin-bottom: 25px
+      width: 100%
+      height: 100px
+      img
+        width: 100%
+        height: auto
+

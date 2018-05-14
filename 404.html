@@ -1268,9 +1268,6 @@ theme">
 </div>
 
 
-
-
-
         <section id="map" class="map_fw">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2722.2578666112804!2d31.982897451587956!3d46.97626953919693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c5c973ea11f4f7%3A0xe44184f1ab8a5c06!2z0LLRg9C70LjRhtGPINCd0ZbQutC-0LvRjNGB0YzQutCwLCAyNSwg0JzQuNC60L7Qu9Cw0ZfQsiwg0JzQuNC60L7Qu9Cw0ZfQstGB0YzQutCwINC-0LHQu9Cw0YHRgtGMLCA1NDAwMA!5e0!3m2!1suk!2sua!4v1516108267833"  frameborder="0" style="border:0" allowfullscreen></iframe>
         </section>
@@ -1281,13 +1278,37 @@ theme">
 <!-- ***********CONTACTS PAGE END-->
 
 
-<!-- ***********NEWS PAGE START-->
+<!--NEWS PAGE START ***********-->
 
     <div class="container">
 
         <h3>Новости и статьи</h3>
 
         <section class="news row">
+            <article>
+                <figure>
+                    <img src="img/item02.jpg" alt="">
+                </figure>
+                <div class="info">
+                    <div class="date">11.33.4444</div>
+                    <h6>Кожаные портмоне и аксессуары</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem delectus libero quasi repellendus similique vitae. quasi repellendus similique vitae.</p>
+                    <a href="#">Подробнее</a>
+                </div>
+
+            </article>
+            <article>
+                <figure>
+                    <img src="img/item02.jpg" alt="">
+                </figure>
+                <div class="info">
+                    <div class="date">11.33.4444</div>
+                    <h6>Кожаные портмоне и аксессуары</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem delectus libero quasi repellendus similique vitae.</p>
+                    <a href="#">Подробнее</a>
+                </div>
+
+            </article>
             <article>
                 <figure>
                     <img src="img/item02.jpg" alt="">
@@ -1302,6 +1323,13 @@ theme">
             </article>
 
         </section>
+        <div class="pagination">
+            <a class="active" href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">...</a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+        </div>
 
 
 
@@ -1313,9 +1341,18 @@ theme">
 
 
 
-<!-- FOOTER START -->
 
-        <footer>
+
+<!--NEWS PAGE START ***********-->
+
+
+<!-- NEWS PAGE END-->
+
+
+
+<!-- FOOTER ***********-->
+
+    <footer>
             <section class="footer__suscribe">
                 <div class="container">
                     <p>Узнавайте о новинках и акциях первыми!</p>
@@ -1419,12 +1456,11 @@ theme">
         </footer>
 
 
-
 <!-- FOOTER END -->
 
 
 
-        <!--MODAL WINDOW " MAP " -->
+<!--MODAL WINDOW " MAP " ***********-->
 
         <div class="modal__overlay">
             <div id="map-block" class="modalDiv modalDiv__map">
@@ -1436,9 +1472,187 @@ theme">
 
             </div>
         </div>
+<!--MODAL WINDOW " MAP "  END -->
+
+<!--MODAL WINDOW " Thanks for answer " **********-->
+        <!--fire modal from this button-->
+    <!--<button class="js-modal" data-href="#modal_thankAnswer">OPEN MODAL</button>-->
+    <div class="modal__overlay">
+        <div id="modal_thankAnswer" class="modalDiv ">
+            <span class="closeModalIcon"></span>
+            <section class="modal__content">
+
+                <h4>Спасибо за обращение </h4>
+                <p>Наш менеджер свяжется с Вами в ближайшее время </p>
+                <button class="btn-def">OK</button>
+            </section>
+        </div>
+    </div>
 
 
-	</div>
+<!--MODAL WINDOW " Thanks for answer " END -->
+
+<!--MODAL WINDOW " Item was added in the cart " **********-->
+        <!--fire modal from this button-->
+    <!--<button class="js-modal" data-href="#modal_itemInCart">OPEN MODAL</button>-->
+    <div class="modal__overlay">
+        <div id="modal_itemInCart" class="modalDiv ">
+            <span class="closeModalIcon"></span>
+
+            <section class="modal__content">
+                <div class="modal__container">
+
+                    <h3 class="modal__title">Товар добавлен в корзину </h3>
+                    <div class="modal__item">
+                        <figure>
+                            <img src="img/item02.jpg" alt="">
+                        </figure>
+                        <div class="info">
+                            <h4>Кожаная барсетка Petek 759</h4>
+                            <span class="price">
+                                <span class="count">1630</span>
+                                грн.
+                            </span>
+                        </div>
+                    </div>
+                    <p>Наш менеджер свяжется с Вами в ближайшее время </p>
+                </div>
+                <div class="modal__btns">
+                    <div class="modal__container">
+                        <button class="btn-def_link btn-def">продолжить покупки</button>
+                        <button class="btn-def">оформить заказ</button>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+
+<!--MODAL WINDOW " Item was added in the cart " END -->
+
+<!--MODAL WINDOW " fast Buy " **********-->
+        <!--fire modal from this button-->
+    <!--<button class="js-modal" data-href="#modal_fastBuy">OPEN MODAL</button>-->
+    <div class="modal__overlay">
+        <div id="modal_fastBuy" class="modalDiv ">
+            <span class="closeModalIcon"></span>
+
+            <section class="modal__content">
+                <div class="modal__container">
+
+                    <h3 class="modal__title">Быстрая покупка </h3>
+
+                    <div class="modal__item">
+                        <figure>
+                            <img src="img/item02.jpg" alt="">
+                        </figure>
+                        <div class="info">
+                            <h4 class="item__name">Кожаная барсетка Petek 759</h4>
+                            <span class="price">
+                                <span class="count">1630</span>
+                                грн.
+                            </span>
+                            <form>
+                                <label>
+                                    <p>Имя:*</p>
+                                    <input type="text" >
+                                </label>
+                                <label>
+                                    <p>Номер телефона:*</p>
+                                    <input type="tel">
+                                </label>
+                                <button class="btn-def">Купить</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+
+<!--MODAL WINDOW "  fast Buy " END -->
+
+<!--MODAL WINDOW " Item Window modal " **********-->
+        <!--fire modal from this button-->
+    <!--<button class="js-modal" data-href="#ItemWindow">OPEN MODAL</button>-->
+    <div class="modal__overlay">
+        <div id="modal_ItemWindow" class="modalDiv ">
+            <span class="closeModalIcon"></span>
+
+            <section class="modal__content">
+                <div class="modal__container">
+
+
+                    <div class="modal__item">
+
+
+
+                        <section data-rel="slider" class="slider_item">
+                            <div class="slider js-slider_item">
+                                <div class="slide">
+                                    <img src="img/bg_02.jpg" alt="">
+                                </div>
+                                <div class="slide">
+                                    <img src="img/bg_02.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="slider__btns">
+                                <div class="prev js-prev"></div>
+                                <div class="next js-next"></div>
+                            </div>
+
+                            <div class="img-wrapper">
+                                <figure>
+                                    <img src="img/item02.jpg" alt="">
+                                </figure>
+                                <figure>
+                                    <img src="img/item02.jpg" alt="">
+                                </figure>
+                                <figure>
+                                    <img src="img/item02.jpg" alt="">
+                                </figure>
+                            </div>
+
+                        </section>
+
+                        <div class="info">
+                            <h3 class="modal__title">Доставка и оплата</h3>
+
+                            <h6>Отделение "Нова Пошта" БЕСПЛАТНО</h6>
+                            <h6>курьер</h6>
+                            <h6>отделение </h6>
+                            <h6></h6>
+                            <h6>14 дней</h6>
+                            <h6>12 мес ...</h6>
+
+
+                            <h4 class="item__name">Кожаная барсетка Petek 759</h4>
+                            <span class="price">
+                                <span>есть в наличии</span>
+                                <span class="count">1630</span>
+                                грн.
+                            </span>
+
+                            <div class="modal__btns">
+                                <div class="modal__container">
+                                    <button class="btn-def">Купить</button>
+                                    <button class="btn-def_link btn-def dots">Купить в 1 клик</button>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+
+<!--MODAL WINDOW " Item Window modal " END -->
+
 
     <!--<link rel="stylesheet" href="css/main.css">-->
 
