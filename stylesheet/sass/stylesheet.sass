@@ -116,6 +116,18 @@ main
 .hidden
   display: none
 
+.title-hr
+  font-size: 18px
+  text-transform: none
+  font-weight: 700
+  padding-top: 12px
+  margin: 0 0 $mb 0
+  position: relative
+  width: 100%
+  border-bottom: 1px solid $hr
+  padding-bottom: 12px
+
+
 //  contacts page start
 .contacts
   display: flex
@@ -129,28 +141,30 @@ main
     flex-direction: column
     justify-content: flex-start
     align-items: flex-start
+    padding: 0 90px 0 0
   &__form
     label
       color: #818181
       font-size: 12px
       display: block
       p
-        margin-bottom: 0
+        //margin-bottom: 0
 
 .contacts__item
   display: flex
-  justify-content: space-between
   align-items: center
-  padding: 10px 10px 0 0
-  border-bottom: 2px solid red
-  &>*
-    flex-grow: 1
+  justify-content: flex-start
+  padding: $mb 10px $mb 0
+  border-bottom: 2px solid $hr
+  width: 100%
+  &:first-of-type
+    padding-top: 0
   img
-    padding: 20px
+    padding:  0 15px 0px 0px
   span
     color: $bb
     display: block
-  &-title
+  .contacts__item-title
     color: $a-color
 
 

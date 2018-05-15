@@ -22,7 +22,13 @@ label, button,
 input, select
 	cursor: pointer
 
-
+form
+	margin-bottom: $mbL
+	label
+		margin-bottom: 12px
+		p
+			margin: 0 0 5px
+			color: $f-color_grey
 input
 	color: #bbb
 	outline: none
@@ -31,8 +37,20 @@ input
 	padding: 10px
 	border: 1px solid $hr
 	border-radius: 4px
+	height: 40px
+	width: 100%
+	margin-bottom: 10px
 textarea
+	color: #bbb
+	outline: none
+	font-size: 14px
+	font-weight: 400
+	padding: 10px
 	resize: none
+	min-height: 80px
+	width: 100%
+	border: 1px solid $hr
+	margin-bottom: $mb
 
 .form_search
 	width: 0
@@ -76,3 +94,10 @@ textarea
 	opacity: 1
 	visibility: visible
 
+
+
+.contacts__form
+	form
+		input
+			width: 60%
+		textarea
