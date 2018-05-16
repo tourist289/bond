@@ -3,20 +3,22 @@
 @import "nav-menu"
 
 header
-	background: $bg
-	border-bottom: 8px solid $hr
-	.header
-		&__top
-			position: relative
-			padding: 14px 0
-			background-color: $bg_grey-dark
-			.container
-				justify-content: space-between
-				display: flex
-				align-items: center
-		&_bottom
-			display: flex
-			padding: 50px 0
+  background: $bg
+  border-bottom: 8px solid $hr
+  .header
+    &__top
+      position: relative
+      padding: 0 0
+      background-color: $bg_grey-dark
+      height: 50px
+      .container
+        justify-content: space-between
+        display: flex
+        align-items: center
+        height: 100%
+    &_bottom
+      display: flex
+      padding: 50px 0
 //
 //.authorize_wrap
 //	margin-right: 36px
@@ -27,116 +29,221 @@ header
 
 
 .nav-wrap
-	display: flex
-	justify-content: flex-start
-	align-items: center
-	flex-grow: 1
+  display: flex
+  justify-content: flex-start
+  align-items: center
+  flex-grow: 1
 nav
-	position: relative
-	padding: 0
-	line-height: 16px
-	font-weight: 400
-	margin-right: $mbL
-	a
-		color: $ff
-		position: relative
-		display: inline-block
-		font-size: 13px
-		transsition: color .25s
-		&:after
-			content: '|'
-			//height: 32px
-			top: -1px
-			position: relative
-			display: inline-block
-			margin: 0 15px
-		&:hover
-			color: $red
-			transsition: color .25s
-			&:after
-				color: $ff
-		&:last-child
-			&:after
-				display: none
+  position: relative
+  padding: 0
+  line-height: 16px
+  font-weight: 400
+  margin-right: $mbL
+  a
+    color: $ff
+    position: relative
+    display: inline-block
+    font-size: 13px
+    transsition: color .25s
+    &:after
+      content: '|'
+      //height: 32px
+      top: -1px
+      position: relative
+      display: inline-block
+      margin: 0 15px
+    &:hover
+      color: $red
+      transsition: color .25s
+      &:after
+        color: $ff
+    &:last-child
+      &:after
+        display: none
 .sertif-link
-	color: $ff
-	position: relative
-	&:hover:before
-		content: ''
-		//height: 32px
-		background: $red
-		bottom: -20px
-		position: absolute
-		display: inline-block
-		width: 100%
-		height: 2px
-		margin: 0 15px
+  color: $ff
+  position: relative
+  &:hover
+    color: $ff
+  &:hover:before
+    content: ''
+    background: #eb494c
+    bottom: -4px
+    position: absolute
+    display: inline-block
+    width: 106%
+    left: -3%
+    height: 2px
+    margin: 0
 
 .contactUs
-	width: 133px
-	display: flex
-	height: 100%
-	align-items: center
-	justify-content: space-between
+  display: flex
+  height: 100%
+  align-items: center
+  justify-content: space-between
 
 
 .lang-wrapper select
-	display: none
+  display: none
 .jq-selectbox__select
-	border: none
+  border: none
+  width: 70px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 0
+  margin: 0
+  position: relative
+  height: 24px
 .jq-selectbox__select-text
-	color: $ff
-	background: $red
-	font-size: 14px
+  color: $ff
+  background: $red
+  font-size: 14px
+  padding: 5px
+.jq-selectbox__trigger
+  position: absolute
+  right: 4px
 .jq-selectbox__dropdown
-	ul
-		background: $bg_grey-dark
-		color: $ff
+  position: absolute
+  width: 70px
+  text-align: center
+  background: $bg_grey-dark
+  top: 25px!important
+  ul
+    background: $bg_grey-dark
+    color: $ff
+    margin: 0
+  li
+    padding: 5px 0
+    &.selected,
+    &:hover
+      color: $ff
+      text-indent: 0
 
 .header__main
-	height: 200px
+  height: 200px
+  .container
+    height: 100%
+  .logo
+    width: 200px
 
-	.logo
 
 
+.main__wrap
+  display: flex
+  height: 100%
+  justify-content: space-between
+  align-items: center
+.main__info
+  flex-grow: 1
+  display: flex
+  justify-content: flex-start
+  align-items: center
 .phone__wrapper
-	display: flex
-	flex-direction: column
-	justify-content: center
-	figure
-		display: inline-flex
-		align-items: center
-		justify-content: flex-start
-		min-width: 150px
-		margin-right: 30px
-		height: 250px
-		img
-			width: 100%
-			height: auto
+  display: flex
+  justify-content: center
+  align-items: center
+  margin-right: $mbL
+  figure
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    margin-right: 30px
+    width: 21px
+    height: 21px
+    img
+      width: 100%
+      height: auto
 
-	.phone__info
-		height: 100%
-		display: flex
-		flex-direction: column
-		align-items: flex-start
-		justify-content: space-between
-		&>*
-			margin: 0
-		span
-			font-size: 22px
+  .phone__info
+    height: 100%
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    justify-content: space-between
+    &>*
+      margin: 0
+    span
+      font-size: 22px
 .scadual__wrapper
 
+  display: flex
+  justify-content: center
+  align-items: flex-start
+  flex-direction: column
+  span:first-of-type
+    color: $f-color_grey
+
+.cart__wrapper
+  display: flex
+  justify-content: center
+  align-items: center
+  .cart__info
+    color: $red
+  figure
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    margin-left: 30px
+    width: 31px
+    height: 45px
+    img
+      width: 100%
+      height: auto
 
 
+.header__bottom
+  height: 50px
+  margin: 0
+  border-top: 1px solid $hr
+  .container
+    display: flex
+    justify-content: space-between
+    align-items: center
+    height: 100%
 
-	.bottom__menu
-		font-size: 16px
-		color: $bb
+.bottom__menu
+  display: flex
+  justify-content: space-between
+  flex-grow: 2
+  max-width: 60%
+  position: relative
+  height: 100%
+  align-items: center
+  display: flex
+  justify-content: space-between
+  a
+    font-size: 16px
+    color: #000
+    flex-grow: 1
+    height: 100%
+    display: inline-flex
+    align-items: center
 
-	.headbottom .search-wrapper button i
-		top: 0
-		position: relative
-		right: 6px
-		font-size: 20px
-	.fa-search:before
-		content: "\f002"
+.drop-menuHolder
+  position: absolute
+  width: 100%
+  min-height: 200px
+  top: 50px
+  left: 0
+
+.headbottom .search-wrapper button i
+  top: 0
+  position: relative
+  right: 6px
+  font-size: 20px
+.fa-search:before
+  content: "\f002"
+#search
+  width: 30%
+  display: flex
+  input[type=text]
+    border: none
+    background: transparent
+    box-shadow: none
+    border-radius: 0
+  button[type=button]
+    border: none
+    background: transparent
+    box-shadow: none
+    border-radius: 0
