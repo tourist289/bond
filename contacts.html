@@ -3,30 +3,31 @@
 
 <head>
 
-	<meta charset="utf-8">
+    <meta charset="utf-8">
 
-	<title>contacts</title>
-	<meta name="description" content="">
+    <title>404</title>
+    <meta name="description" content="">
 
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-	<!--<meta property="og:image" content="path/to/image.jpg">-->
-	<link rel="shortcut icon" href="img/favicon/favicon.png" type="image/x-icon">
-	<!--<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">-->
-	<!--<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">-->
-	<!--<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">-->
-
-
+    <!--<meta property="og:image" content="path/to/image.jpg">-->
+    <link rel="shortcut icon" href="img/favicon/favicon.png" type="image/x-icon">
+    <!--<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">-->
+    <!--<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">-->
+    <!--<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">-->
 
 
-	<!-- Chrome, Firefox OS and Opera -->
-	<!--<meta name="theme-color" content="#000">-->
-	<!-- Windows Phone -->
-	<!--<meta name="msapplication-navbutton-color" content="#000">-->
-	<!-- iOS Safari -->
-	<!--<meta name="apple-mobile-web-app-status-bar-style" content="#000">-->
-	<!--<style>body { opacity: 0; overflow-x: hidden; } html { background-color: #fff; }</style>-->
+
+
+    <!-- Chrome, Firefox OS and Opera -->
+    <!--<meta name="theme-color" content="#000">-->
+    <!-- Windows Phone -->
+    <!--<meta name="msapplication-navbutton-color" content="#000">-->
+    <!-- iOS Safari -->
+    <!--<meta name="apple-mobile-web-app-status-bar-style" content="#000">-->
+    <!--<style>body { opacity: 0; overflow-x: hidden; } html { background-color: #fff; }</style>-->
+
     <link href="https://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700" rel="stylesheet">
     <!--<link href="https://fonts.googleapis.com/css?family=Vollkorn:400,400i,700,700i" rel="stylesheet">-->
@@ -43,7 +44,10 @@
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="libs/css/clockpicker.css">
 
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="stylesheet/css/stylesheet.css">
+
+
+    <script src="libs/js/jquery.min.js"></script>
 
 </head>
 
@@ -51,283 +55,517 @@
 	<div id="root-wrapper">
 
         <header>
-            <div class="container">
-                <div class="header-top  items items_col3">
-                    <span class="header-top_contacts">
-                        <span class="header-top_phones">
-                            <a href="tel:+38(0512)489583">+38(0512) 48-95-83</a>
-                            <a href="tel:+38(094) 510-10-12">+38(094) 510-10-12</a>
-                        </span>
 
-                        <span class="header-top_email" >reception@alex-hotel.com.ua</span>
+            <div class="header__top">
+                <div class="container">
+
+                    <div class="n">
+
+                    </div>
+
+
+                    <div class=" contactUs">
+                        <div class="folowUs">
+                            <div class="soc-wrap">
+                                <div>
+                                <span class="socIcon fb">
+                                    <a rel="nofollow" href="https://fb.com"></a>
+                                </span>
+                                    <span class="socIcon insta">
+                                    <a rel="nofollow" href="https://www.instagram.com/"></a>
+                                </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <span class="nal-wrapper">
+                        <?php echo $currency; ?>
                     </span>
 
-                    <a href="/" id="mainLogo" class="header-top_logo">
-                        <img src="img/logo.png" alt="logo">
-                    </a>
-
-                    <div class="header-top_address">
-                        <span class="lang-wrap">
-                            <a href="#">Рус.</a>
-                            <a class="active" href="#">Eng.</a>
-                        </span>
-                        <span class="address">
-                            <p>г. Николаев. ул. Никольская, 25  </p>
-                            <a class="js-scroll" href="#map-block">Смотреть на карте </a>
-                        </span>
                     </div>
+
+
                 </div>
-                <div class="header-bootom">
-                    <nav class="">
-                        <li><a class="active"  href="nomera.html">Номера</a></li>
-                        <li><a href="restoran.html">Ресторан</a></li>
-                        <li><a href="conferense.html">Конференц сервис</a></li>
-                        <li><a href="sport-club.html">Спорт Клуб</a></li>
-                        <li><a href="billiard.html">Бильярдный клуб</a></li>
-                        <li><a href="sauna.html">Сауна</a></li>
-                        <li><a href="basein.html">Бассейн</a></li>
-                        <li><a href="beauty-saloon.html">Салон красоты</a></li>
-                        <li><a href="contacts.html">Контакты</a></li>
-                    </nav>
+            </div>
+
+
+            <div class="container">
+
+
+                <div class="row  header__info-wraper  ">
+
+
+                    <div class="col-sm-4 col-md-3 logo__wrapper ">
+                        <div id="logo">
+                            <?php if ($logo) { ?>
+                            <?php if ($home == $og_url) { ?>
+                            <img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>"
+                                 class="img-responsive"/>
+                            <?php } else { ?>
+                            <a href="<?php echo $home; ?>"><img src="<?php echo $logo; ?>"
+                                                                title="<?php echo $name; ?>"
+                                                                alt="<?php echo $name; ?>" class="img-responsive"/></a>
+                            <?php } ?>
+                            <?php } else { ?>
+                            <h1><a href="<?php echo $home; ?>"><?php echo $name; ?></a></h1>
+                            <?php } ?>
+                        </div>
+                    </div>
+
+
+                    <div class="col-sm-5  col-md-6 contact-info">
+                        <span class="phone-wrap">
+                              <a href="tel:<?php echo $clear_telephone; ?>" class="phone">
+                                  <span><?php echo $telephone; ?></span>
+                              </a>
+                        </span>
+
+
+
+                        <div>
+
+
+                        </div>
+
+                    </div>
+                    <div class="col-sm-3 cart-wrapper"><?php echo $cart; ?></div>
+
+
+                </div>
+            </div>
+
+
+
+            <?php if ($categories) { ?>
+            <div class="header__bottom">
+                <div class="container">
+
 
                     <div class="mobile-menu">
                         <a href="#my-menu" class="hamburger hamburger--elastic">
-                            <span class="hamburger-box">
-                                <span class="hamburger-inner"></span>
-                            </span>
+                      <span class="hamburger-box">
+                          <span class="hamburger-inner"></span>
+                      </span>
+
                         </a>
-                        <ul class="mobile-menu_side-nav" id="my-menu">
-                            <li><a class="active"  href="nomera.html">Номера</a></li>
-                            <li><a href="restoran.html">Ресторан</a></li>
-                            <li><a href="conferense.html">Конференц сервис</a></li>
-                            <li><a href="sport-club.html">Спорт Клуб</a></li>
-                            <li><a href="billiard.html">Бильярдный клуб</a></li>
-                            <li><a href="sauna.html">Сауна</a></li>
-                            <li><a href="basein.html">Бассейн</a></li>
-                            <li><a href="beauty-saloon.html">Салон красоты</a></li>
-                            <li><a href="contacts.html">Контакты</a></li>
-                            <li class="dop-menu">
-                                <span class="header-top_phones">
-                                    <a href="tel:+38(0512)489583">+38(0512) 48-95-83</a>
+                        <div class="hidden sideMenu" id="my-menu">
+                            <ul>
+
+                                <?php if ($categories) { ?>
+                                <li class="mmcatalog">
+                                    <span class="mmcatalog-link">Каталог</span>
+                                    <ul>
+                                        <?php foreach ($categories as $catalogC) : ?>
+                                        <li>
+                                            <?php if (!empty($catalogC['children'])) : ?>
+                                            <span class="mmcatalog-link">
+                                                        <?php echo $catalogC['name']; ?>
+                                                    </span>
+                                            <ul>
+                                                <?php foreach ($catalogC['children'] as $catalogCFirst) : ?>
+                                                <?php if (!empty($catalogCFirst['children'])) : ?>
+                                                <li>
+                                                                    <span class="mmcatalog-link">
+                                                                        <?php echo $catalogCFirst['name']; ?>
+                                                                    </span>
+                                                    <ul>
+                                                        <?php foreach ($catalogCFirst['children'] as $catalogCSecond) : ?>
+                                                        <li>
+                                                            <a href="<?php echo $catalogCSecond['href']; ?>">
+                                                                <?php echo $catalogCSecond['name']; ?>
+                                                            </a>
+                                                        </li>
+                                                        <?php endforeach; ?>
+                                                    </ul>
+                                                </li>
+                                                <?php else : ?>
+                                                <li>
+                                                    <a href="<?php echo $catalogCFirst['href']; ?>">
+                                                        <?php echo $catalogCFirst['name']; ?>
+                                                    </a>
+                                                </li>
+                                                <?php endif; ?>
+                                                <?php endforeach; ?>
+                                            </ul>
+                                            <?php else : ?>
+                                            <a href="<?php echo $catalogC['href'];?>">
+                                                <?php echo $catalogC['name']; ?>
+                                            </a>
+                                            <?php endif; ?>
+                                        </li>
+                                        <?php endforeach; ?>
+                                    </ul>
+
+                                </li>
+                                <?php } ?>
+
+
+                                <?php if (!empty($catalogCategory)) : ?>
+                                <li class="mmcatalog ">
+                                    <span class="mmcatalog-link">Производители</span>
+                                    <ul>
+                                        <?php foreach ($catalogCategory as $catalogC) : ?>
+                                        <li>
+                                            <?php if (!empty($catalogC['children'])) : ?>
+                                            <span class="mmcatalog-link">
+                                            <?php echo $catalogC['name']; ?>
+                                        </span>
+                                            <ul>
+                                                <?php foreach ($catalogC['children'] as $catalogCFirst) : ?>
+                                                <?php if (!empty($catalogCFirst['children'])) : ?>
+                                                <li>
+                                                <span class="mmcatalog-link">
+                                                    <?php echo $catalogCFirst['name']; ?>
+                                                </span>
+                                                    <ul>
+                                                        <?php foreach ($catalogCFirst['children'] as $catalogCSecond) : ?>
+                                                        <li>
+                                                            <a href="<?php echo $catalogCSecond['href']; ?>">
+                                                                <?php echo $catalogCSecond['name']; ?>
+                                                            </a>
+                                                        </li>
+                                                        <?php endforeach; ?>
+                                                    </ul>
+                                                </li>
+                                                <?php else : ?>
+                                                <li>
+                                                    <a href="<?php echo $catalogCFirst['href']; ?>">
+                                                        <?php echo $catalogCFirst['name']; ?>
+                                                    </a>
+                                                </li>
+                                                <?php endif; ?>
+                                                <?php endforeach; ?>
+                                            </ul>
+                                            <?php else : ?>
+                                            <a href="<?php echo $catalogC['href'];?>">
+                                                <?php echo $catalogC['name']; ?>
+                                            </a>
+                                            <?php endif; ?>
+                                        </li>
+                                        <?php endforeach; ?>
+                                    </ul>
+                                </li>
+                                <?php endif; ?>
+
+                                <li><a href="<?php echo $about_us; ?>">о компании</a></li>
+
+                                <li><a href="<?php echo $contact; ?>">контакты </a></li>
+                                <li class="contact-info">
+                                    <a href="tel:<?php echo $telephone; ?>" class="phone">
+                                        <span><?php echo $telephone; ?></span>
+
+                                    </a>
+                                    <a href="mailto:<?php echo $email; ?>">
+                                        <span class="mail-info"><?php echo $email; ?></span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                <span class="nal-wrapper">
+                                    <?php echo $currency; ?>
                                 </span>
-                                <span class="header-top_email" >reception@alex-hotel.com.ua</span>
-                                <span class="address">
-                                    <p>г. Николаев. ул. Никольская, 25  </p>
-                                    <a class="js-scroll" href="#map-block">Смотреть на карте </a>
-                                </span>
-                            </li>
-                        </ul>
+                                </li>
+
+
+
+                                <li><button class="back-call btn-def btn-fff js-call">Заказать обратный звонок</button>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
+                    <a href="<?php echo $home; ?>" class="mobile-title">Elta-ltd</a>
+
+
+
+
+
+
+
+
+                    <nav id="menu" class="navbar">
+
+                        <!-- <div class="navbar-header"><span id="category" class="visible-xs"><?php echo $text_category; ?></span>
+            <button type="button" class="btn btn-navbar navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"><i class="fa fa-bars"></i></button>
+          </div>-->
+
+                        <div class="collapse navbar-collapse navbar-ex1-collapse">
+                            <ul class="nav navbar-nav">
+                                <?php if ($categories) { ?>
+                                <div class="dropdown">
+                                    <a href="<?php echo $catalog; ?>" class="dropdown-toggle"
+                                       data-toggle="dropdown">Каталог</a>
+
+                                    <div class="dropdown-menu">
+                                        <div class="dropdown-inner">
+                                            <ul class="list-unstyled">
+
+                                                <?php foreach ($categories as $catalogC) : ?>
+                                                <li class="sub-list">
+                                                    <?php if (!empty($catalogC['children'])) : ?>
+                                                    <span class="sub-list__trigger">
+                                                                <a href="<?php echo $catalogC['href']; ?>">
+                                                                <?php echo $catalogC['name']; ?>
+                                                                </a>
+                                                            </span>
+                                                    <ul class="sub-list__ul">
+                                                        <?php foreach ($catalogC['children'] as $catalogCFirst) : ?>
+                                                        <?php if (!empty($catalogCFirst['children'])) : ?>
+                                                        <li>
+                                                            <a href="<?php echo $catalogCFirst['href']; ?>">
+                                                                            <span class="sub-list__trigger">
+                                                                                <?php echo $catalogCFirst['name']; ?>
+                                                                            </span>
+                                                            </a>
+                                                            <ul class="sub-list__ul">
+                                                                <?php foreach ($catalogCFirst['children'] as $catalogCSecond) : ?>
+                                                                <li>
+                                                                    <a href="<?php echo $catalogCSecond['href']; ?>">
+                                                                        <?php echo $catalogCSecond['name']; ?>
+                                                                    </a>
+                                                                </li>
+                                                                <?php endforeach; ?>
+                                                            </ul>
+                                                        </li>
+                                                        <?php else : ?>
+                                                        <li>
+                                                            <a href="<?php echo $catalogCFirst['href']; ?>">
+                                                                <?php echo $catalogCFirst['name']; ?>
+                                                            </a>
+                                                        </li>
+                                                        <?php endif; ?>
+                                                        <?php endforeach; ?>
+                                                    </ul>
+                                                    <?php else : ?>
+                                                    <a href="<?php echo $catalogC['href'];?>">
+                                                        <?php echo $catalogC['name']; ?>
+                                                    </a>
+                                                    <?php endif; ?>
+                                                </li>
+                                                <?php endforeach; ?>
+                                            </ul>
+                                        </div>
+
+                                        <a href="<?php echo $catalog; ?>" class="see-all">
+                                            <?php echo $text_all; ?>
+                                        </a>
+
+                                    </div>
+
+                                </div>
+                                <?php } ?>
+                            </ul>
+
+                        </div>
+
+                    </nav>
+
+                    <span class="link-wrapper">
+                 <a href="<?php echo $about_us; ?>">о компании</a>
+                 <a href="<?php echo $contact; ?>">контакты </a>
+                 </span>
+                    <span class="search-wrapper">
+                 <?php echo $search; ?>
+
+                        <div class="col-sm-5"> <?php echo $search; ?>
+                </span>
+
                 </div>
             </div>
+
+
+
         </header><!-- HEADER END -->
 
+        <!--CONTACTS PAGE START **********-->
+
+        <div class="container">
+
+            <div class="breadcrumbs">
+                <a href="">breadcrumbs text1</a>
+                <a href="">Контакты</a>
+            </div>
 
 
+            <section class="contacts">
+                <div class="contacts__info">
 
-		<main class="page-def page-conf page-def_no-paddings">
-            <div class="container">
+                    <h4 class="contacts__title">Контакты</h4>
 
-                <div class="breadcrumbs">
-                    <a href="/">Главная</a>
-                    <a href="">Номера</a>
-                </div>
-
-
-
-
-                <div class="items items_col2 contact-info">
-
-
-                    <div class="items items_column contact-info__column">
-
-                        <h1 class="title title_dashed">Контакты</h1>
-
-                        <div>
-                            <span>
-                                <h4 class="title_dashed title_dashed-bottom">Адрес</h4>
-                                <h5>г. Николаев, ул. Никольская, 25</h5>
-                            </span>
-                            <span>
-                                <h4 class="title_dashed title_dashed-bottom">СПОРТ-КЛУБ:</h4>
-                                <h5>+38(0512) 489-584  </h5>
-                            </span>
+                    <div class="contacts__item">
+                        <img src="img/icon-insta.png" alt="">
+                        <div class="contacts__item-info">
+                            <span>38 (050) 334-45-45</span>
+                            <span>38 (063) 455-32-32</span>
                         </div>
-                        <div>
-                            <span>
-                                <h4 class="title_dashed title_dashed-bottom">РЕСЕПШН:</h4>
-                                <h5>+38(0512) 489-583; +38(094) 510-10-12 </h5>
-                                <a href="mailto:reception@alex-hotel.com.ua">reception@alex-hotel.com.ua</a>
-                            </span>
-                            <span>
-                                <h4 class="title_dashed title_dashed-bottom">БИЛЬЯРДНЫЙ КУЛУБ:</h4>
-                                <h5>+38(0512) 489-560</h5>
-                            </span>
+                    </div>
+                    <div class="contacts__item ">
+                        <img src="img/icon-insta.png" alt="">
+                        <div class="contacts__item-info">
+                            <span class="contacts__item-title">Режим работы:</span>
+                            <span>Пн. - Пт. с 10.00 до 18.00</span>
                         </div>
-                        <div>
-                            <span>
-                                <h4 class="title_dashed title_dashed-bottom">Ресторан:</h4>
-                                <h5>+38(0512) 489-579; +38(0512) 489-562</h5>
-                                <a href="mailto:restoran@alex-hotel.com.ua">restoran@alex-hotel.com.ua</a>
-                            </span>
-                            <span>
-                                <h4 class="title_dashed title_dashed-bottom">Сауна:</h4>
-                                <h5>+38(0512) 489-594</h5>
-                            </span>
+                    </div>
+                    <div class="contacts__item ">
+                        <img src="img/icon-insta.png" alt="">
+                        <div class="contacts__item-info">
+                            <span class="contacts__item-title">Мы находимся:</span>
+                            <span>г. Николаев, ул. Соборная, 17а</span>
                         </div>
-                        <div>
-                            <span>
-                                <h4 class="title_dashed title_dashed-bottom">КОНФЕРЕНЦ-СЕРВИС:</h4>
-                                <h5>+38(0512) 489-583</h5>
-                                <a href="mailto:admin@alex-hotel.com.ua ">admin@alex-hotel.com.ua </a>
-                            </span>
-                            <span>
-                                <h4 class="title_dashed title_dashed-bottom">САЛОН КРАСОТЫ:</h4>
-                                <h5>+38(0512) 489-593</h5>
-                            </span>
+                    </div>
+                    <div class="contacts__item ">
+                        <img src="img/icon-insta.png" alt="">
+                        <div class="contacts__item-info">
+                            <span class="contacts__item-title">Связаться с нами:</span>
+                            <span>info@bonnd-shop.com.ua</span>
                         </div>
                     </div>
 
 
-                    <section class="form-wrap form-wrap-contact">
-                        <h4 class="title_dashed-bottom">Связаться с нами</h4>
-                        <form>
-                            <label>
-                                <p>Имя:</p>
-                                <input type="text">
-                            </label>
-                            <label>
-                                <p>Электронный адрес:</p>
-                                <input type="email">
-                            </label>
-                            <label>
-                                <p>Сообщение:</p>
-                                <textarea></textarea>
-                            </label>
-                            <button class="btn-def btn-def_md ">Отправить собщение</button>
-                        </form>
-                    </section>
-
-
                 </div>
 
 
+                <div class="contacts__form">
+
+                    <h4 class="contacts__title">Связаться с нами</h4>
+                    <form>
+                        <label>
+                            <p>Ваше имя:</p>
+                            <input type="text">
+                        </label>
+                        <label>
+                            <p>E-mail:</p>
+                            <input type="email">
+                        </label>
+                        <label>
+                            <p>Сообщение:</p>
+                            <textarea></textarea>
+                        </label>
+                        <button class="btn-def btn-def_md ">Отправить собщение</button>
+                    </form>
+                </div>
 
 
-
-
-
-
-            </div>
-
-
-            <!--<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCgYMJM_xSG-4I6q5fYYDvJ2aGY6mdOvKY&sensor=false"></script>-->
-
-            <section id="map" class="map-block">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2722.2578666112804!2d31.982897451587956!3d46.97626953919693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c5c973ea11f4f7%3A0xe44184f1ab8a5c06!2z0LLRg9C70LjRhtGPINCd0ZbQutC-0LvRjNGB0YzQutCwLCAyNSwg0JzQuNC60L7Qu9Cw0ZfQsiwg0JzQuNC60L7Qu9Cw0ZfQstGB0YzQutCwINC-0LHQu9Cw0YHRgtGMLCA1NDAwMA!5e0!3m2!1suk!2sua!4v1516108267833"  frameborder="0" style="border:0" allowfullscreen></iframe>
             </section>
 
 
-		</main><!-- MAIN END -->
 
 
+        </div>
 
 
-        <footer><!-- FOOTER -->
+        <section id="map" class="map_fw">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2722.2578666112804!2d31.982897451587956!3d46.97626953919693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c5c973ea11f4f7%3A0xe44184f1ab8a5c06!2z0LLRg9C70LjRhtGPINCd0ZbQutC-0LvRjNGB0YzQutCwLCAyNSwg0JzQuNC60L7Qu9Cw0ZfQsiwg0JzQuNC60L7Qu9Cw0ZfQstGB0YzQutCwINC-0LHQu9Cw0YHRgtGMLCA1NDAwMA!5e0!3m2!1suk!2sua!4v1516108267833"  frameborder="0" style="border:0" allowfullscreen></iframe>
+        </section>
+
+
+        <!-- ***********CONTACTS PAGE END-->
+
+
+        <!-- FOOTER ***********-->
+
+    <footer>
+        <section class="footer__suscribe">
             <div class="container">
-                <div class="footer__wrap items items_col3">
+                <p>Узнавайте о новинках и акциях первыми!</p>
+                <img src="img/icon-subscribe.jpg" alt="">
+                <form action="">
+                    <input type="text">
+                    <button class="btn-def">Подписаться</button>
+                </form>
 
-                    <ul class="footer__nav">                        <li><a class="active"  href="nomera.html">Номера</a></li>                        <li><a href="restoran.html">Ресторан</a></li>                        <li><a href="conferense.html">Конференц сервис</a></li>                        <li><a href="sport-club.html">Спорт Клуб</a></li>                        <li><a href="billiard.html">Бильярдный клуб</a></li>                        <li><a href="sauna.html">Сауна</a></li>                        <li><a href="basein.html">Бассейн</a></li>                        <li><a href="beauty-saloon.html">Салон красоты</a></li>                        <li><a href="">Карта сайта</a></li>                        <li><a href="contacts.html">Контакты</a></li>                    </ul>
+            </div>
+        </section>
 
-                    <div class="footer__info footer__contact-info items items_col2">
-                        <div>
-                            <span>
-                                <h6>РЕСЕПШН:</h6>
-                                <h5>+38(0512) 489-583; +38(094) 510-10-12 </h5>
-                                <a href="mailto:reception@alex-hotel.com.ua">reception@alex-hotel.com.ua</a>
-                            </span>
-                            <span>
-                                <h6>Ресторан:</h6>
-                                <h5>+38(0512) 489-579; +38(0512) 489-562</h5>
-                                <a href="mailto:restoran@alex-hotel.com.ua">restoran@alex-hotel.com.ua</a>
-                            </span>
-                            <span>
-                                <h6>КОНФЕРЕНЦ-СЕРВИС:</h6>
-                                <h5>+38(0512) 489-583</h5>
-                                <a href="mailto:admin@alex-hotel.com.ua ">admin@alex-hotel.com.ua </a>
-                            </span>
-                        </div>
-                        <div>
-                            <span>
-                                <h6>СПОРТ-КЛУБ:</h6>
-                                <h5>+38(0512) 489-584  </h5>
-                            </span>
-                            <span>
-                                <h6>БИЛЬЯРДНЫЙ КУЛУБ:</h6>
-                                <h5>+38(0512) 489-560</h5>
-                            </span>
-                            <span>
-                                <h6>Сауна:</h6>
-                                <h5>+38(0512) 489-594</h5>
-                            </span>
-                            <span>
-                                <h6>САЛОН КРАСОТЫ:</h6>
-                                <h5>+38(0512) 489-593</h5>
-                            </span>
-                        </div>
 
+        <section class="footer__common">
+            <div class="container">
+                <div class="footer__about">
+
+                    <div class="soc-wrap">
+                        <span class="socIcon fb">
+                            <a rel="nofollow" href="https://fb.com">
+                                <img src="img/icon-fb.png" alt="">
+                            </a>
+                        </span>
+                        <span class="socIcon insta">
+                            <a rel="nofollow" href="https://www.instagram.com/">
+                                <img src="img/icon-insta.png" alt="">
+                            </a>
+                        </span>
                     </div>
 
-                    <div class="footer__logo">
-                        <img src="img/img-logo_footer.png">
-                        <p class="footer__copyright">© 2017  <br>Гостинично-ресторанный кломплекс <br> «Александровский» </p>
-                        <div class="footer__stars">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                        <span>
-                            <p>Разработка и поддержка </p>
-                            <a class="ads-firm-link" href="https://adsgroup.com.ua">ADS group</a>
-                        </span>
+                    <div class="footer__lists">
+                        <ul>
+                            <li><a href="#">О магазине</a></li>
+                            <li><a href="#">Подарочные комплекты</a></li>
+                            <li><a href="#">Подарочные сертификаты</a></li>
+                            <li><a href="#">Оплата и доставка</a></li>
+                        </ul>
 
+                        <ul>
+                            <li><a href="#">Гарантии</a></li>
+                            <li><a href="#">Новости и статьи</a></li>
+                            <li><a href="#">Контакты</a></li>
+                            <li><a href="#">Карта сайта</a></li>
+                        </ul>
+                    </div>
+
+                    <p class="copyright">© BOND. 2018. Все права защищены</p>
+
+                </div>
+
+
+                <div class="footer__info contacts">
+                    <img class="logo" src="img/logo_footer.jpg">
+                    <div class="contacts__info">
+                        <div class="contacts__item">
+                            <img src="img/icon-insta.png" alt="">
+                            <div class="contacts__item-info">
+                                <span>38 (050) 334-45-45</span>
+                                <span>38 (063) 455-32-32</span>
+                            </div>
+                        </div>
+                        <div class="contacts__item ">
+                            <img src="img/icon-insta.png" alt="">
+                            <div class="contacts__item-info">
+                                <span class="contacts__item-title">Режим работы:</span>
+                                <span>Пн. - Пт. с 10.00 до 18.00</span>
+                            </div>
+                        </div>
+                        <div class="contacts__item ">
+                            <img src="img/icon-insta.png" alt="">
+                            <div class="contacts__item-info">
+                                <span class="contacts__item-title">Мы находимся:</span>
+                                <span>г. Николаев, ул. Соборная, 17а</span>
+                            </div>
+                        </div>
+                        <div class="contacts__item ">
+                            <img src="img/icon-insta.png" alt="">
+                            <div class="contacts__item-info">
+                                <span class="contacts__item-title">Связаться с нами:</span>
+                                <span>info@bonnd-shop.com.ua</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="adsgroup">
+                        <a href="" rel="nofollow">Разработка и поддержка ADS group</a>
                     </div>
                 </div>
             </div>
-        </footer><!-- FOOTER END -->
+        </section>
+    </footer>
 
 
+    <!-- FOOTER END -->
 
 
-        <!--MODAL WINDOW " MAP " -->
-
-        <div class="modal__overlay">
-            <div id="map-block" class="modalDiv modalDiv__map">
-                <span class="closeModalIcon"></span>
-
-                <section id="map" class="map-block">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2722.2578666112804!2d31.982897451587956!3d46.97626953919693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c5c973ea11f4f7%3A0xe44184f1ab8a5c06!2z0LLRg9C70LjRhtGPINCd0ZbQutC-0LvRjNGB0YzQutCwLCAyNSwg0JzQuNC60L7Qu9Cw0ZfQsiwg0JzQuNC60L7Qu9Cw0ZfQstGB0YzQutCwINC-0LHQu9Cw0YHRgtGMLCA1NDAwMA!5e0!3m2!1suk!2sua!4v1516108267833"  frameborder="0" style="border:0" allowfullscreen></iframe>
-                </section>
-
-            </div>
-        </div>
-	</div>
-
-
-    <link rel="stylesheet" href="css/main.css">
-
-    <script src="libs/js/jquery.min.js"></script>
-    <!--<script src="js/scripts.min.js"></script>-->
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
-    <script src="js/common.js"></script>
-
     <script src="libs/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="libs/slick/slick.js"></script>
+    <script type="text/javascript" src="libs/slick/slick.min.js"></script>
     <script type="text/javascript" src="libs/js/jquery.mmenu.all.js"></script>
     <script type="text/javascript" src="libs/js/jquery.formstyler.min.js"></script>
     <script src="libs/js/clockpicker.js"></script>
+    <script src="js/common.js"></script>
 
 
 </body>
