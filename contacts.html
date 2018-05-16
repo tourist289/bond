@@ -58,325 +58,128 @@
 
             <div class="header__top">
                 <div class="container">
+                    <div class="nav-wrap">
+                        <nav>
+                            <a href="">О магазине</a>
+                            <a href="">Оплата и доставка</a>
+                            <a href="">Гарантии</a>
+                            <a href="">Контакты</a>
 
-                    <div class="n">
-
+                        </nav>
+                        <a class="sertif-link" href="">Подарочные сертификаты</a>
                     </div>
+
+
+
+
+
+
+
 
 
                     <div class=" contactUs">
-                        <div class="folowUs">
-                            <div class="soc-wrap">
-                                <div>
-                                <span class="socIcon fb">
-                                    <a rel="nofollow" href="https://fb.com"></a>
-                                </span>
-                                    <span class="socIcon insta">
-                                    <a rel="nofollow" href="https://www.instagram.com/"></a>
-                                </span>
-                                </div>
-                            </div>
-                        </div>
+                        <ul class="social_list">
+                            <li>
+                                <a href="" class="socIcon fb"></a>
+                            </li>
+                            <li>
+                                <a href="" class="socIcon inst"></a>
+                            </li>
+                        </ul>
 
-                        <span class="nal-wrapper">
-                        <?php echo $currency; ?>
-                    </span>
-
-                    </div>
-
-
-                </div>
-            </div>
-
-
-            <div class="container">
-
-
-                <div class="row  header__info-wraper  ">
-
-
-                    <div class="col-sm-4 col-md-3 logo__wrapper ">
-                        <div id="logo">
-                            <?php if ($logo) { ?>
-                            <?php if ($home == $og_url) { ?>
-                            <img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>"
-                                 class="img-responsive"/>
-                            <?php } else { ?>
-                            <a href="<?php echo $home; ?>"><img src="<?php echo $logo; ?>"
-                                                                title="<?php echo $name; ?>"
-                                                                alt="<?php echo $name; ?>" class="img-responsive"/></a>
-                            <?php } ?>
-                            <?php } else { ?>
-                            <h1><a href="<?php echo $home; ?>"><?php echo $name; ?></a></h1>
-                            <?php } ?>
-                        </div>
-                    </div>
-
-
-                    <div class="col-sm-5  col-md-6 contact-info">
-                        <span class="phone-wrap">
-                              <a href="tel:<?php echo $clear_telephone; ?>" class="phone">
-                                  <span><?php echo $telephone; ?></span>
-                              </a>
+                        <span class="lang-wrapper">
+                            <select class="js-styler">
+                                  <option value="Рус">Рус</option>
+                                  <option value="ENG">ENG</option>
+                                  <option  value="УКР">УКР</option>
+                            </select>
                         </span>
 
-
-
-                        <div>
-
-
-                        </div>
-
                     </div>
-                    <div class="col-sm-3 cart-wrapper"><?php echo $cart; ?></div>
 
 
                 </div>
             </div>
 
-
-
-            <?php if ($categories) { ?>
-            <div class="header__bottom">
+            <div class="header__main">
                 <div class="container">
 
 
-                    <div class="mobile-menu">
-                        <a href="#my-menu" class="hamburger hamburger--elastic">
-                      <span class="hamburger-box">
-                          <span class="hamburger-inner"></span>
-                      </span>
+                    <div class="row    ">
 
+                        <a class="logo">
+                            <img src="img/logo_header.jpg" alt="">
                         </a>
-                        <div class="hidden sideMenu" id="my-menu">
-                            <ul>
-
-                                <?php if ($categories) { ?>
-                                <li class="mmcatalog">
-                                    <span class="mmcatalog-link">Каталог</span>
-                                    <ul>
-                                        <?php foreach ($categories as $catalogC) : ?>
-                                        <li>
-                                            <?php if (!empty($catalogC['children'])) : ?>
-                                            <span class="mmcatalog-link">
-                                                        <?php echo $catalogC['name']; ?>
-                                                    </span>
-                                            <ul>
-                                                <?php foreach ($catalogC['children'] as $catalogCFirst) : ?>
-                                                <?php if (!empty($catalogCFirst['children'])) : ?>
-                                                <li>
-                                                                    <span class="mmcatalog-link">
-                                                                        <?php echo $catalogCFirst['name']; ?>
-                                                                    </span>
-                                                    <ul>
-                                                        <?php foreach ($catalogCFirst['children'] as $catalogCSecond) : ?>
-                                                        <li>
-                                                            <a href="<?php echo $catalogCSecond['href']; ?>">
-                                                                <?php echo $catalogCSecond['name']; ?>
-                                                            </a>
-                                                        </li>
-                                                        <?php endforeach; ?>
-                                                    </ul>
-                                                </li>
-                                                <?php else : ?>
-                                                <li>
-                                                    <a href="<?php echo $catalogCFirst['href']; ?>">
-                                                        <?php echo $catalogCFirst['name']; ?>
-                                                    </a>
-                                                </li>
-                                                <?php endif; ?>
-                                                <?php endforeach; ?>
-                                            </ul>
-                                            <?php else : ?>
-                                            <a href="<?php echo $catalogC['href'];?>">
-                                                <?php echo $catalogC['name']; ?>
-                                            </a>
-                                            <?php endif; ?>
-                                        </li>
-                                        <?php endforeach; ?>
-                                    </ul>
-
-                                </li>
-                                <?php } ?>
-
-
-                                <?php if (!empty($catalogCategory)) : ?>
-                                <li class="mmcatalog ">
-                                    <span class="mmcatalog-link">Производители</span>
-                                    <ul>
-                                        <?php foreach ($catalogCategory as $catalogC) : ?>
-                                        <li>
-                                            <?php if (!empty($catalogC['children'])) : ?>
-                                            <span class="mmcatalog-link">
-                                            <?php echo $catalogC['name']; ?>
-                                        </span>
-                                            <ul>
-                                                <?php foreach ($catalogC['children'] as $catalogCFirst) : ?>
-                                                <?php if (!empty($catalogCFirst['children'])) : ?>
-                                                <li>
-                                                <span class="mmcatalog-link">
-                                                    <?php echo $catalogCFirst['name']; ?>
-                                                </span>
-                                                    <ul>
-                                                        <?php foreach ($catalogCFirst['children'] as $catalogCSecond) : ?>
-                                                        <li>
-                                                            <a href="<?php echo $catalogCSecond['href']; ?>">
-                                                                <?php echo $catalogCSecond['name']; ?>
-                                                            </a>
-                                                        </li>
-                                                        <?php endforeach; ?>
-                                                    </ul>
-                                                </li>
-                                                <?php else : ?>
-                                                <li>
-                                                    <a href="<?php echo $catalogCFirst['href']; ?>">
-                                                        <?php echo $catalogCFirst['name']; ?>
-                                                    </a>
-                                                </li>
-                                                <?php endif; ?>
-                                                <?php endforeach; ?>
-                                            </ul>
-                                            <?php else : ?>
-                                            <a href="<?php echo $catalogC['href'];?>">
-                                                <?php echo $catalogC['name']; ?>
-                                            </a>
-                                            <?php endif; ?>
-                                        </li>
-                                        <?php endforeach; ?>
-                                    </ul>
-                                </li>
-                                <?php endif; ?>
-
-                                <li><a href="<?php echo $about_us; ?>">о компании</a></li>
-
-                                <li><a href="<?php echo $contact; ?>">контакты </a></li>
-                                <li class="contact-info">
-                                    <a href="tel:<?php echo $telephone; ?>" class="phone">
-                                        <span><?php echo $telephone; ?></span>
-
-                                    </a>
-                                    <a href="mailto:<?php echo $email; ?>">
-                                        <span class="mail-info"><?php echo $email; ?></span>
-                                    </a>
-                                </li>
-
-                                <li>
-                                <span class="nal-wrapper">
-                                    <?php echo $currency; ?>
-                                </span>
-                                </li>
-
-
-
-                                <li><button class="back-call btn-def btn-fff js-call">Заказать обратный звонок</button>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <a href="<?php echo $home; ?>" class="mobile-title">Elta-ltd</a>
-
-
-
-
-
-
-
-
-                    <nav id="menu" class="navbar">
-
-                        <!-- <div class="navbar-header"><span id="category" class="visible-xs"><?php echo $text_category; ?></span>
-            <button type="button" class="btn btn-navbar navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"><i class="fa fa-bars"></i></button>
-          </div>-->
-
-                        <div class="collapse navbar-collapse navbar-ex1-collapse">
-                            <ul class="nav navbar-nav">
-                                <?php if ($categories) { ?>
-                                <div class="dropdown">
-                                    <a href="<?php echo $catalog; ?>" class="dropdown-toggle"
-                                       data-toggle="dropdown">Каталог</a>
-
-                                    <div class="dropdown-menu">
-                                        <div class="dropdown-inner">
-                                            <ul class="list-unstyled">
-
-                                                <?php foreach ($categories as $catalogC) : ?>
-                                                <li class="sub-list">
-                                                    <?php if (!empty($catalogC['children'])) : ?>
-                                                    <span class="sub-list__trigger">
-                                                                <a href="<?php echo $catalogC['href']; ?>">
-                                                                <?php echo $catalogC['name']; ?>
-                                                                </a>
-                                                            </span>
-                                                    <ul class="sub-list__ul">
-                                                        <?php foreach ($catalogC['children'] as $catalogCFirst) : ?>
-                                                        <?php if (!empty($catalogCFirst['children'])) : ?>
-                                                        <li>
-                                                            <a href="<?php echo $catalogCFirst['href']; ?>">
-                                                                            <span class="sub-list__trigger">
-                                                                                <?php echo $catalogCFirst['name']; ?>
-                                                                            </span>
-                                                            </a>
-                                                            <ul class="sub-list__ul">
-                                                                <?php foreach ($catalogCFirst['children'] as $catalogCSecond) : ?>
-                                                                <li>
-                                                                    <a href="<?php echo $catalogCSecond['href']; ?>">
-                                                                        <?php echo $catalogCSecond['name']; ?>
-                                                                    </a>
-                                                                </li>
-                                                                <?php endforeach; ?>
-                                                            </ul>
-                                                        </li>
-                                                        <?php else : ?>
-                                                        <li>
-                                                            <a href="<?php echo $catalogCFirst['href']; ?>">
-                                                                <?php echo $catalogCFirst['name']; ?>
-                                                            </a>
-                                                        </li>
-                                                        <?php endif; ?>
-                                                        <?php endforeach; ?>
-                                                    </ul>
-                                                    <?php else : ?>
-                                                    <a href="<?php echo $catalogC['href'];?>">
-                                                        <?php echo $catalogC['name']; ?>
-                                                    </a>
-                                                    <?php endif; ?>
-                                                </li>
-                                                <?php endforeach; ?>
-                                            </ul>
-                                        </div>
-
-                                        <a href="<?php echo $catalog; ?>" class="see-all">
-                                            <?php echo $text_all; ?>
-                                        </a>
-
-                                    </div>
-
+                        <div class="main__info">
+                            <div class="phone__wrapper">
+                                <figure>
+                                    <img src="img/icon-phone.jpg" alt="">
+                                </figure>
+                                <div class="phone__info">
+                                    <span>38 (050) 334-45-45</span>
+                                    <span>38 (063) 455-32-32</span>
                                 </div>
-                                <?php } ?>
-                            </ul>
-
+                            </div>
+                            <div class="scadual__wrapper">
+                                <span>Режим работы:</span>
+                                <span>Пн. - Пт. с 10.00 до 18.00</span>
+                            </div>
                         </div>
 
-                    </nav>
 
-                    <span class="link-wrapper">
-                 <a href="<?php echo $about_us; ?>">о компании</a>
-                 <a href="<?php echo $contact; ?>">контакты </a>
-                 </span>
-                    <span class="search-wrapper">
-                 <?php echo $search; ?>
-
-                        <div class="col-sm-5"> <?php echo $search; ?>
-                </span>
-
+                    </div>
                 </div>
             </div>
 
 
 
-        </header><!-- HEADER END -->
 
-        <!--CONTACTS PAGE START **********-->
+
+            <div class="header__bottom">
+                <div class="container">
+
+                    <div class="bottom__menu">
+
+                        <a href=""  data-href="">Для мужчин</a>
+                        <a href="" data-href="">Для женщин</a>
+                        <a href="">Подарочные комплекты</a>
+                        <a href="" data-href="">Обувь</a>
+                        <a href="" data-href="">Дорожное</a>
+                        <div class="drop-menuHolder">
+                            <div class="forMan">
+                                <div class="drop__container">
+                                    <figure>
+                                        <img src="img/item02.jpg" alt="">
+                                        <p>some item</p>
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="forWoman"></div>
+                            <div class="shoes"></div>
+                            <div class="forRoad"></div>
+                        </div>
+                    </div>
+                    <div id="search" class=" bottom__search input-group">
+                        <input type="text" name="search" value="" class="form-control input-lg input_item">
+                        <span class="input-group-btn">
+                        <button type="button" class="btn btn-default btn-lg"><i class="fa fa-search"></i></button>
+                        </span>
+                     </div>
+
+                </div>
+
+            </div>
+
+
+
+        </header>
+    <!-- HEADER END -->
+
+
+    <!--CONTACTS PAGE START **********-->
+        <button class="js-modal" data-href="#modal_thankAnswer">OPEN MODAL</button>
+
+
 
         <div class="container">
 
@@ -389,31 +192,39 @@
             <section class="contacts">
                 <div class="contacts__info">
 
-                    <h4 class="contacts__title">Контакты</h4>
+                    <h4 class="title-hr">Контакты</h4>
 
                     <div class="contacts__item">
-                        <img src="img/icon-insta.png" alt="">
+                        <figure>
+                            <img src="img/icon-insta.png" alt="">
+                        </figure>
                         <div class="contacts__item-info">
                             <span>38 (050) 334-45-45</span>
                             <span>38 (063) 455-32-32</span>
                         </div>
                     </div>
                     <div class="contacts__item ">
-                        <img src="img/icon-insta.png" alt="">
+                        <figure>
+                            <img src="img/icon-insta.png" alt="">
+                        </figure>
                         <div class="contacts__item-info">
                             <span class="contacts__item-title">Режим работы:</span>
                             <span>Пн. - Пт. с 10.00 до 18.00</span>
                         </div>
                     </div>
                     <div class="contacts__item ">
-                        <img src="img/icon-insta.png" alt="">
+                        <figure>
+                            <img src="img/icon-insta.png" alt="">
+                        </figure>
                         <div class="contacts__item-info">
                             <span class="contacts__item-title">Мы находимся:</span>
                             <span>г. Николаев, ул. Соборная, 17а</span>
                         </div>
                     </div>
                     <div class="contacts__item ">
-                        <img src="img/icon-insta.png" alt="">
+                        <figure>
+                            <img src="img/icon-insta.png" alt="">
+                        </figure>
                         <div class="contacts__item-info">
                             <span class="contacts__item-title">Связаться с нами:</span>
                             <span>info@bonnd-shop.com.ua</span>
@@ -426,7 +237,7 @@
 
                 <div class="contacts__form">
 
-                    <h4 class="contacts__title">Связаться с нами</h4>
+                    <h4 class="title-hr">Связаться с нами</h4>
                     <form>
                         <label>
                             <p>Ваше имя:</p>
@@ -440,7 +251,7 @@
                             <p>Сообщение:</p>
                             <textarea></textarea>
                         </label>
-                        <button class="btn-def btn-def_md ">Отправить собщение</button>
+                        <button class="btn-def  ">Отправить собщение</button>
                     </form>
                 </div>
 
@@ -454,11 +265,14 @@
 
 
         <section id="map" class="map_fw">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2722.2578666112804!2d31.982897451587956!3d46.97626953919693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c5c973ea11f4f7%3A0xe44184f1ab8a5c06!2z0LLRg9C70LjRhtGPINCd0ZbQutC-0LvRjNGB0YzQutCwLCAyNSwg0JzQuNC60L7Qu9Cw0ZfQsiwg0JzQuNC60L7Qu9Cw0ZfQstGB0YzQutCwINC-0LHQu9Cw0YHRgtGMLCA1NDAwMA!5e0!3m2!1suk!2sua!4v1516108267833"  frameborder="0" style="border:0" allowfullscreen></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d48496.76753561563!2d-21.116129436734354!3d63.968942955628094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1suk!2sua!4v1526456569223" width="" height="" frameborder="0" style="border:0" allowfullscreen></iframe>
         </section>
 
 
-        <!-- ***********CONTACTS PAGE END-->
+
+
+        <!-- CONTACTS PAGE END-->
+
 
 
         <!-- FOOTER ***********-->
@@ -554,9 +368,28 @@
             </div>
         </section>
     </footer>
-
-
     <!-- FOOTER END -->
+
+
+<!--MODAL WINDOW " Thanks for answer " **********-->
+<!--fire modal from this button-->
+<!--<button class="js-modal" data-href="#modal_thankAnswer">OPEN MODAL</button>-->
+<div class="modal__overlay">
+    <div id="modal_thankAnswer" class="modal__wrap ">
+        <span class="closeModalIcon modal__close"></span>
+        <section class="modal__content">
+
+            <h4>Спасибо за обращение </h4>
+            <p>Наш менеджер свяжется с Вами в ближайшее время </p>
+            <button class="btn-def">OK</button>
+        </section>
+    </div>
+</div>
+
+
+<!--MODAL WINDOW " Thanks for answer " END -->
+
+
 
 
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>

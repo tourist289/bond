@@ -25,13 +25,17 @@ footer
     justify-content: space-between
     align-items: center
     height: 100%
+    height: 100%
     width: 45%
+    margin-bottom: 0
 
     input
       width: 60%
       border-radius: 0
+      margin: 0
     button
       width: 35%
+      margin: 0
 
 .footer__common
   .container
@@ -92,7 +96,7 @@ footer
       color: $f-color_footer-dark
       padding-bottom: 5px
 
-.soc-wrap
+.social_list
   display: block
   padding: 20px 0 0
   margin-bottom: 0
@@ -102,7 +106,11 @@ footer
     position: relative
     width: 20px
     height: 20px
-    margin-right: 20px
+    &.fb
+      background: url("../../../img/icon-fb.png") no-repeat 0 0
+      margin-right: 20px
+    &.insta
+      background: url("../../../img/icon-insta.png") no-repeat 0 0
 
 .footer__lists
   display: flex
