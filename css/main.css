@@ -307,10 +307,10 @@ summary {
   .btn-def_red {
     background-color: #ff0300; }
     .btn-def_red:hover {
-      background-color: #000000;
+      background-color: $mainCOLORVOO000;
       transition: background-color .35s; }
   .btn-def_dark {
-    background-color: #000000; }
+    background-color: $mainCOLORVOO000; }
     .btn-def_dark:hover {
       background-color: #ff0300;
       transition: background-color .3s; }
@@ -375,7 +375,7 @@ summary {
 .show-more {
   display: inline-block;
   /*width: 100%;*/
-  color: #000000;
+  color: $mainCOLORVOO000;
   font-family: 'Raleway', sans-serif;
   font-size: 13px;
   font-weight: 400;
@@ -385,7 +385,7 @@ summary {
   letter-spacing: 1.3px;
   padding-bottom: 2px; }
   .show-more:hover {
-    color: #000000;
+    color: $mainCOLORVOO000;
     text-decoration: none; }
   .show-more:before {
     content: '';

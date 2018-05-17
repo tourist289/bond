@@ -111,11 +111,11 @@
                             <img src="img/logo_header.jpg" alt="">
                         </a>
                         <div class="main__info">
-                            <div class="phone__wrapper">
+                            <div class="contacts__item main__phone">
                                 <figure>
                                     <img src="img/icon-phone.jpg" alt="">
                                 </figure>
-                                <div class="phone__info">
+                                <div class="contacts__item-info">
                                     <span>38 (050) 334-45-45</span>
                                     <span>38 (063) 455-32-32</span>
                                 </div>
@@ -148,27 +148,85 @@
             <div class="header__bottom">
                 <div class="container">
 
-                    <div class="bottom__menu">
+                    <ul class="menu__links js-menu__links">
+                        <li><a href="#" data-href="data-1">Для мужчин</a></li>
+                        <li><a href="#" data-href="data-2">Для женщин</a></li>
+                        <li><a href="#">Подарочные комплекты</a></li>
+                        <li><a href="#" data-href="data-4">Обувь</a></li>
+                        <li><a href="#" data-href="data-5">Дорожное</a></li>
 
-                        <a href=""  data-href="">Для мужчин</a>
-                        <a href="" data-href="">Для женщин</a>
-                        <a href="">Подарочные комплекты</a>
-                        <a href="" data-href="">Обувь</a>
-                        <a href="" data-href="">Дорожное</a>
-                        <div class="drop-menuHolder">
-                            <div class="forMan">
-                                <div class="drop__container">
+                    </ul>
+
+                    <div class="menu__content active">
+                        <div id="data-1" class="forMan drop__container active">
+
+                            <div class="link-wrapper js-link-wrapper ">
+                                <h4 class="title-hr"><span>Для мужчин</span></h4>
+                                <a data-link="1" href="#">Барсетки</a>
+                                <a data-link="2" href="#">Брелочки</a>
+                                <a data-link="3" href="#">Визитницы</a>
+                                <a data-link="1" href="#">Барсетки</a>
+                                <a data-link="2" href="#">Брелочки</a>
+                                <a data-link="3" href="#">Визитницы</a>
+                                <a data-link="1" href="#">Барсетки</a>
+                                <a data-link="2" href="#">Брелочки</a>
+                                <a data-link="3" href="#">Визитницы</a>
+                            </div>
+                            <div class="img__wrapper">
+                                <img data-id="1" src="img/menu-item-1.png" alt="">
+                                <img class="active" data-id="2" style="border: 1px solid red"  src="img/menu-item-1.png" alt="">
+                                <img style="border: 1px solid green" data-id="3" src="img/menu-item-1.png" alt="">
+                            </div>
+
+                        </div>
+                        <div id="data-2" class="forWoman"></div>
+                        <div id="data-4" class="shoes"></div>
+
+                        <div id="data-5" class=" forRoad drop__container ">
+                            <h4 class="title-hr">Дорожное</h4>
+                            <div class=" flex">
+                                <div class="drop-item">
                                     <figure>
-                                        <img src="img/item02.jpg" alt="">
-                                        <p>some item</p>
+                                        <img src="img/img-road_06.jpg" alt="">
                                     </figure>
+                                    <a href="#"  class="figcaption">Чемоданы на колесах</a>
+                                </div>
+                                <div class="drop-item">
+                                    <figure>
+                                        <img src="img/img-road_08.jpg" alt="">
+                                    </figure>
+                                    <a href="#" class="figcaption">Портпледы</a>
+                                </div>
+                                <div class="drop-item">
+                                    <figure>
+                                        <img src="img/img-road_10.jpg" alt="">
+                                    </figure>
+                                    <a href="#" class="figcaption">Дорожные сумки на колесах</a>
+                                </div>
+                                <div class="drop-item">
+                                    <figure>
+                                        <img src="img/img-road_03.jpg" alt="">
+                                    </figure>
+                                    <a href="#" class="figcaption">Нессеры</a>
+                                </div>
+                                <div class="drop-item">
+                                    <figure>
+                                        <img src="img/img-road_16.jpg" alt="">
+                                    </figure>
+                                    <a href="#" class="figcaption">Чехлы и футляры</a>
+                                </div>
+                                <div class="drop-item">
+                                    <figure>
+                                        <img src="img/img-road_13.jpg" alt="">
+                                    </figure>
+                                    <a href="#" class="figcaption">Саквояжи</a>
                                 </div>
                             </div>
-                            <div class="forWoman"></div>
-                            <div class="shoes"></div>
-                            <div class="forRoad"></div>
                         </div>
                     </div>
+
+
+
                     <div id="search" class=" bottom__search input-group">
                         <input type="text" name="search" value="" class="form-control input-lg input_item">
                         <span class="input-group-btn">

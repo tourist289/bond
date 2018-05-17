@@ -368,6 +368,16 @@ $(document).ready(function(){
 //     google.maps.event.addDomListener(window, 'load', initialize);
 
 
+//  dropdown menu
+
+    console.log(111)
+    $('.js-bottom__menu').on('click','a', function(e){
+        e.preventDefault();
+        let id = e.target()
+        console.log(id)
+    })
+
+
 
 
 
