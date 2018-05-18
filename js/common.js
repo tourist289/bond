@@ -31,6 +31,7 @@ $(document).ready(function(){
     //============ CLOSE on button */
     $(window).on('click', function(e){
         if(e.target.className == 'modal__overlay' || e.target.className == 'modal__close'){
+            console.log(e.target.className)
             closeModal();
         }
     });
@@ -85,7 +86,7 @@ $(document).ready(function(){
         }, 300);
     };
     //============ CLOSE function
-    const closeModal = () => {
+    let closeModal = () => {
         let modal = $('.modal__wrap');
         modal.animate({ opacity: 0, top: '45%'}, 200);
         modal.css('display', 'none');
@@ -158,36 +159,36 @@ $(document).ready(function(){
 
 
 
-// // 4. mmenu
+// 4. mmenu
 
-//     $('#my-menu').css('opacity', 1);
-//     $('#my-menu').mmenu({
-//         extensions: ['effect-menu-slide', 'pagedim-black'],
-//         navbar: {
-//             title: 'title '
-//         },
-//         offCanvas: {
-// //                pageSelector: ".main-wrap",
-//             position: 'right'
-//         }
-//     });
-// //
-//     var apiButt = $('#my-menu').data('mmenu');
-//     apiButt.close($("#my-menu"));
+    $('#my-menu').css('opacity', 1);
+    $('#my-menu').mmenu({
+        extensions: ['effect-menu-slide', 'pagedim-black'],
+        navbar: {
+            title: 'BOND '
+        },
+        offCanvas: {
+//                pageSelector: ".main-wrap",
+            position: 'left'
+        }
+    });
 //
-//     apiButt.bind('open:finish', function() {
-//         $('.hamburger').addClass('is-active');
-//     });
-//     apiButt.bind('close:finish', function() {
-//         $('.hamburger').removeClass('is-active');
-//     });
-//
-//     $('#my-menu a[data-href="#map-block"]').on('click', function(){
-//         apiButt.close($("#my-menu"));
-//     });
-//
-//
-//
+    var apiButt = $('#my-menu').data('mmenu');
+    apiButt.close($("#my-menu"));
+
+    apiButt.bind('open:finish', function() {
+        $('.hamburger').addClass('is-active');
+    });
+    apiButt.bind('close:finish', function() {
+        $('.hamburger').removeClass('is-active');
+    });
+
+    $('#my-menu a[data-href="#map-block"]').on('click', function(){
+        apiButt.close($("#my-menu"));
+    });
+
+
+
 //
 // 5.slick slider
 
@@ -384,12 +385,33 @@ $(document).ready(function(){
         e.preventDefault();
         let id = e.target.attributes['data-link'].value;
         $('.js-link-wrapper').next().find(`img[data-id=${id}]`).addClass('active').siblings().removeClass('active')
-    })
+    });
 
     $('.js-drop__overlay').on('click', function () {
         $('.js-drop__overlay').hide();
         $('.menu__content').removeClass('active');
     });
+
+
+//============ Show form search
+    $('.js_open-form').on('click', function () {
+
+        console.log(111)
+        $(this).prev().toggleClass('width_fx');
+        $(this).toggleClass('btn_search-open');
+
+        if($('.hidden_search').hasClass('width_fx')){
+            setTimeout( () => {
+                $(this).parent().find('.js_open-answer').addClass('height_fx')
+            }, 1000)
+        }else{
+            $(this).parent().find('.js_open-answer').removeClass('height_fx')
+        }
+    });
+// ======================== END Show form search
+
+
+
 
 
 

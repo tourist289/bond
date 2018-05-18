@@ -1,4 +1,19 @@
 @import "../vars"
+.mobile-menu
+	display: none
+.mm-menu.mm-offcanvas.mm-opened
+	display: block!important
+	background: $bg_footer
+	color: #fff
+.mm-menu .mm-listview>li a:not(.mm-next)
+	color: #fff
+.mm-navbar .mm-title
+	padding-top: 18px
+	font-size: 24px
+	color: $ff!important
+	font-weight: bold
+
+
 
 .mm-panels
 	.mm-panel
@@ -6,6 +21,14 @@
 			.mm-navbar
 				.mm-title
 					padding-top: 18px
+					font-size: 24px
+					color: $ff
+					font-weight: bold
+	.mmenu__lang-wrapper
+		display: flex
+		display: none
+		padding: 10px 0
+		justify-content: center
 .mm-navbar
 	height: 50px
 
@@ -19,7 +42,10 @@
 	a, span, a:not(.mm-next)
 		font-size: 18px
 		text-transform: uppercase
-		color: $bb
+		color: $ff
+.mm-menu .mm-btn:after, .mm-menu .mm-btn:before,
+.mm-menu .mm-listview>li .mm-next:after
+	border-color: $red
 
 .mm-menu
 	li.mb-30
@@ -32,3 +58,8 @@
 		span.search
 			form
 				position: relative
+
+.hamburger-inner,
+.hamburger-inner:after,
+.hamburger-inner:before
+	background: $bg_footer

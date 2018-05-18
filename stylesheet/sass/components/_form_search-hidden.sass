@@ -1,0 +1,155 @@
+@import "../vars"
+
+.form_search
+	input
+		border: 1px solid $hr
+		width: 100%
+		background: $ff
+		border-radius: 4px
+	button
+		position: absolute
+		z-index: 1
+		display: block
+		right: 5px
+		top: 3px
+		width: 34px
+		height: 34px
+		border: none
+		font-size: 16px
+		font-weight: 600
+		outline: 0
+		color: $f-color_footer-dark
+		cursor: pointer
+		background: $ff
+		&:hover
+			color: $buttHov
+	&-wrap
+		position: relative
+		width: 25px
+		height: 25px
+		padding-right: 0
+	&-hidden
+		width: 0
+		opacity: 0
+		visibility: hidden
+		height: 35px
+		position: absolute
+		z-index: 1
+		top: -7px
+		right: 100%
+		transition: all .3s ease-in-out
+		&_answer
+			width: 555px
+			max-height: 640px
+			padding: 19px 17px 13px
+			height: 0
+			opacity: 0
+			visibility: hidden
+			overflow: hidden
+			position: absolute
+			z-index: 3
+			top: 40px
+			right: 100%
+			background-color: $ff
+			border: 1px solid $border
+			border-radius: 4px
+			box-shadow: 1.5px 2.6px 9px rgba(0, 0, 0, 0.1)
+			transition: height .3s ease-in-out, opacity .25s ease-in-out
+
+.answer_item
+	width: 100%
+
+.link_show-all
+	border-top: 1px	solid $border
+	padding-top: 16px
+	color: $accent
+	font-size: 13px
+	&:hover, &:focus, &:active
+		color: $red
+.width_fx
+	width: 390px
+	opacity: 1
+	visibility: visible
+	margin: 0
+.height_fx
+	height: auto
+	opacity: 1
+	visibility: visible
+
+.btn_search
+	width: 27px
+	height: 29px
+	position: relative
+	color: $f-color_footer-dark
+	cursor: pointer
+	opacity: 1
+	transition: opacity 0.25s ease-in-out
+	&:hover
+		color: $bb
+	&-open
+		opacity: 1
+		transition: opacity 0.25s ease-in-out
+		.search_svg
+			&-loupe
+				visibility: hidden
+				opacity: 0
+			&-cross
+				visibility: visible
+				opacity: 1
+		&:hover
+			.search_svg-cross
+				color: $bb
+.search_svg
+	&-loupe
+		width: 100%
+		height: 100%
+	&-cross
+		visibility: hidden
+		opacity: 0
+		position: absolute
+		top: 9px
+		right: 10px
+		width: 12px
+		height: 12px
+		color: $accent
+
+
+
+
+//<div class="form_search-wrap ">
+//<form action="" class="form_search form_search-hidden">
+//<input type="search">
+//
+//<button type="button">ok</button>
+//</form>
+//<div class="js_open-form btn_search">
+//<svg class="search_svg-loupe" xmlns="http://www.w3.org/2000/svg">
+//<path fill="currentColor" d="M18.753,18.931 C20.532,16.924 21.642,14.236 21.642,11.277 C21.642,5.068 16.795,-0.000 10.821,-0.000 C4.847,-0.000 -0.000,5.068 -0.000,11.277 C-0.000,17.485 4.847,22.553 10.821,22.553 C13.253,22.553 15.489,21.720 17.301,20.308 L25.347,28.694 C25.543,28.898 25.788,29.000 26.033,29.000 C26.278,29.000 26.539,28.898 26.718,28.694 C27.094,28.302 27.094,27.656 26.718,27.248 L18.753,18.931 ZM1.959,11.277 C1.959,6.191 5.925,2.041 10.821,2.041 C15.701,2.041 19.684,6.174 19.684,11.277 C19.684,16.379 15.718,20.513 10.821,20.513 C5.925,20.513 1.959,16.362 1.959,11.277 Z"></path>
+//</svg>
+//<svg class="search_svg-cross" xmlns="http://www.w3.org/2000/svg">
+//<path  fill="currentColor"
+//d="M7.414,6.000 L11.657,10.242 C12.047,10.633 12.047,11.266 11.657,11.657 C11.266,12.047 10.633,12.047 10.243,11.657 L6.000,7.414 L1.757,11.657 C1.367,12.047 0.734,12.047 0.343,11.657 C-0.047,11.266 -0.047,10.633 0.343,10.242 L4.586,6.000 L0.343,1.757 C-0.047,1.367 -0.047,0.734 0.343,0.343 C0.734,-0.048 1.367,-0.048 1.757,0.343 L6.000,4.586 L10.243,0.343 C10.633,-0.048 11.266,-0.048 11.657,0.343 C12.047,0.734 12.047,1.367 11.657,1.757 L7.414,6.000 Z"></path>
+//</svg>
+//</div>
+//<div class="js_open-answer form_search-hidden_answer">
+//<a href="" class="answer_item">
+//
+//</a>
+//
+//<a href="" class="link_show-all">Show all</a>
+//</div>
+//</div>
+//============ Show form search
+		$('.js_open-form').on('click', function () {
+			$(this).prev().toggleClass('width_fx');
+			$(this).toggleClass('btn_search-open');
+
+			if($('.hidden_search').hasClass('width_fx')){
+				setTimeout( () => {
+					$(this).parent().find('.js_open-answer').addClass('height_fx')
+			}, 1000)
+			}else{
+				$(this).parent().find('.js_open-answer').removeClass('height_fx')
+			}
+		});
+	//======================== END Show form search

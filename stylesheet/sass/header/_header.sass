@@ -16,14 +16,20 @@ header
         display: flex
         align-items: center
         height: 100%
-    &_bottom
-      display: flex
-      padding: 50px 0
-//
-//.authorize_wrap
-//	margin-right: 36px
-
-.socIcon
+    &__bottom
+      .container
+        &:before,
+        &:after
+          content: none
+  .contactUs
+    right: -10px
+  .social_list
+    .socIcon.fb
+      top: 3px
+      background: url("../../img/icon-fb_l.png") no-repeat 0 0
+    .socIcon.insta
+      top: 3px
+      background: url("../../img/icon-insta-l.png") no-repeat 0 0
 
 
 
@@ -99,16 +105,20 @@ nav
   color: $ff
   background: $red
   font-size: 14px
-  padding: 5px
+  padding: 0 0 0 10px
+  height: 50px
+  display: flex
+  justify-content: flex-start
+  align-items: center
 .jq-selectbox__trigger
   position: absolute
-  right: 4px
+  right: 7px
 .jq-selectbox__dropdown
   position: absolute
   width: 70px
   text-align: center
   background: $bg_grey-dark
-  top: 25px!important
+  top: 37px!important
   ul
     background: $bg_grey-dark
     color: $ff

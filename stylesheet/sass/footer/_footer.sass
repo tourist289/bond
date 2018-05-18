@@ -52,8 +52,9 @@ footer
   flex-direction: column
   justify-content: space-between
   align-items: flex-start
+  padding: 30px 0 0
   & > *
-    flex-grow: 1
+    //flex-grow: 1
   ul
     padding: 0 40px 0 0
     width: 100%
@@ -66,18 +67,19 @@ footer
 
 
 
-.footer__info
+.footer__info.contacts
   background: $bg_grey-dark
   width: 40%
   display: flex
   flex-direction: column
-  padding: 0 0 0 40px
-
-  width: 60%
+  padding: 0 0 10px 25px
+  margin: 0
   display: flex
   flex-direction: column
   justify-content: space-between
   align-items: flex-start
+
+
 
 
   .logo
@@ -90,13 +92,14 @@ footer
   .contacts__item
     border: none
     padding: 0
+    margin-bottom: 15px
     span
       color: $ff
     .contacts__item-title
       color: $f-color_footer-dark
       padding-bottom: 5px
 
-.social_list
+footer .soc-wrap
   display: block
   padding: 20px 0 0
   margin-bottom: 0
@@ -133,5 +136,8 @@ footer
 .copyright
   color: #f6f6f7
   max-height: 30px
+  margin-bottom: 0px
   a
     color: #f6f6f7
+.copyright
+  margin-bottom: 10px
