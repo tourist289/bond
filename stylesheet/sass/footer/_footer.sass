@@ -132,12 +132,24 @@ footer .soc-wrap
   ul
     width: 45%
 
-.adsgroup,
-.copyright
-  color: #f6f6f7
-  max-height: 30px
-  margin-bottom: 0px
-  a
+.copyright__wrap
+  background: linear-gradient(to right, $bg_grey-light 66%, $bg_grey-dark 66%)
+  .container
+    height: 50px
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &>*
+    flex-grow: 1
+  .adsgroup,
+  .copyright
     color: #f6f6f7
-.copyright
-  margin-bottom: 10px
+    max-height: 30px
+    margin-bottom: 0px
+    a
+      color: #f6f6f7
+  .copyright
+    margin-bottom: 0px
+    width: 60%
+  .adsgroup
+    width: 40%
