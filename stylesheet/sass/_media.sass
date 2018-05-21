@@ -53,104 +53,181 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
-	.desktop-menu
-		max-width: 70%
-	.footer__common .container,
-	.footer__suscribe .container
-		padding: 0 10px
+  .desktop-menu
+    max-width: 70%
+  .footer__common .container,
+  .footer__suscribe .container
+    padding: 0 10px
+  .modal__wrap
+    width: 96%
+    padding: 30px 10px 30px
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
-	.btn-def
-		font-size: 14px
-	.mobile-menu
-		display: block
-	.desktop-menu,
-	.main__info
-		display: none
-	.header__main
-		height: 130px
-	.header__top
-		display: none
-	.mm-panels
-		.mmenu__lang-wrapper
-			display: flex
+  .btn-def
+    font-size: 14px
+  .mobile-menu
+    display: block
+  .desktop-menu,
+  .main__info
+    display: none
+  .header__main
+    height: 130px
+  .header__top
+    display: none
+  .mm-panels
+    .mmenu__lang-wrapper
+      display: flex
 
-	.contacts
-		.contacts__info
-			padding: 0 30px 0 0;
-
-
+  .contacts
+    .contacts__info
+      padding: 0 30px 0 0
 
 
 
-	.footer__suscribe
-		p
-			font-size: 14px
-		img
-			margin-right: 10px
-			width: 70px
-	.footer__suscribe
-		form
-			input
-				width: 50%
-			button
-				width: 45%
-	.footer__about
-		ul
-			padding: 0 20px 0 0
+  .footer__suscribe
+    p
+      font-size: 14px
+    img
+      margin-right: 10px
+      width: 70px
+    form
+      input
+        width: 50%
+      button
+        width: 45%
+  .footer__about
+    ul
+      padding: 0 20px 0 0
 
+  .modal__wrap
+    padding: 30px
+  .modal__container
+    width: 100%
+  .modal__item
+    figure.media-wrapper
+      align-self: flex-start
+      padding: 22px
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
-	.contacts
-		flex-direction: column
-		justify-content: flex-start
-		align-items: center
-		&>*
-			width: 90%
-			margin-bottom: $mbL
-	.footer__suscribe
-		.container
-			flex-wrap: wrap
-			height: auto
-			padding: 10px
-	.footer__suscribe
-		img
-			max-width: 120px
-			margin: 10px
-		form
-			width: 100%
-			input
-				width: auto
-				flex-grow: 1
-				margin-right: 10px
-			button
-				width: 130px
+  .contacts
+      flex-direction: column
+      justify-content: flex-start
+      align-items: center
+      &>*
+          width: 90%
+          margin-bottom: $mbL
+  footer
+    background: #2c2f33
+  .footer__info.contacts.contacts
+      &>*
+          margin-bottom: 15px
+  .footer__about
+    display: none
 
+  .footer__suscribe
+      .container
+          flex-wrap: wrap
+          height: auto
+          padding: 10px
+  .footer__suscribe
+      img
+          max-width: 120px
+          margin: 10px
+      form
+          width: 100%
+          input
+              //width: auto
+              //flex-grow: 1
+              //margin-right: 10px
+          button
+              width: 130px
+  .footer__info.contacts
+    .contacts__info
+      flex-direction: row
+      flex-wrap: wrap
+    .contacts__item
+      padding: 0
+      margin-bottom: 15px
+      width: 50%
+  .modal__wrap
+    width: 96%
+  .modal__item
+    figure.media-wrapper
+      padding: 10px
+      margin-right: 10px
+    .item__name
+      font-size:  16px
 @media only screen and (max-width : 576px)
-	header
-		.main__wrap
-			flex-direction: column
-			justify-content: center
-			align-items: center
-	.header__main .logo
-		margin-bottom: 10px
-	.width_fx
-		width: 220px
-	.contacts__form
-		form input
-			width: 100%
-	.footer__suscribe
-		p
-			padding-bottom: 10px
-		img
-		display: none
+  h4
+    font-size: 20px
+
+  .header__main .logo
+      margin-bottom: 10px
+  .width_fx
+      width: 220px
+  .contacts__form
+      form input
+          width: 100%
+  .footer__suscribe
+      .container
+        padding: 20px 10px
+      p
+          padding-bottom: 10px
+      img
+          display: none
+  .footer__info.contacts
+      .contacts__item
+          width: 100%
+  .copyright__wrap.container
+      flex-direction: column
+      background: #2d3033
+      height: auto
+      min-height: auto
+      position: relative
+      justify-content: center
+      align-items: center
+      .copyright,
+      .adsgroup
+          text-align: center
+          width: 100%
+          justify-content: center
+          padding: 0
+      .adsgroup
+          min-height: 35px
+  .modal__wrap
+    padding: 15px
+    .modal__item
+      &>*
+        width: 100%
+      figure.media-wrapper
+        justify-content: center
+        padding: 20px
+        margin: 0
+        margin-bottom: $mb
+        img
+          width: 80%
+    h4
+      font-size: 20px
+    p
+      text-align: center
+    label p
+      text-align: left
+    .btn-def
+      margin-bottom: 0
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
-	.contacts
-		&>*
-			width: 96%
-		.contacts__info
-			padding-right: 0
+  header
+    .main__wrap
+      flex-direction: column
+      justify-content: center
+      align-items: center
+  .width_fx
+    width: 200px
+  .contacts
+      &>*
+          width: 96%
+      .contacts__info
+          padding-right: 0
 
 
 /*  iPad Portrait */

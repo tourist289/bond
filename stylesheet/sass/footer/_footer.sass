@@ -25,14 +25,14 @@ footer
     justify-content: space-between
     align-items: center
     height: 100%
-    height: 100%
     width: 45%
     margin-bottom: 0
 
     input
-      width: 60%
+      width: auto
       border-radius: 0
-      margin: 0
+      margin: 0 10px 0 0
+      flex-grow: 1
     button
       width: 35%
       margin: 0
@@ -50,7 +50,7 @@ footer
   width: 60%
   display: flex
   flex-direction: column
-  justify-content: space-between
+  justify-content: flex-start
   align-items: flex-start
   padding: 30px 0 0
   & > *
@@ -108,9 +108,7 @@ footer .soc-wrap
   justify-content: flex-start
   align-items: flex-start
   padding: 0
-  margin: 0 30px 0 0
-  /* max-height: 20px; */
-  /* justify-content: center; */
+  margin: 0 30px 30px 0
   .socIcon
     display: inline-block
     position: relative
@@ -134,7 +132,7 @@ footer .soc-wrap
 
 .copyright__wrap
   background: linear-gradient(to right, $bg_grey-light 66%, $bg_grey-dark 66%)
-  .container
+  &.container
     height: 50px
     display: flex
     justify-content: space-between
@@ -142,14 +140,24 @@ footer .soc-wrap
   &>*
     flex-grow: 1
   .adsgroup,
-  .copyright
+  .copyright P
     color: #f6f6f7
     max-height: 30px
     margin-bottom: 0px
     a
       color: #f6f6f7
   .copyright
-    margin-bottom: 0px
     width: 60%
+
+  P
+    margin-bottom: 0px
+
   .adsgroup
     width: 40%
+    background: #2d3033
+    height: 50px
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    min-height: 50px
+    padding: 0 0 0 25px

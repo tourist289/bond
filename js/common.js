@@ -245,7 +245,7 @@ $(document).ready(function(){
         return {
             slidesToShow:1,
             slidesToScroll:1,
-            arrows: true,
+            arrows: false,
             dots: false,
             focusOnSelect:true,
             autoplay: false,
@@ -411,6 +411,15 @@ $(document).ready(function(){
 // ======================== END Show form search
 
 
+
+
+//remove href for last link in breadcrambs
+    if($('.js-breadcrumbs a').length > 1 ) {
+        $('.js-breadcrumbs a:last-child').attr('href', '#');
+        $('.js-breadcrumbs a:last-child').on('click', function (e) {
+            e.preventDefault();
+        })
+    }
 
 
 
