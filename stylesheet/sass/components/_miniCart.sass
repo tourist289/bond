@@ -1,0 +1,115 @@
+@import "../vars"
+
+.minicart
+  background: #fff
+  max-width: 210px
+  height: auto
+.minicart__title
+  display: flex
+  justify-content: flex-start
+  align-items: center
+  padding: 0 15px
+  height: 35px
+  p
+    font-size: 14px
+    color: $bb
+    margin-bottom: 0
+.minicart__items
+  background: $bg
+.minicart__item
+  width: 100%
+  display: flex
+  justify-content: space-between
+  border-bottom: 3px solid $ff
+  min-height: 80px
+  padding: 15px
+  position: relative
+  figure
+    background: $ff
+    min-height: 50px
+    min-width: 50px
+    margin-right: 10px
+    display: flex
+    justify-content: center
+    align-items: center
+    img
+      width: 65%
+      height: auto
+
+  .info
+    flex-grow: 1
+    min-height: 50px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    h6
+      color: $f-color_footer-dark
+      font-size: 11px
+      line-height: 1.2
+      margin-bottom: 0
+      padding: 0
+      max-height: 43px
+    .price
+      .summs,
+      .count
+        font-size: 12px
+        text-transform: uppercase
+        color: $bb
+        margin-bottom: 0
+        line-height: 1.2
+.minicart__close
+  position: absolute
+  right: 5px
+  top: 45%
+  font-size: 18px
+  line-height: 1
+  z-index: 2
+  color: $red
+  padding: 0
+  opacity: .7
+  transition: opacity .3s
+  &:hover
+    opacity: 1
+    transition: opacity .3s
+
+
+.minicart__info
+  padding: 0 15px 25px
+
+.minicart__summ
+  display: flex
+  justify-content: flex-end
+  width: 100%
+  position: relative
+  height: 35px
+  align-items: center
+  padding-right: 10px
+  .price
+    .count
+      font-size: 12px
+      text-transform: uppercase
+      color: $bb
+      margin-bottom: 0
+      line-height: 1.2
+.minicart__delivery
+  margin-bottom: 15px
+  .info
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    min-height: 35px
+    margin-bottom: 10px
+    &>*
+      flex-grow: 1
+    p
+      margin-bottom: 0
+      line-height: 1.2
+      font-size: 11px
+  .summ
+    color: $red
+    font-size: 15px
+    width: 40%
+
+.minicart__btn
+  width: 100%
+  padding: 0

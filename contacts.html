@@ -333,6 +333,7 @@
                 <button class="js-modal" data-href="#modal_thankAnswer">modal_thankAnswer</button>
                 <button class="js-modal" data-href="#modal_fastBuy">modal_fastBuy</button>
                 <button class="js-modal" data-href="#modal_ItemWindow">ItemWindow</button>
+                <button class="js-modal" data-href="#modal_itemInCart">modal_itemInCart</button>
 
 
                 <section class="contacts">
@@ -625,22 +626,22 @@
                             <h4 class="modal__title title-hr">Доставка и оплата</h4>
 
                             <h6>Отделение "Нова Пошта" БЕСПЛАТНО</h6>
-                            <h6>курьер "Нова Пошта" 140грн + 30грн*</h6>
+                            <h6>Курьер "Нова Пошта" 140грн + 30грн*</h6>
                             <h6>Отделение "МiстЕкспресс" БЕСПЛАТНО </h6>
-                            <h6>курьер "МiстЕкспресс" БЕСПЛАТНО</h6>
+                            <h6>Курьер "МiстЕкспресс" БЕСПЛАТНО</h6>
                             <h6>14 дней на обмен <a href="">Условия возврата</a></h6>
                             <h6>12 мес гарантии от производителя </h6>
 
 
                             <h4 class="item__name title-hr">Кожаная барсетка Petek 759</h4>
                             <span class="price">
-                                <span>есть в наличии</span>
+                                <span class="inshop">есть в наличии</span>
                                 <span class="count">1630</span> грн.
                             </span>
 
                             <div class="modal__btns">
                                 <button class="btn-def">Купить</button>
-                                <button class="btn-def_link btn-def dots">Купить в 1 клик</button>
+                                <button class="btn-def_link btn-def dots"><i>Купить в 1 клик</i></button>
                             </div>
 
                         </div>
@@ -652,6 +653,50 @@
 
 
     <!--MODAL WINDOW " Item Window modal " END -->
+
+
+
+
+        <!--MODAL WINDOW " Item was added in the cart " **********-->
+        <!--fire modal from this button-->
+        <!--<button class="js-modal" data-href="#modal_itemInCart">OPEN MODAL</button>-->
+        <div class="modal__overlay">
+            <div id="modal_itemInCart" class="modal__wrap modal_InCart">
+                <span class="modal__close">&times;</span>
+
+                <section class="modal__content">
+                    <div class="modal__container">
+
+                        <h4 class="modal__title">Товар добавлен в корзину </h4>
+                        <div class="modal__item">
+                            <figure>
+                                <img src="img/item02.jpg" alt="">
+                            </figure>
+                            <div class="info">
+                                <h4 class="title-hr modal__title">Кожаная барсетка Petek 759</h4>
+                                <span class="price">
+                                    <span class="count">1630</span>
+                                грн.
+                            </span>
+                            </div>
+                        </div>
+                        <!--<p>Наш менеджер свяжется с Вами в ближайшее время </p>-->
+                    </div>
+                    <div class="modal__btns">
+                        <div class="modal__container">
+                            <button class="btn-def_link btn-def">продолжить покупки</button>
+                            <button class="btn-def">оформить заказ</button>
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+
+        <!--MODAL WINDOW " Item was added in the cart " END -->
+
+
 
 
 

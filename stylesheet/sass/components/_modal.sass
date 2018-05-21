@@ -60,7 +60,6 @@
 			transition: opacity .3s
 
 
-
 //.closeModalIcon
 //	position: absolute
 //	display: block
@@ -113,6 +112,7 @@
     display: block
   &__title
     display: block
+    text-transform: none
   &__item
     display: flex
     justify-content: center
@@ -156,6 +156,11 @@
       span.price
         font-size: 22px
         margin-bottom: $mb
+        .inshop
+          color: $f-color_footer-dark
+          font-size: 12px
+          display: block
+          margin-bottom: $mb
   &__btns
     border-top: 4px solid $hr
     width: 100%
@@ -201,9 +206,11 @@
         width: 100%
         height: auto
 
+
 .modal_Item-wrap
   .modal__container
     width: 100%
+    margin-bottom: 0
   .modal__item
     display: flex
     justify-content: space-between
@@ -213,11 +220,18 @@
     width: 49%
     background: $ff
     position: relative
-    margin-right: 15px
+    margin-right: $mb
   .slider
-    margin-right: 30px
+    //margin-right: 30px
+    height: 100%
+    //display: flex
+    //justify-content: center
+    //align-items: center
     .slide
+      padding: $mb
       img
+        width: 100%
+        height: auto
         margin: 0 auto
   .slider__btns
     left: auto
@@ -230,20 +244,20 @@
     flex-direction: column
     justify-content: flex-start
     max-width: 110px
-    min-width: auto
+    min-width: unset
     figure
       display: inline-flex
       align-items: center
       justify-content: flex-start
       margin: 0
-      margin-bottom: 15px
+      margin-bottom: $mb
       width: 100%
       min-width: unset
       height: 110px
       img
-
-        width: 100%
+        width: 80%
         height: auto
+        margin: 0 auto
   .info
     display: flex
     flex-direction: column
@@ -251,13 +265,51 @@
     flex-grow: 1
     padding: 0 0 0 20px
     h6
-      margin-bottom: 10px
+      margin-bottom: 15px
   .modal__btns
     display: flex
     justify-content: space-between
     width: 100%
+    border: none
     button
       flex-grow: 1
 
+.modal_InCart
+  max-width: 720px
+  padding: 40px 0
+  .modal__container
+    width: 100%
 
+  .modal__content > .modal__container
+    padding: 0 40px
+  .modal__item
+    justify-content: space-between
+    align-items: center
+    margin-bottom: $mbL
+    figure
+      height: auto
+      flex-grow: 1
+      max-width: 45%
+    .info
+      flex-grow: 1
+      .title-hr
+        margin: 0 0 14px 0
+
+
+
+  .modal__btns
+    display: flex
+    justify-content: center
+    flex-direction: column
+    margin: 0
+    padding: 40px 0 10px
+    button
+      letter-spacing: .5px
+    .modal__container
+      padding: 0 40px
+      display: flex
+      justify-content: space-between
+      margin-bottom: 0
+    &>*
+      flex-grow: 1
 

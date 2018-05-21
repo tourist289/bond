@@ -61,6 +61,8 @@
   .modal__wrap
     width: 96%
     padding: 30px 10px 30px
+    &.modal_InCart
+      padding: 30px 0 30px
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
   .btn-def
@@ -100,13 +102,20 @@
       padding: 0 20px 0 0
 
   .modal__wrap
-    padding: 30px
+    padding: 45px 30px
   .modal__container
     width: 100%
   .modal__item
     figure.media-wrapper
       align-self: flex-start
       padding: 22px
+
+  .modal_Item-wrap
+    .slider_item
+      flex-grow: 3
+
+
+
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
   .contacts
@@ -152,11 +161,34 @@
   .modal__wrap
     width: 96%
   .modal__item
+    .info
+      padding-left: 0
     figure.media-wrapper
       padding: 10px
       margin-right: 10px
     .item__name
       font-size:  16px
+
+  .modal_Item-wrap
+    .slider_item
+      margin-bottom: $mb
+
+  .modal_InCart
+    .modal__content>.modal__container
+      margin-bottom: 0
+    .modal__btns
+      padding: 30px
+      .modal__container
+        padding: 0
+      button
+        flex-grow: 1
+        width: 51%
+        margin-bottom: 10px
+
+
+
+
+
 @media only screen and (max-width : 576px)
   h4
     font-size: 20px
@@ -195,7 +227,7 @@
       .adsgroup
           min-height: 35px
   .modal__wrap
-    padding: 15px
+    padding: 45px 15px 10px
     .modal__item
       &>*
         width: 100%
@@ -206,6 +238,9 @@
         margin-bottom: $mb
         img
           width: 80%
+      .item__name
+        padding: 10px 0
+        margin: 0 0 10px
     h4
       font-size: 20px
     p
@@ -214,6 +249,29 @@
       text-align: left
     .btn-def
       margin-bottom: 0
+
+  .modal_Item-wrap
+    .slider_item
+      margin-bottom: $mb
+      margin-right: 0
+    .slider__btns
+      right: 0
+      bottom: 0
+    .imgs-wrapper
+      display: none
+
+
+  .modal_InCart
+    .modal__item
+      figure
+        max-width: 100%
+        margin: 0
+        margin-bottom: $mb
+    .modal__btns
+      border: none
+      padding: 10px 30px 10px
+      .modal__container
+        flex-wrap: wrap
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
   header
@@ -228,7 +286,8 @@
           width: 96%
       .contacts__info
           padding-right: 0
-
+  .modal__wrap h4
+    font-size: 18px
 
 /*  iPad Portrait */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait)
