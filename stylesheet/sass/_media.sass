@@ -128,6 +128,22 @@
       &>*
           width: 90%
           margin-bottom: $mbL
+
+  .news
+    article
+      width: 100%
+      &:after
+        width: 100%
+      &:nth-child(1),
+      &:nth-child(2)
+        &:before
+          display: none
+
+
+
+
+
+
   footer
     background: #2c2f33
   .footer__info.contacts.contacts
@@ -289,6 +305,15 @@
           width: 96%
       .contacts__info
           padding-right: 0
+
+  .news
+    article
+      figure
+        min-width: 100px
+        flex-direction: column
+
+
+
   .modal__wrap h4
     font-size: 18px
 
