@@ -1,9 +1,35 @@
 @import "../vars"
 
+.cart__wrapper
+  position: relative
+.cart__desktop
+  display: flex
+  justify-content: space-between
+  align-items: center
+  cursor: pointer
+  position: relative
+  .cart__info-wrapper > span
+    color: #adadad
+    font-size: 14px
+    line-height: 1.8
+  .mob
+    display: none
+  .desk
+    display: block
+
+
 .minicart
   background: #fff
   max-width: 210px
+  width: 210px
   height: auto
+  position: absolute
+  top: 120%
+  right: 0
+  z-index: 2
+  display: none
+  &.active
+    display: block
 .minicart__title
   display: flex
   justify-content: flex-start
@@ -28,7 +54,7 @@
     background: $ff
     min-height: 50px
     min-width: 50px
-    margin-right: 10px
+    margin: 0 10px 0 0
     display: flex
     justify-content: center
     align-items: center
@@ -113,3 +139,62 @@
 .minicart__btn
   width: 100%
   padding: 0
+
+
+.mm-listview
+  .minicart__items
+    .minicart__item
+      display: flex
+      height: 105px
+      figure
+        padding: 6px
+        max-height: 90%
+      .info
+        display: flex
+        align-items: flex-start
+        justify-content: center
+        flex-direction: column
+        padding-right: 10px
+  .minicart__close
+    color: $red
+    right: 8px
+  .minicart__item
+    width: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 0 10px 0
+    .info
+      h6
+        white-space: pre-wrap
+    .price
+      color: $red
+      font-size: 13px
+      text-transform: lowercase
+      .summs,
+      .count
+        color: $red
+        font-size: 15px
+
+  .minicart__info
+  .minicart__summ
+    .price
+      font-size: 13px
+      text-transform: lowercase
+    .count
+      color: $red
+      font-size: 15px
+  .minicart__delivery
+    .info
+      margin-bottom: 20px
+      p
+        white-space: pre-wrap
+    .summ
+      text-align: right
+      padding: 0 15px 0 0
+      i
+        color: $ff
+        font-size: 13px
+        text-transform: lowercase
+    .ui__slider
+      margin-bottom: 10px

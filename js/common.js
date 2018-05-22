@@ -159,7 +159,7 @@ $(document).ready(function(){
 
 
 
-// 4. mmenu
+// 4.1 mmenu
 
     $('#my-menu').css('opacity', 1);
     $('#my-menu').mmenu({
@@ -183,10 +183,41 @@ $(document).ready(function(){
         $('.hamburger').removeClass('is-active');
     });
 
-    $('#my-menu a[data-href="#map-block"]').on('click', function(){
-        apiButt.close($("#my-menu"));
+    // $('#my-menu a[data-href="#map-block"]').on('click', function(){
+    //     apiButt.close($("#my-menu"));
+    // });
+
+
+// 4.2 mmenu
+
+    $('#my-cart').css('opacity', 1);
+    $('#my-cart').mmenu({
+        extensions: ['effect-menu-slide', 'pagedim-black'],
+        navbar: {
+            title: 'Ваша корзина '
+        },
+        offCanvas: {
+//                pageSelector: ".main-wrap",
+            position: 'right'
+        }
+    });
+//
+    var apiButt = $('#my-cart').data('mmenu');
+    apiButt.close($("#my-cart"));
+
+    apiButt.bind('open:finish', function() {
+        $('.hamburger.two').addClass('is-active');
+    });
+    apiButt.bind('close:finish', function() {
+        $('.hamburger.two').removeClass('is-active');
     });
 
+    // $('#my-cart a[data-href="#map-block"]').on('click', function(){
+    //     apiButt.close($("#my-cart"));
+    // });
+
+
+// 4.2 END ***********
 
 
 //
@@ -411,6 +442,9 @@ $(document).ready(function(){
 // ======================== END Show form search
 
 
+    $('.cart__desktop .js-desk').on('click', function(){
+        $('.js-minicart').toggleClass('active');
+    })
 
 
 //remove href for last link in breadcrambs
@@ -420,6 +454,10 @@ $(document).ready(function(){
             e.preventDefault();
         })
     }
+
+
+
+
 
 
 
