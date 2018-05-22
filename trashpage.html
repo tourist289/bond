@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title>404</title>
+    <meta name="description" content="">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!--<meta property="og:image" content="path/to/image.jpg">-->
+    <link rel="shortcut icon" href="img/favicon/favicon.png" type="image/x-icon">
+    <!--<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">-->
+    <!--<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">-->
+    <!--<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">-->
+
+
+
+
+    <!-- Chrome, Firefox OS and Opera -->
+    <!--<meta name="theme-color" content="#000">-->
+    <!-- Windows Phone -->
+    <!--<meta name="msapplication-navbutton-color" content="#000">-->
+    <!-- iOS Safari -->
+    <!--<meta name="apple-mobile-web-app-status-bar-style" content="#000">-->
+    <!--<style>body { opacity: 0; overflow-x: hidden; } html { background-color: #fff; }</style>-->
+
+    <link href="https://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700" rel="stylesheet">
+    <!--<link href="https://fonts.googleapis.com/css?family=Vollkorn:400,400i,700,700i" rel="stylesheet">-->
+
+    <!--<link rel="stylesheet" href="css/libsMin.css">-->
+    <link rel="stylesheet" href="libs/css/bootstrap.min.css">
+    <link rel="stylesheet" href="libs/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="libs/css/hamburger.css">
+    <link rel="stylesheet" href="libs/css/jquery.mmenu.all.css">
+    <link rel="stylesheet" href="libs/css/jquery.mmenu.css">
+    <link rel="stylesheet" href="libs/slick/slick-theme.css">
+    <link rel="stylesheet" href="libs/slick/slick.css">
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="libs/css/clockpicker.css">
+
+    <link rel="stylesheet" href="stylesheet/css/stylesheet.css">
+
+
+    <script src="libs/js/jquery.min.js"></script>
+
+</head>
+
+<body>
+<div id="root-wrapper">
+
+    <header>
+
+        <div class="header__top">
+            <div class="container">
+                <div class="nav-wrap">
+                    <nav>
+                        <a href="#">О магазине</a>
+                        <a href="#">Оплата и доставка</a>
+                        <a href="#">Гарантии</a>
+                        <a href="#">Контакты</a>
+
+                    </nav>
+                    <a class="sertif-link" href="">Подарочные сертификаты</a>
+                </div>
+
+
+                <div class=" contactUs">
+                    <ul class="social_list">
+                        <li>
+                            <a href="" class="socIcon fb"></a>
+                        </li>
+                        <li>
+                            <a href="" class="socIcon insta"></a>
+                        </li>
+                    </ul>
+
+                    <span class="lang-wrapper">
+                            <select class="js-styler">
+                                  <option value="Рус">Рус</option>
+                                  <option value="ENG">ENG</option>
+                                  <option  value="УКР">УКР</option>
+                            </select>
+                        </span>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="header__main">
+            <div class="container">
+                <div class="main__wrap    ">
+
+                    <a class="logo">
+                        <img src="img/logo_header.jpg" alt="">
+                    </a>
+                    <div class="main__info">
+                        <div class="contacts__item main__phone">
+                            <figure>
+                                <img src="img/icon-phone.jpg" alt="">
+                            </figure>
+                            <div class="contacts__item-info">
+                                <span>38 (050) 334-45-45</span>
+                                <span>38 (063) 455-32-32</span>
+                            </div>
+                        </div>
+                        <div class="scadual__wrapper">
+                            <span class="">Режим работы:</span>
+                            <span>Пн. - Пт. с 10.00 до 18.00</span>
+                        </div>
+                    </div>
+
+                    <div class="cart__wrapper">
+                        <div class="">
+                            <span>Ваша корзина</span>
+                            <div class="cart__info">
+                                <span class="count">3</span> тов. на <span class="summ">4588</span> грн.</div>
+                        </div>
+                        <figure>
+                            <img src="img/icon-cart.png" alt="">
+                        </figure>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="header__bottom">
+            <div class="container">
+                <div class="mobile-menu">
+                    <a href="#my-menu" class="hamburger hamburger--elastic">
+                          <span class="hamburger-box">
+                              <span class="hamburger-inner"></span>
+                          </span>
+                    </a>
+                    <div class="hidden sideMenu" id="my-menu">
+                        <ul>
+                            <li><a href="#">О магазине</a></li>
+                            <li><a href="#">Оплата и доставка</a></li>
+                            <li><a href="#">Гарантии</a></li>
+                            <li><a href="#">Контакты</a></li>
+                            <li><a class="sertif-link" href="">Подарочные сертификаты</a></li>
+                            <li class="contact-info">
+                                <a href="tel:<?php echo $telephone; ?>" class="phone">
+                                    <!--<span><?php echo $telephone; ?></span>-->
+                                    <span>333 434 55 66</span>
+                                </a>
+                                <a href="mailto:<?php echo $email; ?>">
+                                    <!--<span class="mail-info"><?php echo $email; ?></span>-->
+                                    <span class="mail-info">test.mail@mail.com</span>
+                                </a>
+                            </li>
+
+
+                            <li>
+                                <div class=" contactUs">
+                                    <!--<ul class="social_list">-->
+                                    <!--<li>-->
+                                    <a href="" class="socIcon fb"></a>
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                    <a href="" class="socIcon insta"></a>
+                                    <!--</li>-->
+                                    <!--</ul>-->
+
+                                    <span class="lang-wrapper">
+                            <!--<select class="js-styler">-->
+                                        <!--<option value="Рус">Рус</option>-->
+
+                                        <!--</select>-->
+                            </span>
+                                </div>
+
+                            </li>
+                            <li class="mmenu__lang-wrapper">
+                                <a value="Рус">Рус</a>
+                                <a value="ENG">ENG</a>
+                                <a value="УКР">УКР</a>
+                            </li>
+
+
+                            <!--подменю которое сдвиагется и показывает другой лист меню -->
+                            <li class="mmcatalog">
+                                <span class="mmcatalog-link">Каталог</span>
+                                <ul>
+
+                                    <li>
+                                        <a href="/">подменюха</a>
+                                    </li>
+
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <ul class="menu__links desktop-menu js-menu__links">
+                    <li><a href="#" data-href="data-1">Для мужчин</a></li>
+                    <li><a href="#" data-href="data-2">Для женщин</a></li>
+                    <li><a href="#">Подарочные комплекты</a></li>
+                    <li><a href="#" data-href="data-4">Обувь</a></li>
+                    <li><a href="#" data-href="data-5">Дорожное</a></li>
+
+                </ul>
+
+                <div class="menu__content   ">
+                    <div id="data-1" class="forMan drop__container active">
+
+                        <div class="link-wrapper js-link-wrapper ">
+                            <h4 class="title-hr"><span>Для мужчин</span></h4>
+                            <a data-link="1" href="#">Барсетки</a>
+                            <a data-link="2" href="#">Брелочки</a>
+                            <a data-link="3" href="#">Визитницы</a>
+                            <a data-link="1" href="#">Барсетки</a>
+                            <a data-link="2" href="#">Брелочки</a>
+                            <a data-link="3" href="#">Визитницы</a>
+                            <a data-link="1" href="#">Барсетки</a>
+                            <a data-link="2" href="#">Брелочки</a>
+                            <a data-link="3" href="#">Визитницы</a>
+                        </div>
+                        <div class="img__wrapper">
+                            <img data-id="1" src="img/menu-item-1.png" alt="">
+                            <img class="active" data-id="2" style="border: 1px solid red"  src="img/menu-item-1.png" alt="">
+                            <img style="border: 1px solid green" data-id="3" src="img/menu-item-1.png" alt="">
+                        </div>
+                    </div>
+                    <div id="data-2" class="forWoman"></div>
+                    <div id="data-4" class="shoes"></div>
+                    <div id="data-5" class=" forRoad drop__container ">
+                        <h4 class="title-hr"><span>Дорожное</span></h4>
+                        <div class=" flex">
+                            <div class="drop-item">
+                                <figure>
+                                    <img src="img/img-road_06.jpg" alt="">
+                                </figure>
+                                <a href="#"  class="figcaption">Чемоданы на колесах</a>
+                            </div>
+                            <div class="drop-item">
+                                <figure>
+                                    <img src="img/img-road_08.jpg" alt="">
+                                </figure>
+                                <a href="#" class="figcaption">Портпледы</a>
+                            </div>
+                            <div class="drop-item">
+                                <figure>
+                                    <img src="img/img-road_10.jpg" alt="">
+                                </figure>
+                                <a href="#" class="figcaption">Дорожные сумки на колесах</a>
+                            </div>
+                            <div class="drop-item">
+                                <figure>
+                                    <img src="img/img-road_03.jpg" alt="">
+                                </figure>
+                                <a href="#" class="figcaption">Нессеры</a>
+                            </div>
+                            <div class="drop-item">
+                                <figure>
+                                    <img src="img/img-road_16.jpg" alt="">
+                                </figure>
+                                <a href="#" class="figcaption">Чехлы и футляры</a>
+                            </div>
+                            <div class="drop-item">
+                                <figure>
+                                    <img src="img/img-road_13.jpg" alt="">
+                                </figure>
+                                <a href="#" class="figcaption">Саквояжи</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="form_search-wrap ">
+                    <form action="" class="form_search form_search-hidden">
+                        <input type="search">
+                        <button type="button">ok</button>
+                    </form>
+                    <div class="js_open-form btn_search">
+                        <svg class="search_svg-loupe" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="currentColor" d="M18.753,18.931 C20.532,16.924 21.642,14.236 21.642,11.277 C21.642,5.068 16.795,-0.000 10.821,-0.000 C4.847,-0.000 -0.000,5.068 -0.000,11.277 C-0.000,17.485 4.847,22.553 10.821,22.553 C13.253,22.553 15.489,21.720 17.301,20.308 L25.347,28.694 C25.543,28.898 25.788,29.000 26.033,29.000 C26.278,29.000 26.539,28.898 26.718,28.694 C27.094,28.302 27.094,27.656 26.718,27.248 L18.753,18.931 ZM1.959,11.277 C1.959,6.191 5.925,2.041 10.821,2.041 C15.701,2.041 19.684,6.174 19.684,11.277 C19.684,16.379 15.718,20.513 10.821,20.513 C5.925,20.513 1.959,16.362 1.959,11.277 Z"></path>
+                        </svg>
+                        <svg class="search_svg-cross" xmlns="http://www.w3.org/2000/svg">
+                            <path  fill="currentColor"
+                                   d="M7.414,6.000 L11.657,10.242 C12.047,10.633 12.047,11.266 11.657,11.657 C11.266,12.047 10.633,12.047 10.243,11.657 L6.000,7.414 L1.757,11.657 C1.367,12.047 0.734,12.047 0.343,11.657 C-0.047,11.266 -0.047,10.633 0.343,10.242 L4.586,6.000 L0.343,1.757 C-0.047,1.367 -0.047,0.734 0.343,0.343 C0.734,-0.048 1.367,-0.048 1.757,0.343 L6.000,4.586 L10.243,0.343 C10.633,-0.048 11.266,-0.048 11.657,0.343 C12.047,0.734 12.047,1.367 11.657,1.757 L7.414,6.000 Z"></path>
+                        </svg>
+                    </div>
+                    <!--<div class="js_open-answer form_search-hidden_answer">-->
+                    <!--<a href="" class="answer_item"></a>-->
+
+                    <!--<a href="" class="link_show-all">Show all</a>-->
+                </div>
+
+
+
+                <!--<div id="search" class=" bottom__search input-group">-->
+                <!--<input type="text" name="search" value="" class="form-control input-lg input_item">-->
+                <!--<span class="input-group-btn">-->
+                <!--<button class=""><i class="fa fa-search">OP</i></button>-->
+                <!--</span>-->
+                <!--</div>-->
+
+            </div>
+
+        </div>
+    </header>
+    <!-- HEADER END -->
+
+
+
+    <div class="minicart">
+        <div class="minicart__title">
+            <p>В корзине:</p>
+        </div>
+        <div class="minicart__items">
+            <div class="minicart__item">
+                <figure>
+                    <img src="img/item02.jpg" alt="">
+                </figure>
+                <div class="info">
+                    <h6 class="minicart__item-title">Кожаная папка для документов Petek 759</h6>
+                    <span class="price">
+                        <span class="summs">1 </span> x
+                        <span class="count">1630</span>
+                                грн.
+                    </span>
+                </div>
+                <span class="minicart__close">&times;</span>
+            </div>
+            <div class="minicart__item">
+                <figure>
+                    <img src="img/item02.jpg" alt="">
+                </figure>
+                <div class="info">
+                    <h6 class="minicart__item-title">Кожаная папка для документов Petek 759</h6>
+                    <span class="price">
+                        <span class="summs">1 </span> x
+                        <span class="count">1630</span>
+                                грн.
+                    </span>
+                </div>
+                <span class="minicart__close">&times;</span>
+            </div>
+        </div>
+        <div class="minicart__info">
+            <div class="minicart__summ">
+                <span class="price">
+                    Всего
+                    <span class="count">1630</span>
+                                грн.
+                </span>
+            </div>
+            <div class="minicart__delivery">
+                <div class="info">
+                    <span>
+                        <p>До беспланой доставки осталось: </p>
+                    </span>
+                    <span class="summ">
+                        42<i>грн</i>
+                    </span>
+                </div>
+                <div class="ui__slider">**************</div>
+            </div>
+
+            <button class="btn-def btn-def_dark minicart__btn" >Оформить заказ</button>
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+        <main class="page-def page-404">
+            <div class="container ">
+                <h6>Произошла ошибка  </h6>
+                <figure>
+                    <img src="img/bg-404.png" alt>
+                </figure>
+                <h6>Страница не найдена   или не сущеfffствует </h6>
+
+                <div class="page-404__link-wraper">
+                    <a href="/" class="btn-def js-btn__link">перейти на главную страницу</a>
+                </div>
+
+            </div>
+        </main><!-- MAIN END -->
+
+
+
+
+    <div class="container">
+
+        <div class="breadcrumbs">
+            <a href="">breadcrumbs text1</a>
+            <a href="">breadcrumbs text2</a>
+        </div>
+
+
+
+
+
+        <div class="items-wrapper clearfix row">
+
+            <div class="item col-3">
+                <div class="card">
+                    <a href="/">
+                        <figure class="card-img">
+                            <img src="img/item1.jpg" alt="" class="img-responsive">
+                            <figcaption>Кожаное мужское портмоне Petek 137</figcaption>
+                        </figure>
+                    </a>
+                    <div class="card__info">
+                        <span class="card__price">
+                            <span class="amount">1630</span> грн.</span>
+                        <button class="btn-def card__btn" type="button" onclick="cart.add( );">купить</button>
+
+                    </div>
+                </div>
+            </div>
+            <div class="item col-3">
+                <div class="card">
+                    <a href="/">
+                        <figure class="card-img">
+                            <img src="img/item1.jpg" alt="" class="img-responsive">
+                            <figcaption>Кожаное мужское портмоне Petek 137</figcaption>
+                        </figure>
+                    </a>
+                    <div class="card__info">
+                        <span class="card__price">
+                            <span class="amount">1630</span> грн.</span>
+                        <button class="btn-def card__btn" type="button" onclick="cart.add( );">купить</button>
+
+                    </div>
+                </div>
+            </div>
+            <div class="item col-3">
+                <div class="card">
+                    <a href="/">
+                        <figure class="card-img">
+                            <img src="img/item1.jpg" alt="" class="img-responsive">
+                            <figcaption>Кожаное мужское портмоне Petek 137</figcaption>
+                        </figure>
+                    </a>
+                    <div class="card__info">
+                        <span class="card__price">
+                            <span class="amount">1630</span> грн.</span>
+                        <button class="btn-def card__btn" type="button" onclick="cart.add( );">купить</button>
+
+                    </div>
+                </div>
+            </div>
+            <div class="item col-3">
+                <div class="card">
+                    <a href="/">
+                        <figure class="card-img">
+                            <img src="img/item1.jpg" alt="" class="img-responsive">
+                            <figcaption>Кожаное мужское портмоне Petek 137</figcaption>
+                        </figure>
+                    </a>
+                    <div class="card__info">
+                        <span class="card__price">
+                            <span class="amount">1630</span> грн.</span>
+                        <button class="btn-def card__btn" type="button" onclick="cart.add( );">купить</button>
+
+                    </div>
+                </div>
+            </div>
+            <div class="item col-3">
+                <div class="card">
+                    <a href="/">
+                        <figure class="card-img">
+                            <img src="img/item1.jpg" alt="" class="img-responsive">
+                            <figcaption>Кожаное мужское портмоне Petek 137</figcaption>
+                        </figure>
+                    </a>
+                    <div class="card__info">
+                        <span class="card__price">
+                            <span class="amount">1630</span> грн.</span>
+                        <button class="btn-def card__btn" type="button" onclick="cart.add( );">купить</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="slider slider_four js-slider_four">
+            <div class="slide">
+                <div class="card">
+                    <a href="/">
+                        <figure class="card-img">
+                            <img src="img/item1.jpg" alt="" class="img-responsive">
+                            <figcaption>Кожаное мужское портмоне Petek 137</figcaption>
+                        </figure>
+                    </a>
+                    <div class="card__info">
+                        <span class="card__price">
+                            <span class="amount">1630</span> грн.</span>
+                        <button class="btn-def card__btn" type="button" onclick="cart.add( );">купить</button>
+
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="card">
+                    <a href="/">
+                        <figure class="card-img">
+                            <img src="img/item1.jpg" alt="" class="img-responsive">
+                            <figcaption>Кожаное мужское портмоне Petek 137</figcaption>
+                        </figure>
+                    </a>
+                    <div class="card__info">
+                        <span class="card__price">
+                            <span class="amount">1630</span> грн.</span>
+                        <button class="btn-def card__btn" type="button" onclick="cart.add( );">купить</button>
+
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="card">
+                    <a href="/">
+                        <figure class="card-img">
+                            <img src="img/item1.jpg" alt="" class="img-responsive">
+                            <figcaption>Кожаное мужское портмоне Petek 137</figcaption>
+                        </figure>
+                    </a>
+                    <div class="card__info">
+                        <span class="card__price">
+                            <span class="amount">1630</span> грн.</span>
+                        <button class="btn-def card__btn" type="button" onclick="cart.add( );">купить</button>
+
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="card">
+                    <a href="/">
+                        <figure class="card-img">
+                            <img src="img/item1.jpg" alt="" class="img-responsive">
+                            <figcaption>Кожаное мужское портмоне Petek 137</figcaption>
+                        </figure>
+                    </a>
+                    <div class="card__info">
+                        <span class="card__price">
+                            <span class="amount">1630</span> грн.</span>
+                        <button class="btn-def card__btn" type="button" onclick="cart.add( );">купить</button>
+
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="card">
+                    <a href="/">
+                        <figure class="card-img">
+                            <img src="img/item1.jpg" alt="" class="img-responsive">
+                            <figcaption>Кожаное мужское портмоне Petek 137</figcaption>
+                        </figure>
+                    </a>
+                    <div class="card__info">
+                        <span class="card__price">
+                            <span class="amount">1630</span> грн.</span>
+                        <button class="btn-def card__btn" type="button" onclick="cart.add( );">купить</button>
+
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="card">
+                    <a href="/">
+                        <figure class="card-img">
+                            <img src="img/item1.jpg" alt="" class="img-responsive">
+                            <figcaption>Кожаное мужское портмоне Petek 137</figcaption>
+                        </figure>
+                    </a>
+                    <div class="card__info">
+                        <span class="card__price">
+                            <span class="amount">1630</span> грн.</span>
+                        <button class="btn-def card__btn" type="button" onclick="cart.add( );">купить</button>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+        <style>
+            .container {
+                width: 1200px;
+                margin: 0 auto;
+                padding: 20px;
+            }
+            .show-more-block {
+                min-height:50px;
+                position: relative;
+                overflow: hidden;
+            }
+            .show-more-block p {
+                margin: 0 0 10px 0;
+            }
+            .show-more__link {
+                min-height: 50px;
+                position: relative;
+                cursor: pointer;
+                color: red;
+                display: block;
+                margin: 20px 0 0;
+            }
+            .show-more-block .text-wrap:after {
+                content: '';
+                width: 100%;
+                display: block;
+                position: absolute;
+                bottom: 0px;
+                left: 0;
+                height: 50px;
+                transition: height .3s;
+                color: red;
+                background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+            }
+            .show-more-block.open .text-wrap:after {
+                height: 0;
+                transition: height .3s;
+            }
+        </style>
+        <script>
+            //3.2  show more
+            $(document).ready(function () {
+
+                let blocks = $('.js-more'),
+                    linkShow = blocks.data('linkshow'),
+                    linkHide = blocks.data('linkhide');
+
+
+                for( let i = 0; i < blocks.length; i++ ) {
+                    var realHeight = blocks[i].clientHeight,
+                        dataHeight = blocks[i].dataset.height;
+
+                    let moreLink = document.createElement('span');
+
+                    moreLink.innerHTML = linkShow;
+                    moreLink.dataset.height = realHeight;
+                    moreLink.className = 'show-more__link js-more-link';
+
+                    if( realHeight > dataHeight ) {
+                        blocks[i].after(moreLink);
+                        blocks[i].style.height = `${dataHeight}px`;
+                        blocks[i].dataset.trigger = 1;
+                    }
+                }
+
+                $(document).on('click', '.js-more-link', function(){
+                    let realheight = $(this).data('height');
+
+                    if( $(this).prev().data('trigger') == 1 ) {
+                        $(this).prev().animate({
+                            height: realheight
+                        }, 500);
+                        $(this).text(linkHide);
+                        $(this).prev().data('trigger', 0);
+                    } else {
+                        $(this).prev().animate({
+                            height: dataHeight
+                        }, 500);
+                        $(this).text(linkShow);
+                        $(this).prev().data('trigger', 1);
+                    }
+                });
+
+
+            })
+
+
+        </script>
+
+        <div class="show-more-block js-show-more" data-height="70" data-linktext="Узнать больше +" data-linktext2="Скрыть" >
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque delectus, enim error id ipsa iure libero necessitatibus omnis saepe sint! Adipisci aspernatur eaque et id maxime nihil perspiciatis sed temporsitatibus omnis saepe sint! Adipisci aspernatur eaque et idmnis saepe sint! Adipisci aspernatur eaque et id maxime nihil perspiciatis sed temporibusvtemporibus vero. Ad earum, ipsa mollitia nostrum odit quos soluta tenetur? Ab commodi dolore minima nobis, reprehendeuae qui reiciendis vitae?</p>
+        </div>
+
+        <div class="show-more-block js-show-more" data-height="70" data-linktext="Узнать больше  +" data-linktext2="Скрыть" >
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque delectus, enim error id ipsa iure libero necessitatibus omnis saepe sint! Adipisci aspernatur eaque et id maxime nihil perspiciatis sed temporibus vero. Ad earum, ipsa mollitia nostrum odit quos soluta tenetur? Ab commodi dolore minima nobis, reprehenderit saepe. Aut commodi debitis enim esse et impedit maiores modi natus odit provident quis sint, sunt voluptatibus. Animi beatae dicta dolore doloribus ea, hic impedit incidunt, iure laboriosam quae quasi quod reiciendis veritatis. Accusantium ad aliquam architecto deleniti deserunt dignissimos distinctio dolor dolore ea est fugiat fugit hic in, iusto libero maiores maxime modi molestias obcaecati odio officia provident qui quia quidem quisquam rem repudiandae voluptatem? Doloremque magnam maxime, numquam quae qu. Animi beatae dicta dolore doloribus ea, hic impedit incidunt, iure laboriosam quae quasi quod reiciendis veritatis. Accusantium ad aliquam architecto deleniti deserunt dignissimos distinctio dolor dolore ea est fugiat fugit hic in, iusto libero maiores maxime modi molestias obcaecati odio officia provident qui quia quidem quisquam rem repudiandae voluptatem? Doloremque magnam maxime, numquam quae qui reiciendis vitae?</p>
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+<!--MAIN PAGE START **********-->
+
+
+
+        <section data-rel="slider" class="slider_fw">
+            <div class="slider js-slider_fw">
+                <div class="slide">
+                    <img src="img/bg_02.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="img/bg_02.jpg" alt="">
+                </div>
+            </div>
+            <div class="container">
+                <div class="slider__btns">
+                    <div class="prev js-prev"></div>
+                    <div class="next js-next"></div>
+                </div>
+            </div>
+        </section>
+
+
+        <div class="container">
+
+            <section class="best-offer">
+                <img src="img/forman_07.jpg" alt="">
+                <a class="best-offer__show-all" href="#">Смотреть все</a>
+
+                <section data-rel="slider" class="slider_best">
+                    <div class="slider js-slider_best">
+                        <div class="slide">
+                            <div class="card">
+                                <a href="/">
+                                    <figure class="card-img">
+                                        <img src="img/item1.jpg" alt="" class="img-responsive">
+                                        <figcaption>Кожаное мужское портмоне Petek 137</figcaption>
+                                    </figure>
+                                </a>
+                                <div class="card__info">
+                        <span class="card__price">
+                            <span class="amount">1630</span> грн.</span>
+                                    <button class="btn-def card__btn" type="button" onclick="cart.add( );">купить</button>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="card">
+                                <a href="/">
+                                    <figure class="card-img">
+                                        <img src="img/item1.jpg" alt="" class="img-responsive">
+                                        <figcaption>Кожаное мужское портмоне Petek 137</figcaption>
+                                    </figure>
+                                </a>
+                                <div class="card__info">
+                        <span class="card__price">
+                            <span class="amount">1630</span> грн.</span>
+                                    <button class="btn-def card__btn" type="button" onclick="cart.add( );">купить</button>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="card">
+                                <a href="/">
+                                    <figure class="card-img">
+                                        <img src="img/item1.jpg" alt="" class="img-responsive">
+                                        <figcaption>Кожаное мужское портмоне Petek 137</figcaption>
+                                    </figure>
+                                </a>
+                                <div class="card__info">
+                        <span class="card__price">
+                            <span class="amount">1630</span> грн.</span>
+                                    <button class="btn-def card__btn" type="button" onclick="cart.add( );">купить</button>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="card">
+                                <a href="/">
+                                    <figure class="card-img">
+                                        <img src="img/item1.jpg" alt="" class="img-responsive">
+                                        <figcaption>Кожаное мужское портмоне Petek 137</figcaption>
+                                    </figure>
+                                </a>
+                                <div class="card__info">
+                        <span class="card__price">
+                            <span class="amount">1630</span> грн.</span>
+                                    <button class="btn-def card__btn" type="button" onclick="cart.add( );">купить</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__btns">
+                        <div class="prev js-prev"></div>
+                        <div class="next js-next"></div>
+                    </div>
+                </section>
+            </section>
+            <section class="best-offer right">
+                <img src="img/forman2_03.jpg" alt="">
+                <a class="best-offer__show-all" href="#">Смотреть все</a>
+
+                <section data-rel="slider" class="slider_best">
+                    <div class="slider js-slider_best">
+                        <div class="slide">
+                            <div class="card">
+                                <a href="/">
+                                    <figure class="card-img">
+                                        <img src="img/item1.jpg" alt="" class="img-responsive">
+                                        <figcaption>Кожаное мужское портмоне Petek 137</figcaption>
+                                    </figure>
+                                </a>
+                                <div class="card__info">
+                        <span class="card__price">
+                            <span class="amount">1630</span> грн.</span>
+                                    <button class="btn-def card__btn" type="button" onclick="cart.add( );">купить</button>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="card">
+                                <a href="/">
+                                    <figure class="card-img">
+                                        <img src="img/item1.jpg" alt="" class="img-responsive">
+                                        <figcaption>Кожаное мужское портмоне Petek 137</figcaption>
+                                    </figure>
+                                </a>
+                                <div class="card__info">
+                        <span class="card__price">
+                            <span class="amount">1630</span> грн.</span>
+                                    <button class="btn-def card__btn" type="button" onclick="cart.add( );">купить</button>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="card">
+                                <a href="/">
+                                    <figure class="card-img">
+                                        <img src="img/item1.jpg" alt="" class="img-responsive">
+                                        <figcaption>Кожаное мужское портмоне Petek 137</figcaption>
+                                    </figure>
+                                </a>
+                                <div class="card__info">
+                        <span class="card__price">
+                            <span class="amount">1630</span> грн.</span>
+                                    <button class="btn-def card__btn" type="button" onclick="cart.add( );">купить</button>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="card">
+                                <a href="/">
+                                    <figure class="card-img">
+                                        <img src="img/item1.jpg" alt="" class="img-responsive">
+                                        <figcaption>Кожаное мужское портмоне Petek 137</figcaption>
+                                    </figure>
+                                </a>
+                                <div class="card__info">
+                        <span class="card__price">
+                            <span class="amount">1630</span> грн.</span>
+                                    <button class="btn-def card__btn" type="button" onclick="cart.add( );">купить</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__btns">
+                        <div class="prev js-prev"></div>
+                        <div class="next js-next"></div>
+                    </div>
+                </section>
+            </section>
+
+
+
+            <!--бренды   slider-->
+
+            <section data-rel="slider" class="slider_brands">
+                <div class="slider js-slider_brands">
+                    <div class="slide">
+                        <figure>
+                            <img src="img/forman_15.jpg" alt="">
+                        </figure>
+                    </div>
+                    <div class="slide">
+                        <figure>
+                            <img src="img/forman_15.jpg" alt="">
+                        </figure>
+                    </div>
+                    <div class="slide">
+                        <figure>
+                            <img src="img/forman_15.jpg" alt="">
+                        </figure>
+                    </div>
+                    <div class="slide">
+                        <figure>
+                            <img src="img/forman_15.jpg" alt="">
+                        </figure>
+                    </div>
+                    <div class="slide">
+                        <figure>
+                            <img src="img/forman_15.jpg" alt="">
+                        </figure>
+                    </div>
+                    <div class="slide">
+                        <figure>
+                            <img src="img/forman_15.jpg" alt="">
+                        </figure>
+                    </div>
+                    <div class="slide">
+                        <figure>
+                            <img src="img/forman_15.jpg" alt="">
+                        </figure>
+                    </div>
+
+                </div>
+                <div class="container">
+                    <div class="slider__btns">
+                        <div class="prev js-prev"></div>
+                        <span class="slider__btns-divider"></span>
+                        <div class="next js-next"></div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+<!--MAIN PAGE END **********-->
+
+
+
+
+
+
+
+<!--SERTIFICATE PAGE START **********-->
+
+        <div class="container sertif">
+            <h3 class="title-hr">Купить подарочный сертификат</h3>
+            <div class="row">
+                <div class="col-6">
+                    <h6>  Подарочный сертификат будет отправлен получателбю на электронную почту послетого, как Вы оплатите стоимость подарочного сертификата </h6>
+                    <form class="sertif__form">
+                        <label>
+                            <p>Имя получателя: *</p>
+                            <input type="text">
+                        </label>
+                        <label>
+                            <p>E-mail:</p>
+                            <input type="email">
+                        </label>
+                        <label class="sertif__theme">
+                            <p>Тема подарочного сертификата: *</p>
+                            <input class="js-styler" type="radio" name="
+theme">
+                            <p>День Рождения</p>
+                            <input class="js-styler"  type="radio" name="
+theme">
+                            <p> Другое</p>
+                        </label>
+                        <label class="sertif__summ">
+                            <p>Сумма: *</p>
+                            <input name="summ" class="js-styler"  type="radio"><p>500</p>
+                            <input name="summ" class="js-styler"  type="radio"><p>1000</p>
+                            <input name="summ" class="js-styler"  type="radio"><p>1500</p>
+                            <input name="summ" class="js-styler"  type="radio"><p>2000</p>
+                            <input name="summ" class="js-styler"  type="radio"><p>3000</p>
+                        </label>
+                        <label >
+                            <input type="checkbox">
+                            Я уведомлен, что подарочные сертификаты не подлежат возврату *
+                        </label>
+                        <button class="btn-def btn-def_md ">Купить</button>
+                    </form>
+
+
+
+
+                </div>
+                <div class="col-6">
+                    <img src="img/sertif.jpg" alt="">
+                </div>
+            </div>
+
+
+
+        </div>
+
+<!--SERTIFICATE PAGE END **********-->
+
+
+
+
+
+
+
+
+
+<!--THANK YOU PAGE START **********-->
+
+        <div class="container thank">
+            <h4>Благодарим за покупку!</h4>
+            <h6>Ваш заказ отправлен, наш менеджер свяжется с Вами в ближайше время для уточнения деталей </h6>
+            <div class="thank__link-wraper">
+                <a href="/" class="btn-def js-btn__link">перейти на главную</a>
+            </div>
+        </div>
+
+<!--THANK YOU  PAGE END ***************-->
+
+
+
+
+
+
+
+<!--CART PAGE START -->
+
+        <div class="container cart-container">
+            <div class="breadcrumbs">
+                <a href="">breadcrumbs text1</a>
+                <a href="">breadcrumbs text2</a>
+            </div>
+
+
+
+    <div class="row">
+        <div  id="" class="col-sm-12">
+                <h3 class="title-hr">Ваша корзина </h3>
+
+                <div class="col-sm-8 cart__items">
+                    <form action="" id="cartForm" method="post" enctype="multipart/form-data">
+                        <section class="cart__table">
+                            <header>
+                                <p>Фото</p>
+                                <p class="name">Товар</p>
+                                <p>Кол-во</p>
+                                <p>Цена</p>
+                                <p>Сумма</p>
+                            </header>
+
+
+                            <section class="cart__item">
+                                <span class="remove-item js-remove" onclick="cart.remove('92');"></span>
+                                <span class="img-wrapper">
+                                    <a href="">
+                                        <img src="img/item02.jpg" alt="">
+                                    </a>
+                                </span>
+                                <span class="info">
+                                    <a href="">Кожаная папка для
+    документов Petek 811    <span>759-283-01</span>
+                                    </a>
+                                </span>
+                                <span class="amount-counter">
+                                      <div class="jq-number js-styler product_select_count"> - 1 +
+                                      </div>
+                                </span>
+                                <span class="price">
+                                    <span class="count">6 858</span> грн.
+                                </span>
+                                <span class="total price"><span class="count">6 858</span> грн.</span>
+
+                            </section>
+
+                        </section>
+                    </form>
+
+                    <div class="cart__table-bottom">
+                        <a class="main_return" href="http://elta.test-02.in.ua/">Продолжить покупки</a>
+                        <div class="total-wrap">
+                            <span class="">Итого:</span>
+                            <span class="total_price">98UAH</span>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-sm-4 cart__sidebar">
+
+
+                    <h3 class="title-hr"> Оформление заказа</h3>
+
+                    <form class="ordering_form_item" method="post" action="" id="ordering_form_item">
+                        <div class="steps">
+                            <div class="step step-1" id="collapse-user-data">
+                                <h5>1. Личные данные</h5>
+                                <fieldset required="">
+                                    <label class="" for="input-name">Имя:</label>
+                                    <code class="error-message hidden"></code>
+                                    <input type="text" name="name" value="" id="input-name" class="">
+                                    <label class="" for="input-name">Фамилия:</label>
+                                    <code class="error-message hidden"></code>
+                                    <input type="text" name="lastName" value="" id="input-lastName" class="">
+
+                                    <label class="" for="input-email">E-mail:</label>
+                                    <code class="error-message hidden"></code>
+                                    <input type="email" name="email" value="" id="input-email" class="js-mail">
+
+                                    <label class="" for="input-phone">Контактный телефон:</label>
+                                    <code class="error-message hidden"></code>
+                                    <input type="text" name="phone" value="" id="input-phone" class="js-phone">
+
+                                    <label class="" for="input-address">Город</label>
+                                    <code class="error-message hidden"></code>
+                                    <input type="text" name="address" id="input-address" class="gutter_normal">
+                                </fieldset>
+                            </div>
+
+
+                            <div class="step step-2" id="collapse-shipping-method">
+                                <h5>2. Способ доставки</h5>
+
+                                <div class="jq-radio js-styler"><input class="js-styler" type="radio" name="shipping_method" value="novaposhta.novaposhta"><div class="jq-radio__div"></div></div>
+                                <span class="bold">Доставка Новой почтой</span>
+                                <p class="gutter_normal">Заказы суммой более 2000 грн, доставляются бесплатно.</p>
+
+
+                                <div class="jq-radio js-styler checked">
+                                    <input checked="" class="js-styler" type="radio" name="shipping_method" value="pickup.pickup"><div class="jq-radio__div"></div>
+                                </div>
+                                <span class="bold">Самовывоз</span>
+                                <p class="gutter_sm">По адресу: г.Харьков, ул. Чкалова, 33</p><br>
+                            </div>
+
+                            <div class="step step-3 hr" id="collapse-payment-method">
+                                <h5>3. Способ оплаты</h5>
+                                <div class="jq-radio js-styler checked"><input checked="" class="js-styler" type="radio" name="payment_method" value="bank_transfer"><div class="jq-radio__div"></div></div>
+                                <span class="bold gutter_sm">Оплата на карту Приват Банка</span><br>
+                                <div class="jq-radio js-styler"><input class="js-styler" type="radio" name="payment_method" value="cod"><div class="jq-radio__div"></div></div>
+                                <span class="bold gutter_sm">Платежная система Liqpay</span><br>
+
+                                <div class="jq-radio js-styler"><input class="js-styler" type="radio" name="payment_method" value="cod"><div class="jq-radio__div"></div></div>
+                                <span class="bold gutter_sm">Наложенный платеж <span> (При получении заказа в курьерской службе или самовывозе)</span></span><br>
+                            </div>
+                        </div>
+
+                        <div id="collapse-payment-address">
+                            <input type="hidden" name="payment_address" value="existing">
+                            <input type="hidden" name="address_id" value="209">
+                        </div>
+                        <div id="collapse-shipping-address">
+                            <input type="hidden" name="shipping_address" value="existing">
+                            <input type="hidden" name="address_id" value="209">
+                        </div>
+                        <button type="button" onclick="orderguest.save();" class="btn-def btn-main"> Оформить заказ
+                        </button>
+                        <div class="loader hidden">
+                            <img src="/catalog/view/theme/adsgroup/image/preLoaders.svg" alt="">
+                        </div>
+                    </form>
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- CART PAGE END -->
+
+
+
+
+
+
+
+
+<!--NEWS PAGE START ***********-->
+
+    <main class="container">
+
+        <h3>Новости и статьи</h3>
+
+        <section class="news row">
+            <article>
+                <figure>
+                    <img src="img/item02.jpg" alt="">
+                </figure>
+                <div class="info">
+                    <div class="date">11.33.4444</div>
+                    <h6>Кожаные портмоне и аксессуары</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem delectus libero quasi repellendus similique vitae. quasi repellendus similique vitae.</p>
+                    <a href="#">Подробнее</a>
+                </div>
+
+            </article>
+            <article>
+                <figure>
+                    <img src="img/item02.jpg" alt="">
+                </figure>
+                <div class="info">
+                    <div class="date">11.33.4444</div>
+                    <h6>Кожаные портмоне и аксессуары</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem delectus libero quasi repellendus similique vitae.</p>
+                    <a href="#">Подробнее</a>
+                </div>
+
+            </article>
+            <article>
+                <figure>
+                    <img src="img/item02.jpg" alt="">
+                </figure>
+                <div class="info">
+                    <div class="date">11.33.4444</div>
+                    <h6>Кожаные портмоне и аксессуары</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem delectus libero quasi repellendus similique vitae.</p>
+                    <a href="#">Подробнее</a>
+                </div>
+
+            </article>
+
+        </section>
+        <div class="pagination">
+            <a class="active" href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">...</a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+        </div>
+
+    </main>
+
+
+<!-- ***********NEWS PAGE END-->
+
+
+
+
+
+<!--NEWS PAGE START ***********-->
+
+
+<!-- NEWS PAGE END-->
+
+
+
+
+        <!-- FOOTER ***********-->
+
+        <footer>
+            <section class="footer__suscribe">
+                <div class="container">
+                    <p>Узнавайте о новинках и акциях первыми!</p>
+                    <img src="img/icon-subscribe.jpg" alt="">
+                    <form action="">
+                        <input type="text">
+                        <button class="btn-def">Подписаться</button>
+                    </form>
+
+                </div>
+            </section>
+
+
+            <section class="footer__common">
+                <div class="container">
+                    <div class="footer__about">
+
+                        <div class="soc-wrap">
+                        <span class="socIcon fb">
+                            <a rel="nofollow" href="https://fb.com">
+                                <img src="img/icon-fb.png" alt="">
+                            </a>
+                        </span>
+                            <span class="socIcon insta">
+                            <a rel="nofollow" href="https://www.instagram.com/">
+                                <img src="img/icon-insta.png" alt="">
+                            </a>
+                        </span>
+                        </div>
+
+                        <div class="footer__lists">
+                            <ul>
+                                <li><a href="#">О магазине</a></li>
+                                <li><a href="#">Подарочные комплекты</a></li>
+                                <li><a href="#">Подарочные сертификаты</a></li>
+                                <li><a href="#">Оплата и доставка</a></li>
+                            </ul>
+
+                            <ul>
+                                <li><a href="#">Гарантии</a></li>
+                                <li><a href="#">Новости и статьи</a></li>
+                                <li><a href="#">Контакты</a></li>
+                                <li><a href="#">Карта сайта</a></li>
+                            </ul>
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="footer__info contacts">
+                        <img class="logo" src="img/logo_footer.jpg">
+                        <div class="contacts__info">
+                            <div class="contacts__item">
+                                <img src="img/icon-insta.png" alt="">
+                                <div class="contacts__item-info">
+                                    <span>38 (050) 334-45-45</span>
+                                    <span>38 (063) 455-32-32</span>
+                                </div>
+                            </div>
+                            <div class="contacts__item ">
+                                <img src="img/icon-insta.png" alt="">
+                                <div class="contacts__item-info">
+                                    <span class="contacts__item-title">Режим работы:</span>
+                                    <span>Пн. - Пт. с 10.00 до 18.00</span>
+                                </div>
+                            </div>
+                            <div class="contacts__item ">
+                                <img src="img/icon-insta.png" alt="">
+                                <div class="contacts__item-info">
+                                    <span class="contacts__item-title">Мы находимся:</span>
+                                    <span>г. Николаев, ул. Соборная, 17а</span>
+                                </div>
+                            </div>
+                            <div class="contacts__item ">
+                                <img src="img/icon-insta.png" alt="">
+                                <div class="contacts__item-info">
+                                    <span class="contacts__item-title">Связаться с нами:</span>
+                                    <span>info@bond-shop.com.ua</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container copyright__wrap">
+                    <div class="copyright">
+                        <p>© BOND. 2018. Все права защищены</p>
+                    </div>
+                    <div class="adsgroup">
+                        <a href="https://adsgroup.com.ua/" rel="nofollow">Разработка и поддержка ADS group</a>
+                    </div>
+                </div>
+            </section>
+        </footer>
+    <!-- FOOTER END -->
+
+
+
+<!--MODAL WINDOW " MAP " ***********-->
+
+        <div class="modal__overlay">
+            <div id="map-block" class="modalDiv modalDiv__map">
+                <span class="closeModalIcon"></span>
+
+                <!--<section id="map1" class="map-fw">-->
+                    <!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2722.2578666112804!2d31.982897451587956!3d46.97626953919693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c5c973ea11f4f7%3A0xe44184f1ab8a5c06!2z0LLRg9C70LjRhtGPINCd0ZbQutC-0LvRjNGB0YzQutCwLCAyNSwg0JzQuNC60L7Qu9Cw0ZfQsiwg0JzQuNC60L7Qu9Cw0ZfQstGB0YzQutCwINC-0LHQu9Cw0YHRgtGMLCA1NDAwMA!5e0!3m2!1suk!2sua!4v1516108267833"  frameborder="0" style="border:0" allowfullscreen></iframe>-->
+                <!--</section>-->
+
+            </div>
+        </div>
+<!--MODAL WINDOW " MAP "  END -->
+
+
+
+
+
+
+
+
+    <!--<link rel="stylesheet" href="css/main.css">-->
+
+    <!--<script src="js/scripts.min.js"></script>-->
+    <!--<script src="https://code.jquery.com/jquery-1.12.4.js"></script>-->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+
+    <script src="libs/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="libs/slick/slick.min.js"></script>
+    <script type="text/javascript" src="libs/js/jquery.mmenu.all.js"></script>
+    <script type="text/javascript" src="libs/js/jquery.formstyler.min.js"></script>
+    <script src="libs/js/clockpicker.js"></script>
+    <script src="js/common.js"></script>
+
+</body>
+</html>
