@@ -1,20 +1,21 @@
 @import "vars"
 .page-404
   padding: 50px 0
-  .container
+  &.container
     display: flex
     flex-direction: column
     justify-content: flex-start
     align-items: center
+    padding-bottom: 0 !important
     & > *
       margin-bottom: 30px
       position: relative
 
-  h6
-    width: 260px
+  h5
+    max-width: 260px
     text-align: center
   figure
-    width: 360px
+    max-width: 360px
     display: block
     img
       width: 100%
@@ -22,11 +23,14 @@
       position: relative
   &__link-wraper
     position: relative
-
+    margin-bottom: 0!important
+    img
+      max-width: 100%
     a
       position: absolute
-      top: 80px
-      left: 10%
+      top: 21%
+      left: 20%
+      text-decoration: none
     //&:after
     //  content: ''
     //  position: absolute

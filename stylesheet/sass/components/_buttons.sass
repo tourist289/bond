@@ -24,11 +24,15 @@
 	transition: background $t1
 	&:hover
 		transition: background $t1
-		background: $bb
+		background: $bg_grey-light
 		color: $ff
 	&_dark
 		background: $bg_grey-light
 		color: #ffffff
+		&:hover
+			transition: background $t1
+			background: $red
+			color: $ff
 	&_md
 		width: 160px
 	&_link
