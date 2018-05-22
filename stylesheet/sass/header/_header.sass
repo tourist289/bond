@@ -224,7 +224,7 @@ nav
 
 
 .header__bottom
-  height: 50px
+  height: 60px
   margin: 0
   border-top: 1px solid $hr
   .container
@@ -253,9 +253,20 @@ nav
     display: inline-flex
     align-items: center
     text-decoration: none
+    position: relative
     &:hover
       text-decoration: none
       color: $mainCOLOR
+    &:after
+      content: ''
+      position: absolute
+      display: block
+      right: 0
+      top: 0
+      width: 7px
+      height: 4px
+      background: url("../../../img/icon-arrow.jpg") no-repeat 0 0
+      transform: rotate(90deg)
 
 
 

@@ -109,6 +109,23 @@ $(document).ready(function(){
 
     $('.js-styler').styler();
 
+//  2.1 masked input
+//     $('#input-payment-telephone').mask('+38 (999) 999 99 99');
+
+//  2.2   jquery ui slider
+    const MAXSliderValue = 130;
+    $( "#delivery__slider" ).progressbar({
+        // range: "min",
+        value: 37,
+        min: 1,
+        max: MAXSliderValue
+        // slide: function( event, ui ) {
+        //     $( "#delivery__amount" ).val(MAXSliderValue - ui.value  + " грн");
+        // }
+    });
+    $( "#delivery__amount" ).val( MAXSliderValue -  $( "#delivery__slider" ).attr( "aria-valuenow" ) + " грн");
+
+
 
 //3.2  show more
     (function(){

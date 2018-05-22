@@ -55,6 +55,11 @@
 @media only screen and (max-width : 1200px)
   .desktop-menu
     max-width: 70%
+
+  .cart__items
+    padding:  0 20px $mbL 0
+
+
   .footer__common .container,
   .footer__suscribe .container
     padding: 0 10px
@@ -87,6 +92,17 @@
     .contacts__info
       padding: 0 30px 0 0
 
+  .steps
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    .step
+      width: 29%
+    button
+      width: 50%
+      align-items: center
+      left: 25%
+      top: 25px
 
 
   .footer__suscribe
@@ -140,7 +156,24 @@
           display: none
 
 
+  .cart__table-bottom
+    .delivery-wrap
+      width: 65%
+  .cart__items
+    padding-right: 0
+  .summ__block
+    .summ__promo
+      width: 43%
+      padding: 15px
 
+  .steps
+    .step
+      width: 46%
+    button
+      width: 50%
+      align-self: flex-end
+      left: 0
+      top: 0
 
 
 
@@ -219,6 +252,39 @@
   .contacts__form
       form input
           width: 100%
+
+
+  .cart__table header
+    //display: none
+  .cart__item
+    padding: 15px 6px
+    align-items: center
+    flex-wrap: wrap
+    &>*
+      max-width: 48%
+      align-self: center
+      margin-bottom: 10px
+    .remove-item
+      bottom: auto
+      top: 0px
+  .cart__table-bottom
+    flex-wrap: wrap
+    .main_return,
+    .delivery-wrap
+      width: 100%
+      &>span
+        width: 60%
+  .summ__block
+    flex-direction: column
+    height: auto
+    width: 100%
+    .summ__promo
+      width: 100%
+      margin-bottom: 15px
+    .summ__table
+      height: 150px
+
+
   .footer__suscribe
       .container
         padding: 20px 10px
@@ -312,7 +378,10 @@
         min-width: 100px
         flex-direction: column
 
-
+  .steps
+    .step,
+    button
+      width: 100%
 
   .modal__wrap h4
     font-size: 18px

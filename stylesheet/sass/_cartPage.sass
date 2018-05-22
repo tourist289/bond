@@ -2,7 +2,7 @@
 
 
 .cart__items
-  padding: 0 20px 0 0
+  padding: 0 70px 0 0
 
 
 .cart__table
@@ -11,8 +11,9 @@
     justify-content: space-around
     align-items: center
     height: 50px
-    border-top: 2px solid #f3f3f4
+    border: none
     padding: 0px
+
     p
       color: #818181
       font-size: 14px
@@ -27,28 +28,30 @@
   height: 200px
   border: none
   background-color: #ffffff
-  padding: 20px
+  padding: 40px 20px 20px
   display: flex
   justify-content: space-between
   align-items: center
   position: relative
-  margin-bottom: 20px
+  margin-bottom: 15px
   &>*
     flex-grow: 1
-    width: 25%
+    max-width: 20%
     display: flex
     justify-content: center
+    align-self: flex-start
   .remove-item
     width: 15px
     height: 15px
     position: absolute
     cursor: pointer
-    right: 15px
-    bottom: 15px
-    background: url(../../img/icon-remove.jpg) no-repeat 0 0
-    background-size: contain
+    right: 25px
+    bottom: 30px
+    font-size: 25px
     display: block
+    color: $red
   .img-wrapper
+    align-self: center
     img
       width: 80%
   .name
@@ -80,59 +83,250 @@
 
 
 
+
+
+
 .cart__table-bottom
   display: flex
   justify-content: space-between
   align-items: flex-start
-  height: 40px
-  border-bottom: 1px solid $hr
+  height: 60px
+  margin-bottom: $mbL
   .main_return
     color: #f12729
-    font-family: "Source Sans Pro"
     font-size: 15px
     font-weight: 300
     line-height: 20px
-    margin-bottom: 20px
+    margin-bottom: 0px
     letter-spacing: -0.15px
-    text-decoration: underline
-  .total-wrap
+    text-decoration: none
+  .delivery-wrap
+    width: 60%
+    height: 60px
+    flex-wrap: wrap
     display: flex
-    justify-content: flex-end
-    align-items: center
-    color: #1d1d1d
-    font-size: 16px
+    justify-content: space-between
+    align-items: flex-start
+    color: $color_grey
+    font-size: 15px
     font-weight: 600
-    text-transform: uppercase
+    text-transform: none
     letter-spacing: 0.8px
-  .total_price
-    font-size: 26px
+    &>span
+      width: 70%
+  .delivery__price
+    font-size: 18px
     letter-spacing: 1.3px
-    margin-left: 25px
+    margin-left: 15px
+    color: $red
+    width: 86px
+    height: 23px
+    border: none
+    background: transparent
+    text-align: right
+  .ui__slider
+    flex-grow: 1
+    width: 100%
+    display: block
+    position: relative
+
+
+
+
+
+.ui__slider
+  width: 100%
+  display: block
+  position: relative
+  height: 4px
+  border: none!important
+  background: $hr
+  .ui-state-default
+    background: red
+    top: -14px
+    position: relative
+    width: 5px
+    height: 5px
+    border: 1px solid
+    margin: 0
+  .ui-slider-range-min
+    background: $red
+    height: 4px
+.ui-widget-header
+  background: $red
+  border: none
+
+.summ__block
+  display: flex
+  justify-content: space-between
+  height: 210px
+  .summ__promo
+    background: $ff
+    padding: 35px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: flex-start
+    height: 100%
+    width: 37%
+    margin-right: 15px
+    form
+      width: 100%
+      margin-bottom: 0
+  .summ__table
+    padding: 0
+    display: flex
+    justify-content: center
+    align-items: flex-start
+    height: 100%
+    flex-grow: 1
+    .table__col
+      width: 55%
+      flex-grow: 1
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      height: 100%
+      margin-right: 2px
+      &>span
+        background: $ff
+        margin-bottom: 2px
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        flex-grow: 1
+        padding: 0 20px
+        letter-spacing: .5px
+        font-size: 15px
+      &.numbers
+        width: 44%
+        flex-grow: 1
+        text-align: right
+        span
+          justify-content: flex-end
+          b
+            font-weight: normal
+            margin-left: 3px
+    .summ__table-summ
+      font-weight: bold
+
 
 
 .cart__sidebar
   padding-bottom: 50px
-  h3.title-hr
-    color: #1d1d1d
-    font-size: 16px
-    font-weight: 600
-    text-transform: uppercase
-    letter-spacing: 0.8px
-    margin-top: 26px
-    margin-bottom: 34px
+  h4.title-hr
+    margin-bottom: 10px
 
 .steps 
   margin-bottom: 53px 
   .step
     padding: 0
-  .accordion
-    font-size: 16px
-    font-weight: 600
+  .step-3
+    margin-bottom: $mb
+  button
     width: 100%
-    height: 44px
-    margin-bottom: 30px
-    justify-content: flex-start
-    padding-left: 20px
+
+
+
+.jq-radio
+  clear: both
+  display: inline
+  width: 25px
+  float: left
+  margin-right: 10px
+  height: 20px
+  input[type=radio]
+    width: 21px
+    height: 20px
+    outline: none
+  .jq-radio__div
+    display: none
+  &.checked
+    position: relative
+    .jq-radio__div
+      display: block
+      position: absolute
+      top: 10px
+      left: 6px
+      width: 7px
+      height: 7px
+      z-index: 1
+      background: $red
+      opacity: 1
+      border-radius: 50%
+  &+ span
+    display: inline-block
+    float: left
+    line-height: 20px
+    padding: 4px 0 0
+    width: 82%
+    font-size: 13px
+    b
+      color: $color_grey
+      font-weight: normal
+
+    & + p
+      display: block
+      clear: both
+      margin-bottom: 0
+      padding: 11px 0 7px
+    & + input[type=radio]
+      clear: both
+
+
+
+
+
+
+
+.jq-number
+  width: 70%
+  padding-top: 4px
+  height: 40px
+  position: relative
+  .jq-number__field
+    //width: 170px
+    input[type=number]
+      text-align: center
+      color: #180f05
+      font-size: 16px
+      font-weight: 300
+      line-height: 20px
+      margin-bottom: 0
+      padding-left: 15px
+  .jq-number__spin
+    position: absolute
+    top: 22%
+    &:after
+      content: '+'
+      color: $red
+      display: block
+      width: 8px
+      height: 8px
+      border: none
+      top: 0
+      font-size: 22px
+  .jq-number__spin.minus
+    left: 13px
+    &:after
+      content: '-'
+  .jq-number__spin.plus
+    right: 13px
+
+
+
+
+
+
+  //.accordion
+  //  font-size: 16px
+  //  font-weight: 600
+  //  width: 100%
+  //  height: 44px
+  //  margin-bottom: 30px
+  //  justify-content: flex-start
+  //  padding-left: 20px
+
 
 fieldset 
   min-width: 0 
