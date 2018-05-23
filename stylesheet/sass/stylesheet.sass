@@ -13,6 +13,7 @@
 //@import "components/rating"
 @import "components/breadCrumbs"
 @import "404"
+@import "katalog"
 @import "header/header"
 @import "header/header-mobile"
 @import "components/item"
@@ -106,6 +107,160 @@ legend
     color: $red
 .warn
   color: $red
+
+.ui__slider
+  width: 100%
+  display: block
+  position: relative
+  height: 4px
+  border: none!important
+  background: $hr
+  .ui-state-default
+    background: red
+    top: -14px
+    position: relative
+    width: 5px
+    height: 5px
+    border: 1px solid
+    margin: 0
+  .ui-slider-range-min
+    background: $red
+    height: 4px
+.ui-widget-header
+  background: $red
+  border: none
+
+
+
+.jq-radio
+  clear: both
+  display: inline
+  width: 25px
+  float: left
+  margin-right: 10px
+  height: 20px
+  input[type=radio]
+    width: 21px
+    height: 20px
+    outline: none
+  .jq-radio__div
+    display: none
+  &.checked
+    position: relative
+    .jq-radio__div
+      display: block
+      position: absolute
+      top: 10px
+      left: 6px
+      width: 7px
+      height: 7px
+      z-index: 1
+      background: $red
+      opacity: 1
+      border-radius: 50%
+  &+ span
+    display: inline-block
+    float: left
+    line-height: 20px
+    padding: 4px 0 0
+    width: 82%
+    font-size: 13px
+    b
+      color: $color_grey
+      font-weight: normal
+
+    & + p
+      display: block
+      clear: both
+      margin-bottom: 0
+      padding: 11px 0 7px
+    & + input[type=radio]
+      clear: both
+
+
+.jq-checkbox
+  clear: both
+  display: inline
+  width: 18px
+  float: left
+  margin-right: 15px
+  height: 18px
+  margin-bottom: 10px
+  border: 2px solid $color_grey
+  border-radius: 0
+  input[type=checkbox]
+    //width: 21px
+    //height: 20px
+    //outline: none
+    display: none
+  &.focused,
+  &.checked
+    position: relative
+    .jq-checkbox__div
+      border: none
+      border-radius: 0
+      border-bottom: 1px solid black
+      border-left: 1px solid black
+      transform: rotate(-51deg)
+      width: 12px
+      height: 9px
+      background: transparent
+      top: 1px
+      position: absolute
+      left: 2px
+  &+ span
+    display: inline-block
+    float: left
+    line-height: 20px
+    padding: 0
+    width: 82%
+    font-size: 13px
+    color: $color_grey
+    b
+      color: $color_grey
+      font-weight: normal
+
+
+
+
+
+.jq-number
+  width: 70%
+  padding-top: 4px
+  height: 40px
+  position: relative
+  .jq-number__field
+    //width: 170px
+    input[type=number]
+      text-align: center
+      color: #180f05
+      font-size: 16px
+      font-weight: 300
+      line-height: 20px
+      margin-bottom: 0
+      padding-left: 15px
+  .jq-number__spin
+    position: absolute
+    top: 22%
+    &:after
+      content: '+'
+      color: $red
+      display: block
+      width: 8px
+      height: 8px
+      border: none
+      top: 0
+      font-size: 22px
+  .jq-number__spin.minus
+    left: 13px
+    &:after
+      content: '-'
+  .jq-number__spin.plus
+    right: 13px
+
+
+
+
 
 /* Для Chrome */
 input[type=number]::-webkit-inner-spin-button,
