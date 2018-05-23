@@ -243,12 +243,11 @@ $(document).ready(function(){
 // **** next - prev buttons for sliders
 
     $('.js-prev').on('click', function(e){
-        let slider = $(this).closest('section[data-rel=slider]').attr('class');
-        $(`.js-${slider}`).slick('slickPrev');
+        $(this).closest('section[data-rel=slider]').find('.slider').slick('slickPrev');
     });
+
     $('.js-next').on('click', function(e){
-        let slider = $(this).closest('section[data-rel=slider]').attr('class');
-        $(`.js-${slider}`).slick('slickNext');
+        $(this).closest('section[data-rel=slider]').find('.slider').slick('slickNext');
     });
 
 
@@ -270,8 +269,18 @@ $(document).ready(function(){
             autoplay: false,
             responsive:[
                 {
-                    breakpoint: 770,
+                    breakpoint: 1100,
                     settings:{
+                        slidesToShow: 5,
+                        slidesToScroll:3,
+                        swipe: false
+                    }
+                },
+                {
+                    breakpoint: 990,
+                    settings:{
+                        slidesToShow:4,
+                        slidesToScroll:3,
                         swipe: false
                     }
                 }
@@ -353,14 +362,28 @@ $(document).ready(function(){
             autoplay: false,
             responsive:[
                 {
-                    breakpoint: 760,
+                    breakpoint: 1100,
+                    settings:{
+                        slidesToShow: 3,
+                        slidesToScroll:1
+                    }
+                },
+                {
+                    breakpoint: 900,
+                    settings:{
+                        slidesToShow: 3,
+                        slidesToScroll:1
+                    }
+                },
+                {
+                    breakpoint: 768,
                     settings:{
                         slidesToShow: 2,
                         slidesToScroll:1
                     }
                 },
                 {
-                    breakpoint: 550,
+                    breakpoint: 576,
                     settings:{
                         slidesToShow: 1,
                         slidesToScroll:1

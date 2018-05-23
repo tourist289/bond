@@ -19,7 +19,7 @@
       transition: background .3s
     &:before
       content: ""
-      background: url(../../../img/icon-slider-prev-arrow.png) no-repeat 0 0
+      background: url(../../img/icon-slider-prev-arrow.png) no-repeat 0 0
       width: 6px
       position: relative
       height: 10px
@@ -42,6 +42,8 @@
 
 .slider_fw
   position: relative
+  margin-top: -8px
+  margin-bottom: $mbX
   .container
     position: relative
     bottom: 50px
@@ -60,9 +62,11 @@
 
 .best-offer
   position: relative
-  margin-bottom: $mbL + 50px
+  margin-bottom: $mbXX
   display: flex
   justify-content: flex-start
+  .slider__title
+    display: none
   img
     //position: absolute
     left: 0
@@ -73,6 +77,7 @@
     right: 0
     top: 0
     color: $red
+    text-decoration: none
 .slider_best
   display: flex
   justify-content: flex-end
@@ -82,16 +87,21 @@
   position: absolute
   right: -50px
   right: 0
-  width: 850px
-  top: 70px
+  width: 75%
+  top: 47px
   .slider
     width: 100%
     height: auto
   .slider__btns
-    left: -262px
+    left: -248px
     bottom: 85px
   .card
     margin-bottom: 0
+    height: 360px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
 
 .best-offer.right
   justify-content: flex-end
@@ -104,23 +114,19 @@
     top: 0
     color: $red
   .slider_best
-    display: flex
-    justify-content: flex-start
-    align-items: center
-    padding: 40px 0
-
-    position: absolute
     right: auto
     left: 0
-    width: 850px
-    top: 70px
     .slider
       width: 100%
       height: auto
     .slider__btns
-      right: -212px
+      right: -248px
       left: auto
       bottom: 85px
+
+.slider__title
+  font-weight: normal
+  padding-left: 10px
 
 .slider_brands
   margin-bottom: $mbL +20px
@@ -165,20 +171,22 @@
     border: none
     border-top: 6px solid $red
     border-left: 6px solid $red
-    background: $ff
+    background: $bg
     opacity: 1
     transition: opacity .3s
     transform: rotate(-45deg)
     &:hover
       opacity: .7
       transition: opacity .3s
-      background: $ff
+      background: $bg
+    &:before
+      display: none
   .next
     transform: rotate(135deg)
     margin: 0
     padding: 0
   .slider__btns-divider
-    background: url(../../../img/hr_03.jpg) no-repeat 0 0
+    background: url(../../img/hr_03.jpg) no-repeat 0 0
     width: 3px
     height: 50px
     position: absolute

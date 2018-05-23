@@ -52,6 +52,12 @@
 /*==========  Desktop First  ==========*/
 
 /* Large Devices, Wide Screens */
+@media only screen and (max-width : 1300px)
+  .slider_fw
+    display: none
+  .best-offer
+    margin-top: $mbL
+
 @media only screen and (max-width : 1200px)
   .desktop-menu
     max-width: 70%
@@ -68,6 +74,39 @@
     padding: 30px 10px 30px
     &.modal_InCart
       padding: 30px 0 30px
+
+@media only screen and (max-width : 1100px)
+  .best-offer
+    position: relative
+    .slider__title
+      display: block
+      position: absolute
+      top: -18px
+
+
+    &> img
+      visibility: hidden
+      left: 0
+    &.right
+      &> img
+        right: 0
+        left: auto
+      .slider_best
+        .slider__btns
+          left: auto
+          right: 0
+          bottom: 0
+      .best-offer__show-all
+        left: auto
+        right: 0
+  .slider_best
+    width: 100%
+    .slider__btns
+      left: 0
+      bottom: 0
+
+
+
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
   .btn-def
@@ -103,6 +142,41 @@
       align-items: center
       left: 25%
       top: 25px
+
+
+  .best-offer
+    position: relative
+    .slider__title
+      display: block
+      position: absolute
+      top: -18px
+
+
+    &> img
+      visibility: hidden
+      left: 0
+      width: 0
+      height: auto
+    &.right
+      &> img
+        right: 0
+        left: auto
+        width: 0
+        height: auto
+      .slider_best
+        .slider__btns
+          left: auto
+          right: 0
+          bottom: 0
+      .best-offer__show-all
+        left: auto
+        right: 0
+  .slider_best
+    width: 100%
+    .slider__btns
+      left: 0
+      bottom: 0
+
 
 
   .footer__suscribe
@@ -175,6 +249,8 @@
       left: 0
       top: 0
 
+  .slider_best .card
+    height: 410px
 
 
   footer
@@ -253,6 +329,10 @@
       form input
           width: 100%
 
+  .slider_best .slider
+    width: 70%
+    height: auto
+    margin: 0 auto
 
   .cart__table header
     //display: none
@@ -392,6 +472,10 @@
     .step,
     button
       width: 100%
+
+  .slider_best .slider
+    width: 96%
+
 
   .modal__wrap h4
     font-size: 18px
