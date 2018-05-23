@@ -5,7 +5,7 @@
 
     <meta charset="utf-8">
 
-    <title>katalog</title>
+    <title>tovar</title>
     <meta name="description" content="">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -271,19 +271,19 @@
                         <p>До беспланой доставки осталось: </p>
                     </span>
 
-                    <input class="price__holder" type="text" readonly id="summ__price_min"  class="summ__price summ">
-                    </div>
+                                                <input class="price__holder" type="text" readonly id="summ__price_min"  class="summ__price summ">
+                                            </div>
 
 
-                    <div id="summ__slider_min" class="ui__slider"></div>
+                                            <div id="summ__slider_min" class="ui__slider"></div>
 
 
 
 
 
-                    </div>
+                                        </div>
 
-                    <button class="btn-def btn-def_dark minicart__btn" >Оформить заказ</button>
+                                        <button class="btn-def btn-def_dark minicart__btn" >Оформить заказ</button>
                                     </div>
 
                                 </div>
@@ -488,6 +488,10 @@
 
 
 
+        <!--TOVAR PAGE START **********-->
+
+
+
 
         <div class="container">
 
@@ -497,236 +501,25 @@
             </div>
 
 
-
-            <!--<div class="row">-->
-            <div class="">
-
-                <div class="col-md-3 col-sm-4 hidden-xs filter__block">
-                    <h4 class="title-hr"> Фильтры</h4>
+        <div class="tovar__block">
 
 
+            <div class="imgs-wrapper">
 
-                    <div class="filter__part">
-                        <h5 class="filter__title">Цена: </h5>
-                        <div class="filter__items">
-                            <div id="slider-range"></div>
-                            <fieldset></fieldset>
-                            <span class="slider__forms">
-                                <input type="text" id="amount"  >
-                                <input type="text" id="amount2"  >
-                                <button class="btn-def js-slider__btn">ok</button>
-                            </span>
+                <figure class="main__img">
+                    <img src="img/img-tovar_big.jpg" alt="">
+                </figure>
 
-                            <script>
-
-                                $( function() {
-                                    $('.js-slider__btn').on('click', function(){
-
-                                       var value1 =  $( "#amount" ).val();
-                                        var value2 = $( "#amount2" ).val();
-
-                                        $( "#slider-range" ).slider({
-                                            'values': [ value1, value2 ],
-                                        });
-                                    });
-
-
-                                    $( "#slider-range" ).slider({
-                                        range: true,
-                                        min: 0,
-                                        max: 500,
-                                        values: [ 75, 300 ],
-                                        slide: function( event, ui ) {
-
-                                            console.log(event)
-                                            console.log(ui)
-                                            $( "#amount" ).val( ui.values[ 0 ] + 'грн' );
-                                            $( "#amount2" ).val(ui.values[ 1 ] + 'грн');
-                                        }
-                                    });
-
-
-                                    $(document).ready(function(){
-                                        $( "#amount" ).val( $( "#slider-range" ).slider( "values", 0 )+ 'грн' );
-                                        $( "#amount2" ).val($( "#slider-range" ).slider( "values", 1 ) + 'грн'  );
-                                    })
-
-
-                                }) ;
-                            </script>
-
-                            <!--<div class="filter__show-more">-->
-                                <!--<span>Показать еще</span>-->
-                            <!--</div>-->
-                        </div>
-                    </div>
-
-
-
-
-                    <div class="filter__part">
-                        <h5 class="filter__title">Бренд: </h5>
-
-                        <div class="filter__items">
-                            <fieldset class="">
-                                <input class=" js-styler" type="checkbox" name="delivery">
-                                <span class="">Gucci</span>
-                                <input class=" js-styler" type="checkbox" name="delivery">
-                                <span class="">Prada</span>
-                                <input class=" js-styler" type="checkbox" name="delivery">
-                                <span class="">Miuci Prada</span>
-                                <input class=" js-styler" type="checkbox" name="delivery">
-                                <span class="">Fendi</span>
-                                <input class=" js-styler" type="checkbox" name="delivery">
-                                <span class="">Furla</span>
-
-                            </fieldset>
-                            <div class="filter__show-more js-filter__show-more">
-                                <span>Показать еще</span>
-                            </div>
-
-                        </div>
-                    </div>
-
-
-                    <div class="filter__part">
-                        <h5 class="filter__title">Материал: </h5>
-
-                        <div class="filter__items">
-                            <fieldset class="">
-                                <input class=" js-styler" type="checkbox" name="delivery">
-                                <span class="">Гладкая кожа</span>
-                                <input class=" js-styler" type="checkbox" name="delivery">
-                                <span class="">Замша</span>
-                                <input class=" js-styler" type="checkbox" name="delivery">
-                                <span class="">Нубук</span>
-                                <input class=" js-styler" type="checkbox" name="delivery">
-                                <span class="">Текстиль</span>
-                                <input class=" js-styler" type="checkbox" name="delivery">
-                                <span class="">Другое</span>
-
-                            </fieldset>
-                            <div class="filter__show-more">
-                                <span>Показать еще</span>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="filter__part">
-                        <h5 class="filter__title">Цвет: </h5>
-
-                        <div class="filter__items">
-                            <fieldset class="">
-                                <input class=" js-styler" type="checkbox" name="delivery">
-                                <span class="">Черный</span>
-                                <input class=" js-styler" type="checkbox" name="delivery">
-                                <span class="">Коричневый</span>
-                                <input class=" js-styler" type="checkbox" name="delivery">
-                                <span class="">Красный</span>
-                                <input class=" js-styler" type="checkbox" name="delivery">
-                                <span class="">Серый</span>
-                                <input class=" js-styler" type="checkbox" name="delivery">
-                                <span class="">Зеленый</span>
-
-                            </fieldset>
-                            <div class="filter__show-more">
-                                <span>Показать еще</span>
-                            </div>
-
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-
-
-
-                </div>
-                <div class="col-md-9 col-sm-8">
-                    <h4 class="title-hr"> Папки</h4>
-
-
-
-                    <div class="items-wrapper clearfix row">
-
-                        <div class="item col-md-4 col-sm-6">
-                            <div class="card">
-                                <a href="/">
-                                    <figure class="card-img">
-                                        <img src="img/item1.jpg" alt="" class="img-responsive">
-                                        <figcaption>Кожаное мужское портмоне Petek 137</figcaption>
-                                    </figure>
-                                </a>
-                                <div class="card__info">
-                        <span class="card__price">
-                            <span class="amount">1630</span> грн.</span>
-                                    <button class="btn-def card__btn" type="button" onclick="cart.add( );">купить</button>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item col-md-4 col-sm-6">
-                            <div class="card">
-                                <a href="/">
-                                    <figure class="card-img">
-                                        <img src="img/item1.jpg" alt="" class="img-responsive">
-                                        <figcaption>Кожаное мужское портмоне Petek 137</figcaption>
-                                    </figure>
-                                </a>
-                                <div class="card__info">
-                        <span class="card__price">
-                            <span class="amount">1630</span> грн.</span>
-                                    <button class="btn-def card__btn" type="button" onclick="cart.add( );">купить</button>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item col-md-4 col-sm-6">
-                            <div class="card">
-                                <a href="/">
-                                    <figure class="card-img">
-                                        <img src="img/item1.jpg" alt="" class="img-responsive">
-                                        <figcaption>Кожаное мужское портмоне Petek 137</figcaption>
-                                    </figure>
-                                </a>
-                                <div class="card__info">
-                        <span class="card__price">
-                            <span class="amount">1630</span> грн.</span>
-                                    <button class="btn-def card__btn" type="button" onclick="cart.add( );">купить</button>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item col-md-4 col-sm-6">
-                            <div class="card">
-                                <a href="/">
-                                    <figure class="card-img">
-                                        <img src="img/item1.jpg" alt="" class="img-responsive">
-                                        <figcaption>Кожаное мужское портмоне Petek 137</figcaption>
-                                    </figure>
-                                </a>
-                                <div class="card__info">
-                        <span class="card__price">
-                            <span class="amount">1630</span> грн.</span>
-                                    <button class="btn-def card__btn" type="button" onclick="cart.add( );">купить</button>
-
-                                </div>
-                            </div>
-                        </div>
-
-
-
-
-
-                    </div>
-
-
-
+                <div>
+                    <figure>
+                        <img class="img-responsive" src="img/item02.jpg" alt="">
+                    </figure>
+                    <figure>
+                        <img class="img-responsive" src="img/item02.jpg" alt="">
+                    </figure>
+                    <figure>
+                        <img class="img-responsive" src="img/item02.jpg" alt="">
+                    </figure>
                 </div>
 
             </div>
@@ -734,21 +527,332 @@
 
 
 
+        <div class="tovar_preferences">
+
+            <h4 class="item__name title-hr">Кожаная барсетка Petek 759</h4>
+            <span class="item__id">
+                759-340-66
+            </span>
 
 
-            <div class="show-more-block js-show-more" data-height="70" data-linktext="Читать полностью" data-linktext2="Скрыть" >
-                <div class="text-wrap">
-                    <p>Вы хотите выглядеть достойно и солидно? Быть оригинальным и иметь вещи, использование которых приносит только радость и удовольствие? Интернет-магазин Петек Киев поможет вам в этом! Доставка осуществляется по всей Украине. Вы не будете расстраиваться от новости, что товар в наличии лишь в другом городе. Интернет магазин Петек 1855 обеспечивает прямые поставки от производителя в любую точку страны.
-                        С помощью нашего магазина вы гарантированно выберете подходящий вам аксессуар, будь то портмоне Petek или обычная кожаная сумка Petek. Вы не знаете, что подарить другу, молодому человеку или девушке?
-                        Аксессуар должны выглядеть достойно и элегантно. Изделия нашего магазина изготовлены из натуральной кожи высшего класса и дополнены фурнитурой из швейцарской стали. Это значит, что качество гарантированно, и вы не столкнетесь с проблемой снашивания или порчи вещи.
-                        На сайте Petek 1855 Original предоставлен широкий выбор различных товаров из кожи. Помимо кожаных изделий (а именно сумок, бумажников, ремней, кошельков и портфелей) присутствуют деловые папки, зажимы для денег и прочие предметы из обихода бизнесмена. Поэтому каждый клиент нашего магазина сможет найти подходящую для себя вещь. Будет удачным решением купить кошельки Petek для делового человека. А барсетка подчеркнет ваш статус среди коллег, указывая на вашу практичность.</p>
+
+            <fieldset class="item__colors">
+                <div class="stylerwrap">
+                    <label for="" style="background-color: orange">
+                        <input name="color" class="js-styler"  type="radio">
+                    </label>
+                    <label for="" style="background-color: red">
+                        <input name="color" class="js-styler"  type="radio">
+                    </label>
+                    <label for="" style="background-color: purple">
+                        <input name="color" class="js-styler"  type="radio">
+                    </label>
+                    <label for="" style="background-color: lightpink">
+                        <input name="color" class="js-styler"  type="radio">
+                    </label>
                 </div>
+
+            </fieldset>
+
+
+
+            <span class="price">
+                <span class="inshop">есть в наличии</span>
+                <span class="count">1630</span> грн.
+            </span>
+
+            <div class="modal__btns">
+                <span class="amount-counter">
+                      <input min="1" value="1" type="number" class=" js-styler product_select_count">
+                    </input>
+                </span>
+                <button class="btn-def">Купить</button>
+                <button class="btn-def_link btn-def dots"><i>Купить в 1 клик</i></button>
             </div>
 
 
         </div>
 
 
+
+
+
+            <div class="info">
+                <h4 class=" title-hr">Доставка и оплата</h4>
+
+                <h6>Отделение "Нова Пошта" БЕСПЛАТНО</h6>
+                <h6>Курьер "Нова Пошта" 140грн + 30грн*</h6>
+                <h6>Отделение "МiстЕкспресс" БЕСПЛАТНО </h6>
+                <h6>Курьер "МiстЕкспресс" БЕСПЛАТНО</h6>
+                <h6>14 дней на обмен <a href="">Условия возврата</a></h6>
+                <h6>12 мес гарантии от производителя </h6>
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <section class="js_tabs tabs">
+            	<ul class="js_tabs-menu tabs_menu">
+            		<li class="active">Описание</li>
+            		<li>Характеристики</li>
+            		<li>Отызывы (<b>5</b>)</li>
+            	</ul>
+            	<div class="js_tabs-item tabs_item active">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam aspernatur ea eaque esse est, eum illo labore magnam nam neque odio quisquam reiciendis repudiandae sapiente, sunt unde vel. Id, quam, velit? Debitis deleniti dolorem error, esse explicabo fugit hic mollitia nemo optio praesentium ut?</div>
+            	<div class="js_tabs-item tabs_item"><img src="http://placehold.it/320x340"></div>
+            	<div class="js_tabs-item tabs_item">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. At excepturi explicabo quisquam quod reprehenderit. A eligendi libero, minima odit quaerat quod sapiente vitae. Adipisci commodi debitis dicta facilis nemo nisi nobis sit soluta!
+                </div>
+            </section>
+
+
+
+
+            <section data-rel="slider" class="slider_four">
+                <div class="slider__title title-hr">Рекомендуемые товары</div>
+                <div class="slider  js-slider_four">
+
+
+                <div class="slide">
+                    <div class="card">
+                        <a href="/">
+                            <figure class="card-img">
+                                <img src="img/item1.jpg" alt="" class="img-responsive">
+                                <figcaption>Кожаное мужское портмоне Petek 137</figcaption>
+                            </figure>
+                        </a>
+                        <div class="card__info">
+                        <span class="card__price">
+                            <span class="amount">1630</span> грн.</span>
+                            <button class="btn-def card__btn" type="button" onclick="cart.add( );">купить</button>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="card">
+                        <a href="/">
+                            <figure class="card-img">
+                                <img src="img/item1.jpg" alt="" class="img-responsive">
+                                <figcaption>Кожаное мужское портмоне Petek 137</figcaption>
+                            </figure>
+                        </a>
+                        <div class="card__info">
+                        <span class="card__price">
+                            <span class="amount">1630</span> грн.</span>
+                            <button class="btn-def card__btn" type="button" onclick="cart.add( );">купить</button>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="card">
+                        <a href="/">
+                            <figure class="card-img">
+                                <img src="img/item1.jpg" alt="" class="img-responsive">
+                                <figcaption>Кожаное мужское портмоне Petek 137</figcaption>
+                            </figure>
+                        </a>
+                        <div class="card__info">
+                        <span class="card__price">
+                            <span class="amount">1630</span> грн.</span>
+                            <button class="btn-def card__btn" type="button" onclick="cart.add( );">купить</button>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="card">
+                        <a href="/">
+                            <figure class="card-img">
+                                <img src="img/item1.jpg" alt="" class="img-responsive">
+                                <figcaption>Кожаное мужское портмоне Petek 137</figcaption>
+                            </figure>
+                        </a>
+                        <div class="card__info">
+                        <span class="card__price">
+                            <span class="amount">1630</span> грн.</span>
+                            <button class="btn-def card__btn" type="button" onclick="cart.add( );">купить</button>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="card">
+                        <a href="/">
+                            <figure class="card-img">
+                                <img src="img/item1.jpg" alt="" class="img-responsive">
+                                <figcaption>Кожаное мужское портмоне Petek 137</figcaption>
+                            </figure>
+                        </a>
+                        <div class="card__info">
+                        <span class="card__price">
+                            <span class="amount">1630</span> грн.</span>
+                            <button class="btn-def card__btn" type="button" onclick="cart.add( );">купить</button>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="card">
+                        <a href="/">
+                            <figure class="card-img">
+                                <img src="img/item1.jpg" alt="" class="img-responsive">
+                                <figcaption>Кожаное мужское портмоне Petek 137</figcaption>
+                            </figure>
+                        </a>
+                        <div class="card__info">
+                        <span class="card__price">
+                            <span class="amount">1630</span> грн.</span>
+                            <button class="btn-def card__btn" type="button" onclick="cart.add( );">купить</button>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+                <div class="slider__btns">
+                    <div class="prev js-prev"></div>
+                    <div class="next js-next"></div>
+                </div>
+            </section>
+
+            <section data-rel="slider" class="slider_four">
+                <div class="slider__title title-hr">Просмотренные товары</div>
+                <div class="slider  js-slider_four">
+
+
+                <div class="slide">
+                    <div class="card">
+                        <a href="/">
+                            <figure class="card-img">
+                                <img src="img/item1.jpg" alt="" class="img-responsive">
+                                <figcaption>Кожаное мужское портмоне Petek 137</figcaption>
+                            </figure>
+                        </a>
+                        <div class="card__info">
+                        <span class="card__price">
+                            <span class="amount">1630</span> грн.</span>
+                            <button class="btn-def card__btn" type="button" onclick="cart.add( );">купить</button>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="card">
+                        <a href="/">
+                            <figure class="card-img">
+                                <img src="img/item1.jpg" alt="" class="img-responsive">
+                                <figcaption>Кожаное мужское портмоне Petek 137</figcaption>
+                            </figure>
+                        </a>
+                        <div class="card__info">
+                        <span class="card__price">
+                            <span class="amount">1630</span> грн.</span>
+                            <button class="btn-def card__btn" type="button" onclick="cart.add( );">купить</button>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="card">
+                        <a href="/">
+                            <figure class="card-img">
+                                <img src="img/item1.jpg" alt="" class="img-responsive">
+                                <figcaption>Кожаное мужское портмоне Petek 137</figcaption>
+                            </figure>
+                        </a>
+                        <div class="card__info">
+                        <span class="card__price">
+                            <span class="amount">1630</span> грн.</span>
+                            <button class="btn-def card__btn" type="button" onclick="cart.add( );">купить</button>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="card">
+                        <a href="/">
+                            <figure class="card-img">
+                                <img src="img/item1.jpg" alt="" class="img-responsive">
+                                <figcaption>Кожаное мужское портмоне Petek 137</figcaption>
+                            </figure>
+                        </a>
+                        <div class="card__info">
+                        <span class="card__price">
+                            <span class="amount">1630</span> грн.</span>
+                            <button class="btn-def card__btn" type="button" onclick="cart.add( );">купить</button>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="card">
+                        <a href="/">
+                            <figure class="card-img">
+                                <img src="img/item1.jpg" alt="" class="img-responsive">
+                                <figcaption>Кожаное мужское портмоне Petek 137</figcaption>
+                            </figure>
+                        </a>
+                        <div class="card__info">
+                        <span class="card__price">
+                            <span class="amount">1630</span> грн.</span>
+                            <button class="btn-def card__btn" type="button" onclick="cart.add( );">купить</button>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="card">
+                        <a href="/">
+                            <figure class="card-img">
+                                <img src="img/item1.jpg" alt="" class="img-responsive">
+                                <figcaption>Кожаное мужское портмоне Petek 137</figcaption>
+                            </figure>
+                        </a>
+                        <div class="card__info">
+                        <span class="card__price">
+                            <span class="amount">1630</span> грн.</span>
+                            <button class="btn-def card__btn" type="button" onclick="cart.add( );">купить</button>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+                <div class="slider__btns">
+                    <div class="prev js-prev"></div>
+                    <div class="next js-next"></div>
+                </div>
+            </section>
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <!--TOVAR PAGE End-->
 
 
 
@@ -855,43 +959,6 @@
         </section>
     </footer>
     <!-- FOOTER END -->
-
-        <style>
-        .show-more-block {
-        min-height:50px;
-        position: relative;
-        overflow: hidden;
-            width: 100%;
-        }
-        .show-more-block p {
-        margin: 0 0 10px 0;
-        }
-        .show-more__link {
-        min-height: 50px;
-        position: relative;
-        cursor: pointer;
-        color: red;
-        display: block;
-        margin: 20px 0 0;
-        }
-        .show-more-block .text-wrap:after {
-        content: '';
-        width: 100%;
-        display: block;
-        position: absolute;
-        bottom: 0px;
-        left: 0;
-        height: 50px;
-        transition: height .3s;
-        color: red;
-        background: linear-gradient(to top, rgb(249, 249, 249), rgba(255, 255, 255, 0));
-        }
-        .show-more-block.open .text-wrap:after {
-        height: 0;
-        transition: height .3s;
-        }
-        </style>
-
 
 
 <!--MODAL WINDOW " Thanks for answer " **********-->

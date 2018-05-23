@@ -1,26 +1,49 @@
 @import "../vars"
 
 .tabs
+	margin-bottom: $mbX
+	min-height: 200px
+	background: $ff
+	padding: 25px
 	&_item
 		display: none
 		&.active
 			display: block
 	&_menu
 		display: flex
-		justify-content: space-between
+		justify-content: flex-start
 		position: relative
-		margin-bottom: 50px
+		margin-bottom: $mbL
 		padding-left: 0
 		li
-			background: $butt
-			color: $ff
+			background: transparent
+			margin: 0 20px 0 0
+			color: $red
 			cursor: pointer
 			text-align: center
-			padding: 10px 0
-			width: 83px
-			border-radius: 4px
+			padding: 20px 0
+			//width: 83px
+			//border-radius: 4px
+			font-size: 15px
+			padding: 10px
+			position: relative
+			&:before
+				content: ''
+				display: block
+				position: absolute
+				width: 1px
+				height: 17px
+				top: 13px
+				right: auto
+				left: -10px
+				background: $color_grey
+			&:first-child
+				&:before
+					display: none
+
+
 			&.active
-				background: #293b5a
+				color: $bb
 
 //============  TABS
 //	$('.js_tabs-menu').on('click', 'li:not(.active)', function() {

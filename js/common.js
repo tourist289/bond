@@ -157,51 +157,43 @@ $(document).ready(function(){
 
 
 //3.2  show more
-    (function(){
-
-            var
-                blocks = $('.show-more-block'),
-                linkText = blocks.data('linktext'),
-                linkText2 = blocks.data('linktext2');
-
-            for(var i = 0; i < blocks.length; i++) {
-                var
-                    realHeight = blocks[i].clientHeight,
-                    dataHeight = blocks[i].dataset.height;
-                moreLink = document.createElement('span');
-                moreLink.innerHTML = linkText;
-                moreLink.dataset.height = realHeight;
-                moreLink.className = 'show-more__link js-more-link';
-
-                if(realHeight > dataHeight) {
-                    blocks[i].after(moreLink);
-                    blocks[i].style.height = dataHeight + 'px';
-                    blocks[i].dataset.trigger = 1;
-                }
-            }
-
-            $(document).on('click', '.js-more-link', function(){
-                var realheight = $(this).data('height')
-
-                if( $(this).prev().data('trigger') == 1) {
-                    $(this).prev().animate({
-                        height: realheight + 5
-                    }, 500);
-                    $(this).text(linkText2);
-                    $(this).prev().data('trigger', 0);
-                } else {
-                    $(this).prev().animate({
-                        height: dataHeight
-                    }, 500);
-                    $(this).text(linkText);
-                    $(this).prev().data('trigger', 1);
-                }
-            });
-
-
-
-    })();
-
+    var
+        blocks = $('.js-show-more'),
+        linkText = blocks.data('linktext'),
+        linkText2 = blocks.data('linktext2');
+    for(var i = 0; i < blocks.length; i++) {
+        var
+            realHeight = blocks[i].clientHeight,
+            dataHeight = blocks[i].dataset.height;
+        moreLink = document.createElement('span');
+        moreLink.innerHTML = linkText;
+        moreLink.dataset.height = realHeight;
+        moreLink.className = 'show-more__link js-more-link';
+        if(realHeight > dataHeight) {
+            blocks[i].after(moreLink);
+            blocks[i].style.height = dataHeight + 'px';
+            blocks[i].dataset.trigger = 1;
+        }
+    }
+    $(document).on('click', '.js-more-link', function(){
+        var realheight = $(this).data('height'),
+            parent = $(this).prev();
+        if( parent.data('trigger') == 1) {
+            parent.animate({
+                height: realheight
+            }, 500);
+            $(this).text(linkText2);
+            parent.data('trigger', 0);
+            parent.addClass('open');
+        } else {
+            parent.animate({
+                height: dataHeight
+            }, 500);
+            $(this).text(linkText);
+            parent.data('trigger', 1);
+            parent.removeClass('open');
+        }
+    });
 
 
 
@@ -375,7 +367,7 @@ $(document).ready(function(){
         return {
             slidesToShow:4,
             slidesToScroll:1,
-            arrows: true,
+            arrows: false,
             dots: false,
             focusOnSelect:true,
             autoplay: false,
@@ -520,7 +512,6 @@ $(document).ready(function(){
 //============ Show form search
     $('.js_open-form').on('click', function () {
 
-        console.log(111)
         $(this).prev().toggleClass('width_fx');
         $(this).toggleClass('btn_search-open');
 
@@ -537,7 +528,7 @@ $(document).ready(function(){
 
     $('.cart__desktop .js-desk').on('click', function(){
         $('.js-minicart').toggleClass('active');
-    })
+    });
 
 
 //remove href for last link in breadcrambs
@@ -550,6 +541,15 @@ $(document).ready(function(){
 
 
 
+
+
+//============  TABS
+	$('.js_tabs-menu').on('click', 'li:not(.active)', function() {
+		$(this)
+			.addClass('active').siblings().removeClass('active')
+			.closest('.js_tabs').find('.js_tabs-item').removeClass('active').eq($(this).index()).addClass('active');
+	});
+//========================  END TABS
 
 
 

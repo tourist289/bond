@@ -22,9 +22,10 @@
 @import "thank"
 @import "sertificate"
 @import "cartPage"
+@import "tovarPage"
 @import "components/miniCart"
 @import "news"
-//@import "components/tabs"
+@import "components/tabs"
 @import "plugins/mMenu"
 @import "footer/footer"
 
@@ -181,13 +182,15 @@ legend
 .jq-checkbox
   clear: both
   display: inline
-  width: 18px
+  width: 23px
+  height: 23px
   float: left
   margin-right: 15px
-  height: 18px
   margin-bottom: 10px
-  border: 2px solid $color_grey
+  border: 2px solid $hrInput
   border-radius: 0
+  &:hover
+    border: 2px solid #3f4143
   input[type=checkbox]
     //width: 21px
     //height: 20px
@@ -196,18 +199,19 @@ legend
   &.focused,
   &.checked
     position: relative
+    border: 2px solid #3f4143
     .jq-checkbox__div
       border: none
-      border-radius: 0
-      border-bottom: 1px solid black
-      border-left: 1px solid black
-      transform: rotate(-51deg)
-      width: 12px
-      height: 9px
-      background: transparent
-      top: 1px
+      //border-radius: 0
+      //border-bottom: 1px solid black
+      //border-left: 1px solid black
+      //transform: rotate(-51deg)
+      width: 23px
+      height: 23px
+      top: 0
+      left: 0
       position: absolute
-      left: 2px
+      background: url("../../img/icon-checkbox.png") no-repeat 0 0
   &+ span
     display: inline-block
     float: left
@@ -257,6 +261,41 @@ legend
       content: '-'
   .jq-number__spin.plus
     right: 13px
+
+
+
+.show-more
+  &-block
+    min-height: 50px
+    position: relative
+    overflow: hidden
+    p
+      margin: 0
+    &.minimized
+      .text-wrap
+        &:after
+          content: ''
+          width: 100%
+          display: block
+          position: absolute
+          bottom: 0
+          left: 0
+          height: 60px
+          transition: height .3s
+          background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0))
+    &.open
+      .text-wrap
+        &:after
+          height: 0
+          transition: height .3s
+  &__link
+    min-height: 50px
+    position: relative
+    cursor: pointer
+    color: red
+    display: block
+    margin: 20px 0 0
+
 
 
 

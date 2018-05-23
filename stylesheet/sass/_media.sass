@@ -45,6 +45,10 @@
 			>*
 				flex: 0 0 25%
 				max-width: 25%
+    .btn-def_link
+      .def_link.def_link
+        padding: 0
+
 //@media (min-width: 1200px)
 //	.container
 //		max-width: 1170px
@@ -180,8 +184,17 @@
       left: 0
       bottom: 0
 
-
-
+  .tovar__block
+    flex-wrap: wrap
+    .info
+      width: 100%
+      max-width: 100%
+      flex-wrap: wrap
+      flex-direction: row
+      .title-hr
+        width: 100%
+      h6
+        width: 50%
   .footer__suscribe
     p
       font-size: 14px
@@ -255,6 +268,17 @@
   .slider_best .card
     height: 410px
 
+  .items-wrapper
+    justify-content: center
+
+  .tovar__block
+    .imgs-wrapper
+      width: 100%
+      margin-bottom: $mb
+    .info h6
+      width: 100%
+  .tovar__block .tovar_preferences .modal__btns
+    justify-content: flex-start
 
   footer
     background: #2c2f33
@@ -367,6 +391,12 @@
     .summ__table
       height: 150px
 
+  .slider_four
+      .slider__btns
+        width: 80px
+      .title-hr
+        font-size: 14px
+
   .sertif__info
     padding-right: 10px
     .stylerwrap
@@ -377,6 +407,22 @@
         width: 90%
   .sertif__summ label
     width: 49%
+
+  .tabs
+    padding: 12px 12px 25px
+  .tabs_menu li
+    font-size: 14px
+    padding: 10px 0px 0
+    margin: 0 20px 0 0
+
+  .modal__btns
+    flex-wrap: wrap
+    .btn-def:first-of-type
+      width: 70%
+    .btn-def.dots
+      width: 100%
+
+
 
   .footer__suscribe
       .container
@@ -475,6 +521,13 @@
     .step,
     button
       width: 100%
+
+  .tabs_menu
+    flex-direction: column
+    align-items: flex-end
+    li:before
+      display: none
+
 
   .slider_best .slider
     width: 96%
