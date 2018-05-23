@@ -26,8 +26,9 @@
   position: absolute
   top: 120%
   right: 0
-  z-index: 2
+  z-index: 111
   display: none
+  box-shadow: 0px 0px 21px -3px grey
   &.active
     display: block
 .minicart__title
@@ -127,6 +128,18 @@
     margin-bottom: 10px
     &>*
       flex-grow: 1
+    .price__holder
+      border: none
+      color: red
+      font-size: 18px
+      padding: 0
+      text-align: right
+      width: 65px
+      align-items: flex-end
+      height: 21px
+      margin: 0
+
+
     p
       margin-bottom: 0
       line-height: 1.2
@@ -135,6 +148,18 @@
     color: $red
     font-size: 15px
     width: 40%
+
+
+.price__holder
+  border: none
+  color: red
+  font-size: 18px
+  padding: 0
+  text-align: right
+  width: 65px
+  align-items: flex-end
+  height: 21px
+  margin: 0
 
 .minicart__btn
   width: 100%
@@ -186,15 +211,28 @@
       font-size: 15px
   .minicart__delivery
     .info
+      height: 60px
+      flex-wrap: wrap
       margin-bottom: 20px
+      &>span
+        width: 66%
+      .price__holder
+        border: none
+        background: #272d30
+        color: $red
+        max-width: 77px
       p
         white-space: pre-wrap
+        color: $ff
     .summ
       text-align: right
       padding: 0 15px 0 0
       i
+        font-style: normal
         color: $ff
         font-size: 13px
         text-transform: lowercase
     .ui__slider
       margin-bottom: 10px
+.ui-widget-header
+  margin: 0 !important

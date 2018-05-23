@@ -126,6 +126,35 @@ $(document).ready(function(){
     $( "#delivery__amount" ).val( MAXSliderValue -  $( "#delivery__slider" ).attr( "aria-valuenow" ) + " грн");
 
 
+//  2.22  jquery ui slider
+
+    $( "#summ__slider" ).progressbar({
+        // range: "min",
+        value: 37,
+        min: 1,
+        max: MAXSliderValue
+        // slide: function( event, ui ) {
+        //     $( "#delivery__amount" ).val(MAXSliderValue - ui.value  + " грн");
+        // }
+    });
+    $( "#summ__price" ).val( MAXSliderValue -  $( "#summ__slider" ).attr( "aria-valuenow" ) + " грн");
+
+
+//  2.23  jquery ui slider
+
+    $( "#summ__slider_min" ).progressbar({
+        // range: "min",
+        value: 37,
+        min: 1,
+        max: MAXSliderValue
+        // slide: function( event, ui ) {
+        //     $( "#delivery__amount" ).val(MAXSliderValue - ui.value  + " грн");
+        // }
+    });
+    $( "#summ__price_min" ).val( MAXSliderValue -  $( "#summ__slider_min" ).attr( "aria-valuenow" ) + " грн");
+
+
+
 
 //3.2  show more
     (function(){
@@ -281,6 +310,30 @@ $(document).ready(function(){
                     settings:{
                         slidesToShow:4,
                         slidesToScroll:3,
+                        swipe: false
+                    }
+                },
+                {
+                    breakpoint: 700,
+                    settings:{
+                        slidesToShow:3,
+                        slidesToScroll:3,
+                        swipe: false
+                    }
+                },
+                {
+                    breakpoint: 550,
+                    settings:{
+                        slidesToShow:2,
+                        slidesToScroll:2,
+                        swipe: false
+                    }
+                },
+                {
+                    breakpoint: 400,
+                    settings:{
+                        slidesToShow:1,
+                        slidesToScroll:1,
                         swipe: false
                     }
                 }

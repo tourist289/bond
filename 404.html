@@ -129,9 +129,9 @@
 
                             <div class="mobile-menu ">
                                 <!--<a href="#my-cart" class="hamburger two hamburger&#45;&#45;elastic">-->
-                                    <!--<span class="hamburger-box">-->
-                                        <!--<span class="hamburger-inner"></span>-->
-                                    <!--</span>-->
+                                <!--<span class="hamburger-box">-->
+                                <!--<span class="hamburger-inner"></span>-->
+                                <!--</span>-->
                                 <!--</a>-->
                                 <span class="hidden sideMenu" id="my-cart">
                                     <ul>
@@ -185,19 +185,25 @@
                 </span>
                                                 </span>
 
-                                                <span class="minicart__delivery">
-                                                    <span class="info">
+            <span class="minicart__delivery">
+                <span class="info">
+
                     <span>
                         <p>До беспланой доставки осталось: </p>
                     </span>
-                                                        <span class="summ">
-                        42<i>грн</i>
-                    </span>
-                                                    </span>
-                                                    <div class="ui__slider js-ui__slider ">**************</div>
-                                                </span>
+                    <!--<span class="summ">42<i>грн</i>-->
+                    <input class="price__holder" type="text" readonly id="summ__price"  class="summ__price summ">
+                   <div id="summ__slider" class="ui__slider"></div>
+                    <!--</span>-->
+                </span>
 
-                                                <button class="btn-def btn-def_dark minicart__btn" >Оформить заказ</button>
+
+                <!--<div class="ui__slider js-ui__slider ">**************</div>-->
+
+            </span>
+
+
+                                                <button class="btn-def  minicart__btn" >Оформить заказ</button>
                                             </span>
 
 
@@ -263,11 +269,17 @@
                     <span>
                         <p>До беспланой доставки осталось: </p>
                     </span>
-                                                <span class="summ">
-                        42<i>грн</i>
-                    </span>
+
+                                                <input class="price__holder" type="text" readonly id="summ__price_min"  class="summ__price summ">
                                             </div>
-                                            <div class="ui__slider">**************</div>
+
+
+                                            <div id="summ__slider_min" class="ui__slider"></div>
+
+
+
+
+
                                         </div>
 
                                         <button class="btn-def btn-def_dark minicart__btn" >Оформить заказ</button>
@@ -319,42 +331,42 @@
                                         <span class="mail-info">test.mail@mail.com</span>
                                     </a>
                                 </li>
-                        <li>
-                            <div class=" contactUs">
-                                <!--<ul class="social_list">-->
-                                    <!--<li>-->
-                                        <a href="" class="socIcon fb"></a>
-                                    <!--</li>-->
-                                    <!--<li>-->
-                                        <a href="" class="socIcon insta"></a>
-                                    <!--</li>-->
-                                <!--</ul>-->
-
-                                <span class="lang-wrapper">
-                                <!--<select class="js-styler">-->
-                                      <!--<option value="Рус">Рус</option>-->
-
-                                <!--</select>-->
-                                </span>
-                            </div>
-                        </li>
-                        <li class="mmenu__lang-wrapper">
-                            <a value="Рус">Рус</a>
-                            <a value="ENG">ENG</a>
-                            <a value="УКР">УКР</a>
-                        </li>
-
-                                <!--подменю которое сдвиагется и показывает другой лист меню -->
-                        <li class="mmcatalog">
-                            <span class="mmcatalog-link">Каталог</span>
-                            <ul>
-
                                 <li>
-                                    <a href="/">подменюха</a>
+                                    <div class=" contactUs">
+                                        <!--<ul class="social_list">-->
+                                        <!--<li>-->
+                                        <a href="" class="socIcon fb"></a>
+                                        <!--</li>-->
+                                        <!--<li>-->
+                                        <a href="" class="socIcon insta"></a>
+                                        <!--</li>-->
+                                        <!--</ul>-->
+
+                                        <span class="lang-wrapper">
+                                <!--<select class="js-styler">-->
+                                            <!--<option value="Рус">Рус</option>-->
+
+                                            <!--</select>-->
+                                </span>
+                                    </div>
+                                </li>
+                                <li class="mmenu__lang-wrapper">
+                                    <a value="Рус">Рус</a>
+                                    <a value="ENG">ENG</a>
+                                    <a value="УКР">УКР</a>
                                 </li>
 
-                            </ul>
-                        </li>
+                                <!--подменю которое сдвиагется и показывает другой лист меню -->
+                                <li class="mmcatalog">
+                                    <span class="mmcatalog-link">Каталог</span>
+                                    <ul>
+
+                                        <li>
+                                            <a href="/">подменюха</a>
+                                        </li>
+
+                                    </ul>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -438,41 +450,40 @@
 
 
 
-                <div class="form_search-wrap ">
-                    <form action="" class="form_search form_search-hidden">
-                        <input type="search">
-                        <button type="button">ok</button>
-                    </form>
-                    <div class="js_open-form btn_search">
-                        <svg class="search_svg-loupe" xmlns="http://www.w3.org/2000/svg">
-                        <path fill="currentColor" d="M18.753,18.931 C20.532,16.924 21.642,14.236 21.642,11.277 C21.642,5.068 16.795,-0.000 10.821,-0.000 C4.847,-0.000 -0.000,5.068 -0.000,11.277 C-0.000,17.485 4.847,22.553 10.821,22.553 C13.253,22.553 15.489,21.720 17.301,20.308 L25.347,28.694 C25.543,28.898 25.788,29.000 26.033,29.000 C26.278,29.000 26.539,28.898 26.718,28.694 C27.094,28.302 27.094,27.656 26.718,27.248 L18.753,18.931 ZM1.959,11.277 C1.959,6.191 5.925,2.041 10.821,2.041 C15.701,2.041 19.684,6.174 19.684,11.277 C19.684,16.379 15.718,20.513 10.821,20.513 C5.925,20.513 1.959,16.362 1.959,11.277 Z"></path>
-                        </svg>
-                        <svg class="search_svg-cross" xmlns="http://www.w3.org/2000/svg">
-                        <path  fill="currentColor"
-                        d="M7.414,6.000 L11.657,10.242 C12.047,10.633 12.047,11.266 11.657,11.657 C11.266,12.047 10.633,12.047 10.243,11.657 L6.000,7.414 L1.757,11.657 C1.367,12.047 0.734,12.047 0.343,11.657 C-0.047,11.266 -0.047,10.633 0.343,10.242 L4.586,6.000 L0.343,1.757 C-0.047,1.367 -0.047,0.734 0.343,0.343 C0.734,-0.048 1.367,-0.048 1.757,0.343 L6.000,4.586 L10.243,0.343 C10.633,-0.048 11.266,-0.048 11.657,0.343 C12.047,0.734 12.047,1.367 11.657,1.757 L7.414,6.000 Z"></path>
-                        </svg>
-                    </div>
-                    <!--<div class="js_open-answer form_search-hidden_answer">-->
-                    <!--<a href="" class="answer_item"></a>-->
+                    <div class="form_search-wrap ">
+                        <form action="" class="form_search form_search-hidden">
+                            <input type="search">
+                            <button type="button">ok</button>
+                        </form>
+                        <div class="js_open-form btn_search">
+                            <svg class="search_svg-loupe" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="currentColor" d="M18.753,18.931 C20.532,16.924 21.642,14.236 21.642,11.277 C21.642,5.068 16.795,-0.000 10.821,-0.000 C4.847,-0.000 -0.000,5.068 -0.000,11.277 C-0.000,17.485 4.847,22.553 10.821,22.553 C13.253,22.553 15.489,21.720 17.301,20.308 L25.347,28.694 C25.543,28.898 25.788,29.000 26.033,29.000 C26.278,29.000 26.539,28.898 26.718,28.694 C27.094,28.302 27.094,27.656 26.718,27.248 L18.753,18.931 ZM1.959,11.277 C1.959,6.191 5.925,2.041 10.821,2.041 C15.701,2.041 19.684,6.174 19.684,11.277 C19.684,16.379 15.718,20.513 10.821,20.513 C5.925,20.513 1.959,16.362 1.959,11.277 Z"></path>
+                            </svg>
+                            <svg class="search_svg-cross" xmlns="http://www.w3.org/2000/svg">
+                                <path  fill="currentColor"
+                                       d="M7.414,6.000 L11.657,10.242 C12.047,10.633 12.047,11.266 11.657,11.657 C11.266,12.047 10.633,12.047 10.243,11.657 L6.000,7.414 L1.757,11.657 C1.367,12.047 0.734,12.047 0.343,11.657 C-0.047,11.266 -0.047,10.633 0.343,10.242 L4.586,6.000 L0.343,1.757 C-0.047,1.367 -0.047,0.734 0.343,0.343 C0.734,-0.048 1.367,-0.048 1.757,0.343 L6.000,4.586 L10.243,0.343 C10.633,-0.048 11.266,-0.048 11.657,0.343 C12.047,0.734 12.047,1.367 11.657,1.757 L7.414,6.000 Z"></path>
+                            </svg>
+                        </div>
+                        <!--<div class="js_open-answer form_search-hidden_answer">-->
+                        <!--<a href="" class="answer_item"></a>-->
 
-                    <!--<a href="" class="link_show-all">Show all</a>-->
-                </div>
+                        <!--<a href="" class="link_show-all">Show all</a>-->
+                    </div>
 
 
 
                     <!--<div id="search" class=" bottom__search input-group">-->
-                        <!--<input type="text" name="search" value="" class="form-control input-lg input_item">-->
-                        <!--<span class="input-group-btn">-->
-                        <!--<button class=""><i class="fa fa-search">OP</i></button>-->
-                        <!--</span>-->
-                     <!--</div>-->
+                    <!--<input type="text" name="search" value="" class="form-control input-lg input_item">-->
+                    <!--<span class="input-group-btn">-->
+                    <!--<button class=""><i class="fa fa-search">OP</i></button>-->
+                    <!--</span>-->
+                    <!--</div>-->
 
                 </div>
 
             </div>
         </header>
-    <!-- HEADER END -->
-
+        <!-- HEADER END -->
 
 
         <main class="container thank page-404">
