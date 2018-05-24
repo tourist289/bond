@@ -7,8 +7,9 @@
   &>*
     width: 30%
     flex-grow: 1
+
   .jq-number
-    width: 55px
+    width: 57px
     padding-top: 0
     height: 40px
     position: relative
@@ -47,9 +48,23 @@
         color: $bb
         font-size: 22px
     .jq-number__field input[type=number]
-      width: 34px
+      width: 36px
       border-radius: 0
       padding: 0
+  .jq-radio.checked
+    width: 100%
+    height: 100%
+    .jq-radio__div
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      z-index: 1
+      background: transparent
+      opacity: 1
+      border-radius: 0
+      border: 2px solid $red
+
   .imgs-wrapper
     width: 20%
     display: flex
@@ -144,7 +159,61 @@
     justify-content: flex-start
     a
       color: $color_grey
-      te
+
+
+.testimon
+  display: flex
+  justify-content: space-between
+  .answers__block
+    flex-grow: 1
+    flex-direction: column
+    justify-content: space-between
+    min-height: 100%
+    display: flex
+  .answers
+    article
+      padding: 0 $mbX 30px 0
+      margin-bottom: 30px
+      border-bottom: 2px solid $hr
+      &:nth-child(4n)
+        border-bottom: none
+      .date
+        color: $color_grey
+        font-weight: normal
+        margin-bottom: 15px
+        display: flex
+        justify-content: flex-start
+        align-items: flex-start
+        height: 10px
+      strong
+        color: #000
+        display: block
+        margin-right: 10px
+      p
+        color: $color_grey
+        margin-bottom: 0
+
+  .pagination
+    justify-content: flex-start
+.left__form
+  max-height: 600px
+  min-width: 330px
+  padding: $mbL
+  margin-left: $mbL
+  background: $bg
+  margin-top: -60px
+  h6
+    text-transform: uppercase
+    color: $bb
+    margin-bottom: 30px
+  textarea
+    resize: none
+    height: 200px
+  input[type=email]
+    margin-bottom: 20px
+  button
+    width: 100%
+
 .slider_four
   position: relative
   .slider__btns

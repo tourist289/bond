@@ -513,13 +513,14 @@ $(document).ready(function(){
 //     google.maps.event.addDomListener(window, 'load', initialize);
 
 
-//  dropdown menu
 
+//  dropdown menu
 
     $('.js-menu__links').on('click','a', function(e){
         e.preventDefault();
         let id = e.target.attributes['data-href'].value;
 
+        $(this).parent().addClass("active").siblings().removeClass('active');
         $(`#${id}`).closest('.menu__content').addClass('active');
         $(`#${id}`).addClass('active').siblings().removeClass('active');
         $('.js-drop__overlay').show();
@@ -536,6 +537,11 @@ $(document).ready(function(){
         $('.js-drop__overlay').hide();
         $('.menu__content').removeClass('active');
     });
+
+
+
+
+
 
 
 //============ Show form search

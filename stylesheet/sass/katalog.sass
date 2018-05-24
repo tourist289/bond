@@ -1,6 +1,7 @@
 @import "vars"
 
 .filter__block
+  margin-bottom: $mb
   .ui-widget.ui-widget-content
     border: none
     height: 4px
@@ -25,6 +26,51 @@
         top: -5px
 
 
+.sort__block
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin: 0 0 30px 0
+  padding: 0
+  .sort-wrap
+    display: flex
+    justify-content: space-between
+    min-width: 220px
+    color: $color_grey
+    select
+      display: none
+  .jq-selectbox
+    width: 50%
+  .jq-selectbox__select
+    min-width: 130px
+    height: 20px
+    margin-left: 20px
+  .jq-selectbox__select-text
+    //height: 20px
+    background: transparent
+    color: black
+    padding-left: 0
+  .jq-selectbox__dropdown
+    width: 190px
+    background: #ffffff
+    color: #000
+    box-shadow: 0px 0px 15px 0px grey
+    ul
+      background: $bg
+  .jq-selectbox__dropdown li
+    color: #000
+    text-transform: none
+  .jq-selectbox li.selected,
+  .jq-selectbox li:hover
+    background-color: #fff
+    color: #000
+  .jq-selectbox__trigger
+    top: 3px
+  .jq-selectbox__trigger-arrow
+    background: url("../../img/icon-arrow_sm.png") no-repeat 0 0
+    transform: rotate(-90deg)
+    width: 10px
+    height: 10px
 
 
 .filter__items

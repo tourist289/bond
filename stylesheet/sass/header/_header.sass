@@ -245,6 +245,19 @@ nav
   height: 100%
   align-items: center
   margin: 0
+  .active
+    a
+      position: relative
+      &:before
+        content: ''
+        position: absolute
+        display: block
+        left: -3px
+        top: auto
+        bottom: -18px
+        width: 110%
+        height: 2px
+        background: $red
   a
     font-size: 16px
     color: $mainCOLOR
@@ -267,6 +280,7 @@ nav
       height: 13px
       background: url(../../img/icon-arrow.jpg) no-repeat 0 0
       transform: rotate(90deg)
+
 
 
 
@@ -297,7 +311,7 @@ nav
   position: absolute
   width: 100%
   min-height: 200px
-  top: 49px
+  top: 59px
   left: 0
   background: #fff
   border-bottom: 2px solid $red
@@ -337,6 +351,7 @@ nav
   .title-hr
     border: none
     margin-bottom: 0
+    padding-top: 20px
     span
       font-size: 16px
       letter-spacing: 0.5px
@@ -351,7 +366,7 @@ nav
       display: inline
 
 .modal__overlay.drop__overlay
-  top: 300px
+  top: 310px
   position: absolute
   margin-bottom: -320px
 
