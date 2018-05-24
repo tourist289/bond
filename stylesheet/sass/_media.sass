@@ -119,6 +119,7 @@
   .mobile-menu
     display: block
   .cart__desktop .desk,
+  .cart__info-wrapper,
   .minicart,
   .minicart.active,
   .desktop-menu,
@@ -126,10 +127,45 @@
   .menu__content,
   .menu__content.active
     display: none
+
+
   .header__main
-    height: 130px
+    height: 80px
+    .logo
+      flex-grow: 1
+      display: flex
+      justify-content: center
+      margin-left: 70px
   .header__top
     display: none
+  .cart__desktop
+    .mob
+      position: relative
+      .count
+        position: absolute
+        bottom: 4px
+        width: 100%
+        text-align: center
+        color: $red
+
+  .form_search-hidden
+    right: 0
+  .form_search.width_fx
+    right: 30px
+    width: 60%
+
+
+  .mobile-menu
+    position: absolute
+    top: -63px
+  .form_search-wrap
+    position: relative
+    right: 0
+    width: 100%
+    justify-content: flex-end
+    display: flex
+
+
   .mm-panels
     .mmenu__lang-wrapper
       display: flex
@@ -348,10 +384,6 @@
   h4
     font-size: 20px
 
-  .header__main .logo
-      margin-bottom: 10px
-  .width_fx
-      width: 220px
   .contacts__form
       form input
           width: 100%
@@ -422,7 +454,11 @@
     .btn-def.dots
       width: 100%
 
-
+  .form_search.width_fx
+    width: 92%
+  .header__main .logo
+    width: unset
+    margin-bottom: 0!important
 
   .footer__suscribe
       .container
@@ -500,11 +536,11 @@
 @media only screen and (max-width : 480px)
   header
     .main__wrap
-      flex-direction: column
-      justify-content: center
-      align-items: center
+      //flex-direction: column
+      //justify-content: center
+      //align-items: center
   .width_fx
-    width: 200px
+    //width: 200px
   .contacts
       &>*
           width: 96%

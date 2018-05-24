@@ -31,7 +31,6 @@ $(document).ready(function(){
     //============ CLOSE on button */
     $(window).on('click', function(e){
         if(e.target.className == 'modal__overlay' || e.target.className == 'modal__close'){
-            console.log(e.target.className)
             closeModal();
         }
     });
@@ -156,7 +155,37 @@ $(document).ready(function(){
 
 
 
-//3.2  show more
+
+// 3.1 show more in catalog
+    const
+        TEXTTOSHOW = 'Показать еще',
+        TEXTTOHIDE = 'Скрыть';
+    $('.js-nested').each(function(){
+        let
+            itemsToShow = 5,
+            filterAmount = $(this).find('li').length;
+        if( filterAmount > itemsToShow){
+            $('li', this).eq(itemsToShow - 1).nextAll().hide().addClass('toggleable');
+            $(this).after(`<div class="filter__show-more js-show"><span>${TEXTTOSHOW}</span></div>`);
+        }
+    });
+
+    $('.js-show').on('click', function(){
+        $(this).find('span').text() == TEXTTOHIDE ? $(this).find('span').text(TEXTTOSHOW) : $(this).find('span').text(TEXTTOHIDE);
+        $(this).prev().find('li.toggleable').slideToggle();
+    });
+
+//
+// <ul class=" js-nest">
+//     <li></li>
+//     <li></li>
+// </ul>
+
+
+
+
+
+//3.2  show more ****************
     var
         blocks = $('.js-show-more'),
         linkText = blocks.data('linktext'),
@@ -226,7 +255,7 @@ $(document).ready(function(){
     // });
 
 
-// 4.2 mmenu
+// 4.2 mmenu cart
 
     $('#my-cart').css('opacity', 1);
     $('#my-cart').mmenu({
