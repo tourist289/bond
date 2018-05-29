@@ -536,6 +536,8 @@ $(document).ready(function(){
     $('.js-drop__overlay').on('click', function () {
         $('.js-drop__overlay').hide();
         $('.menu__content').removeClass('active');
+        $('.js-menu__links li').removeClass('active');
+
     });
 
 
